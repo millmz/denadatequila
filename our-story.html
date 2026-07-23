@@ -50,11 +50,13 @@ nav{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:2px s
 .story-hero .serif-i{font-size:clamp(1.2rem,2.4vw,1.6rem);color:var(--gray);max-width:640px;margin:0 auto}
 
 /* chapters */
-.chapter{max-width:720px;margin:0 auto;padding:70px 32px}
+.chapter{max-width:720px;margin:0 auto;padding:64px 32px}
+.chapter + .chapter{padding-top:8px}
 .chapter .eyebrow{color:var(--burnt);display:block;text-align:center;margin-bottom:14px}
 .chapter h2{font-size:clamp(1.9rem,4vw,2.8rem);text-align:center;margin-bottom:30px}
 .chapter p{margin-bottom:20px;font-size:1.05rem;color:#3A3735}
-.chapter .rule-set{color:var(--green);max-width:220px;margin:44px auto 0}
+.chapter p:last-child{margin-bottom:0}
+.chapter .rule-set{color:var(--green);max-width:220px;margin:52px auto 0}
 .dropcap::first-letter{font-family:'EB Garamond',serif;font-size:3.4em;float:left;line-height:.82;padding:6px 10px 0 0;color:var(--green)}
 
 /* pull quote band */
