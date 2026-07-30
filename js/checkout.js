@@ -73,7 +73,6 @@
     var qtyInp = document.getElementById("qty");
     var addBtn = document.getElementById("add-to-cart");
     var buyBtn = document.getElementById("buy-now");
-    var note   = document.getElementById("buy-note");
 
     function qty() { return Math.min(99, Math.max(1, parseInt(qtyInp && qtyInp.value, 10) || 1)); }
 
@@ -91,15 +90,13 @@
         window.location.href = buyNowUrl(target.variantId, qty());
       });
     } else {
-      // Not set up in Shopify yet. Send shoppers to the store rather than to a
-      // button that cannot complete.
-      addBtn.style.display = "none";
-      buyBtn.textContent = target.mode === "product" ? "Buy on Our Shop" : "Shop This";
-      buyBtn.addEventListener("click", function () { window.location.href = target.url; });
-      if (note) {
-        note.textContent = "Checkout is handled by our secure online store.";
-        note.style.display = "block";
-      }
+      // Not set up in Shopify yet. The button keeps reading "Add to Cart" and
+      // takes the shopper to the store, where they can add it there. Buy It Now
+      // is hidden because a direct checkout needs a variant ID.
+      buyBtn.style.display = "none";
+      addBtn.addEventListener("click", function () { window.location.href = target.url; });
+      // The shipping note below the buttons already explains that the cart and
+      // checkout live on the store, so nothing extra is shown here.
     }
   }
 

@@ -140,7 +140,9 @@ footer a:hover{color:var(--cream)}
 .pdp-media img{max-height:440px;width:auto;filter:drop-shadow(0 14px 14px rgba(35,31,32,.3))}
 .pdp-info .eyebrow{color:var(--burnt);display:block;margin-bottom:10px}
 .pdp-info h1{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.03em;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.05}
-.award{display:inline-block;margin-top:14px;border:2px solid var(--gold);color:#8a6f2e;font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;padding:7px 14px}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.award{display:inline-block;border:2px solid var(--gold);color:#8a6f2e;font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;padding:7px 14px}
+.award.af{border-color:var(--green);color:var(--green)}
 .pdp-lede{font-family:'EB Garamond',serif;font-style:italic;font-size:1.28rem;color:var(--gray);margin:20px 0 0}
 .pdp-price{font-family:'Oswald',sans-serif;font-weight:600;font-size:2rem;margin:22px 0 4px}
 .pdp-price small{font-family:'EB Garamond',serif;font-style:italic;font-weight:400;font-size:.95rem;color:var(--gray);margin-left:8px}
@@ -227,7 +229,7 @@ footer a:hover{color:var(--cream)}
   <div class="pdp-info rv" data-sku="aluminum-blanco">
     <span class="eyebrow">700mL &middot; 40% ALC &middot; 100% Recycled Aluminum</span>
     <h1>The Original Blanco</h1>
-    <div class="award">The Original &middot; While It Lasts</div>
+    <div class="badges"><span class="award">The Original &middot; While It Lasts</span><span class="award af">Additive-Free</span></div>
     <p class="pdp-lede">The world&rsquo;s first aluminum tequila bottle. Unbreakable, featherweight, and nearly gone.</p>
 
     <div class="pdp-price">$41.99 <small>plus tax and shipping</small></div>
@@ -275,8 +277,10 @@ footer a:hover{color:var(--cream)}
         <div class="spec"><dt>NOM</dt><dd>1414</dd></div>
         <div class="spec"><dt>Region</dt><dd>Arandas, Los Altos, Jalisco</dd></div>
         <div class="spec"><dt>Agave</dt><dd>100% Blue Weber, single estate</dd></div>
+        <div class="spec"><dt>Cooking</dt><dd>Brick ovens, 48-50 hours</dd></div>
+        <div class="spec"><dt>Fermentation</dt><dd>Proprietary yeast</dd></div>
+        <div class="spec"><dt>Distillation</dt><dd>Twice, copper pot stills</dd></div>
         <div class="spec"><dt>Aging</dt><dd>Unaged</dd></div>
-        <div class="spec"><dt>Additives</dt><dd>None. Certified additive-free</dd></div>
         <div class="spec"><dt>ABV</dt><dd>40% ALC/VOL (80 proof)</dd></div>
         <div class="spec"><dt>Size</dt><dd>700mL</dd></div>
         <div class="spec"><dt>Bottle</dt><dd>100% recycled aluminum, recyclable</dd></div>
