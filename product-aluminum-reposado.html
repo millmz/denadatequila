@@ -164,6 +164,15 @@ footer a:hover{color:var(--cream)}
 .notes p{color:var(--gray);margin-bottom:16px}
 .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
 .chip{border:2px solid var(--green);color:var(--green);font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;padding:8px 14px}
+.pour{margin-top:26px;border-top:2px solid rgba(35,31,32,.15);padding-top:22px}
+.pour-label{font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.16em;font-size:.7rem;color:var(--burnt);display:block;margin-bottom:14px}
+.pour-list{list-style:none;display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0 0 16px}
+.pour-list a{display:inline-block;border:2px solid var(--green);color:var(--green);font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;padding:9px 14px;transition:background .15s,color .15s}
+.pour-list a:hover,.pour-list a:focus-visible{background:var(--green);color:var(--cream)}
+.pour-all{font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.14em;font-size:.7rem;color:var(--black);border-bottom:2px solid var(--black);padding-bottom:3px}
+.pour-all:hover{color:var(--green);border-color:var(--green)}
+.pour-none{font-size:.95rem;color:var(--gray)}
+.pour-none a{color:var(--green);border-bottom:2px solid var(--green)}
 .spec{display:flex;justify-content:space-between;gap:18px;border-bottom:1px solid rgba(35,31,32,.16);padding:11px 0;font-size:.92rem}
 .spec dt{font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.13em;font-size:.7rem;color:var(--gray)}
 .spec dd{text-align:right}
@@ -269,6 +278,15 @@ footer a:hover{color:var(--cream)}
       <div class="chips"><span class="chip">Vanilla</span><span class="chip">Caramel</span><span class="chip">Oak</span></div>
       <h2 style="margin-top:34px">How to Serve</h2>
       <p>Wherever the day takes you. Palomas at the beach, old fashioneds at the campfire.</p>
+    <div class="pour">
+      <span class="pour-label">Pour it into</span>
+      <ul class="pour-list">
+        <li><a href="cocktails.html#tommys-margarita">Tommy's Margarita</a></li>
+        <li><a href="cocktails.html#tikila-sunrise">Tikila Sunrise</a></li>
+        <li><a href="cocktails.html#pina-rita">Pi&ntilde;a Rita</a></li>
+      </ul>
+      <a class="pour-all" href="cocktails.html?exp=reposado">All Reposado cocktails <span aria-hidden="true">&rarr;</span></a>
+    </div>
     </div>
     <div class="rv">
       <h2>The Details</h2>
