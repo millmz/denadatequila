@@ -70,8 +70,6 @@ nav{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:2px s
 .p-card.blanco .p-swatch{background:var(--turquoise)}
 .p-card.repo .p-swatch{background:var(--orange)}
 .p-card.bundle .p-swatch{background:var(--green)}
-.cart-link{position:relative}
-.cart-count{display:none;margin-left:7px;background:var(--gold);color:var(--black);border-radius:999px;padding:1px 7px;font-size:.7rem;font-weight:600}
 .p-card.alu-blanco .p-swatch{background:var(--turquoise)}
 .p-card.alu-repo .p-swatch{background:var(--orange)}
 .p-card.anejo .p-swatch{background:var(--black)}
@@ -134,9 +132,7 @@ footer a:hover{color:var(--cream)}
 .bfly-foot{display:block;margin-top:14px;opacity:.75}
 .fulfill-note{font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.18em;font-size:.68rem;color:var(--gray);text-align:center;margin:26px auto 6px}
 
-/* ---- product detail + cart ---- */
-.cart-link{position:relative}
-.cart-count{display:none;margin-left:7px;background:var(--gold);color:var(--black);border-radius:999px;padding:1px 7px;font-size:.7rem;font-weight:600}
+/* ---- product detail ---- */
 .crumb{max-width:1180px;margin:0 auto;padding:22px 32px 0;font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.16em;font-size:.7rem;color:var(--gray)}
 .crumb a:hover{color:var(--green)}
 .pdp{max-width:1180px;margin:0 auto;padding:26px 32px 84px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
@@ -148,9 +144,13 @@ footer a:hover{color:var(--cream)}
 .pdp-lede{font-family:'EB Garamond',serif;font-style:italic;font-size:1.28rem;color:var(--gray);margin:20px 0 0}
 .pdp-price{font-family:'Oswald',sans-serif;font-weight:600;font-size:2rem;margin:22px 0 4px}
 .pdp-price small{font-family:'EB Garamond',serif;font-style:italic;font-weight:400;font-size:.95rem;color:var(--gray);margin-left:8px}
-.buy-row{display:flex;gap:14px;align-items:stretch;flex-wrap:wrap;margin-top:24px}
+.feats{list-style:none;margin:24px 0 0;padding:0}
+.feats li{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;font-size:.95rem;color:#3A3735}
+.feats .bolt{color:var(--burnt);flex:0 0 auto;font-size:1rem;line-height:1.5}
+.qty-label{font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.16em;font-size:.7rem;color:var(--gray);display:block;margin:26px 0 8px}
+.buy-row{display:flex;gap:14px;align-items:stretch;flex-wrap:wrap}
 .qty{display:flex;align-items:center;border:2px solid var(--black);background:#FBFDF3;box-shadow:3px 3px 0 var(--black)}
-.qty button{width:42px;height:100%;min-height:46px;background:none;border:none;font-size:1.2rem;cursor:pointer;font-family:'Oswald',sans-serif;color:var(--black)}
+.qty button{width:42px;min-height:46px;background:none;border:none;font-size:1.2rem;cursor:pointer;font-family:'Oswald',sans-serif;color:var(--black)}
 .qty button:hover{background:var(--cream)}
 .qty input{width:48px;text-align:center;border:none;background:none;font-family:'Oswald',sans-serif;font-weight:600;font-size:1rem;-moz-appearance:textfield}
 .qty input::-webkit-outer-spin-button,.qty input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
@@ -175,45 +175,16 @@ footer a:hover{color:var(--cream)}
 .more-b{padding:16px 16px 20px;border-top:2px solid var(--black)}
 .more-b h3{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:.98rem;letter-spacing:.04em}
 .more-b .p{font-family:'Oswald',sans-serif;font-weight:600;font-size:.95rem;margin-top:6px}
-/* cart */
-.cart-wrap{max-width:980px;margin:0 auto;padding:34px 32px 90px}
-.cart-wrap h1{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:clamp(2rem,4.6vw,3rem);text-align:center;margin-bottom:8px}
-.cart-sub{text-align:center;font-family:'EB Garamond',serif;font-style:italic;color:var(--gray);font-size:1.15rem;margin-bottom:38px}
-.c-line{display:grid;grid-template-columns:96px 1fr auto auto;gap:20px;align-items:center;border:2px solid var(--black);background:#FBFDF3;box-shadow:5px 5px 0 var(--black);padding:14px;margin-bottom:18px}
-.c-thumb{display:flex;align-items:flex-end;justify-content:center;height:96px;padding:8px 6px 0;border:1px solid rgba(35,31,32,.2)}
-.c-thumb img{max-height:82px;width:auto}
-.c-name{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:1.05rem;letter-spacing:.04em}
-.c-name:hover{color:var(--green)}
-.c-unit{font-size:.85rem;color:var(--gray);margin-top:3px}
-.c-remove{background:none;border:none;color:var(--burnt);font-size:.8rem;cursor:pointer;padding:4px 0;margin-top:6px;text-decoration:underline}
-.c-qty{display:flex;align-items:center;border:2px solid var(--black)}
-.c-qty button{width:34px;height:36px;background:none;border:none;cursor:pointer;font-family:'Oswald',sans-serif;font-size:1.05rem}
-.c-qty button:hover{background:var(--cream)}
-.c-qty input{width:42px;text-align:center;border:none;background:none;font-family:'Oswald',sans-serif;font-weight:600;-moz-appearance:textfield}
-.c-qty input::-webkit-outer-spin-button,.c-qty input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
-.c-total{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.1rem;min-width:80px;text-align:right}
-.c-foot{border-top:2px solid var(--black);margin-top:26px;padding-top:24px;text-align:right}
-.c-sub{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.5rem}
-.c-sub span{font-size:.8rem;color:var(--gray);font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin-right:14px}
-.c-note{font-size:.86rem;color:var(--gray);margin-top:10px}
-.c-warn{background:#FDF3E7;border:2px solid var(--orange);padding:14px 16px;font-size:.88rem;color:#7a3f1d;margin-top:18px;text-align:left;display:none}
-.c-warn a{color:var(--burnt);text-decoration:underline}
-.c-actions{display:flex;gap:14px;justify-content:flex-end;margin-top:22px;flex-wrap:wrap}
-.cart-empty{text-align:center;padding:40px 0 10px}
-.cart-empty p{color:var(--gray);margin-bottom:26px;font-family:'EB Garamond',serif;font-style:italic;font-size:1.2rem}
 @media (max-width:900px){
   .pdp{grid-template-columns:1fr;gap:34px;padding-bottom:60px}
   .pdp-media{min-height:400px}
   .notes-in{grid-template-columns:1fr;gap:34px;padding:54px 22px}
   .more-grid{grid-template-columns:repeat(2,1fr)}
-  .c-line{grid-template-columns:72px 1fr;gap:14px}
-  .c-thumb{height:78px}
-  .c-qty{grid-column:1/2;justify-self:start}
-  .c-total{grid-column:2/3;text-align:right}
 }
 @media (max-width:560px){
   .crumb,.pdp{padding-left:20px;padding-right:20px}
   .more-grid{grid-template-columns:1fr}
+  .buy-row .btn{flex:1 1 100%;text-align:center}
 }
 </style>
 <link rel="icon" type="image/png" href="favicon.png">
@@ -240,8 +211,7 @@ footer a:hover{color:var(--cream)}
       <a href="cocktails.html">Behind the Bar</a>
       <a href="index.html#craft">Quiet Craft</a>
       <a href="our-story.html">Our Story</a>
-      <a href="shop.html">Shop</a>
-      <a class="btn cart-link" href="cart.html">Cart<span class="cart-count" data-cart-count></span></a>
+      <a class="btn" href="shop.html">Shop</a>
     </div>
   </div>
 </nav>
@@ -262,6 +232,14 @@ footer a:hover{color:var(--cream)}
 
     <div class="pdp-price">$41.99 <small>plus tax and shipping</small></div>
 
+    <ul class="feats">
+        <li><span class="bolt">&#9889;</span><span>Cooked in brick ovens for 48-50 hours.</span></li>
+        <li><span class="bolt">&#9889;</span><span>2x distilled in copper pots.</span></li>
+        <li><span class="bolt">&#9889;</span><span>Classical music played during fermentation.</span></li>
+        <li><span class="bolt">&#9889;</span><span>Lightweight, unbreakable, earth-friendly bottle.</span></li>
+    </ul>
+
+    <label class="qty-label" for="qty">Quantity</label>
     <div class="buy-row">
       <div class="qty">
         <button type="button" data-qty-step="-1" aria-label="Decrease quantity">&minus;</button>
@@ -269,13 +247,13 @@ footer a:hover{color:var(--cream)}
         <button type="button" data-qty-step="1" aria-label="Increase quantity">+</button>
       </div>
       <button class="btn" id="add-to-cart" type="button">Add to Cart</button>
-      <button class="btn orange" id="buy-now" type="button">Buy Now</button>
+      <button class="btn orange" id="buy-now" type="button">Buy It Now</button>
     </div>
     <p class="buy-note" id="buy-note"></p>
 
     <div class="ship-note">
-      Checkout is handled by our secure online store. All orders are fulfilled and shipped by
-      licensed retailers, and an adult signature (21+) is required on delivery.
+      Cart and checkout are handled by our secure online store. All orders are fulfilled and
+      shipped by licensed retailers, and an adult signature (21+) is required on delivery.
       Questions about an order? <a href="mailto:orders@denadatequila.com" style="color:var(--green);border-bottom:2px solid var(--green)">orders@denadatequila.com</a>
     </div>
   </div>

@@ -17,17 +17,26 @@
 
    Paste that number as a string:  variantId: "44445556667778"
 
+   WHERE THE CART LIVES
+   --------------------
+   On Shopify, not on this site. This site has product pages; Shopify owns the
+   cart and the checkout, so there is only ever one cart and it is always the
+   real one. The buttons hand off to Shopify:
+
+     Add to Cart  ->  /cart/add?id=<variantId>&quantity=<n>&return_to=/cart
+                      adds the item, then shows the Shopify cart page
+     Buy It Now   ->  /cart/<variantId>:<n>
+                      straight into Shopify checkout
+
    HOW THE BUTTONS BEHAVE
    ----------------------
    The site falls back gracefully, so nothing is ever broken mid-setup:
 
-     1. variantId filled in   -> "Add to Cart" works, checkout goes straight
-                                 to Shopify's secure checkout with the item
-                                 and quantity already in the cart.
+     1. variantId filled in   -> Add to Cart and Buy It Now both work.
      2. no variantId, but
-        productUrl filled in  -> button links to that Shopify product page.
-     3. neither filled in     -> button links to the store homepage
-                                 (storeUrl below) and reads "Shop This".
+        productUrl filled in  -> one button linking to that Shopify product page.
+     3. neither filled in     -> one button linking to the store homepage
+                                 (storeUrl below), reading "Shop This".
 
    So you can fill these in one at a time as SKUs go live.
 

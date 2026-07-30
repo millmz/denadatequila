@@ -15,6 +15,45 @@ That's the whole job. No HTML to touch, no other files.
 
 ---
 
+## Where the cart lives: Shopify
+
+**This site has no cart of its own, on purpose.**
+
+The website owns the product pages. Shopify owns the cart and the checkout,
+exactly as it does today. That means there is only ever one cart, and it is
+always the real one — correct inventory, correct discounts, and the express
+payment options (Google Pay, Shop Pay, and the rest) that Shopify provides.
+
+A second cart living on the website would drift out of sync with Shopify's:
+someone adds two bottles here, opens the store, and the cart looks empty or
+doubles up at checkout. So the buttons hand off instead.
+
+---
+
+## The customer flow
+
+```
+shop.html                     → grid of all five bottles
+   ↓ Buy
+product-*.html                → product page: tasting notes, process, specs,
+                                quantity, Add to Cart / Buy It Now
+   ↓ Add to Cart                        ↓ Buy It Now
+Shopify cart page             →         Shopify checkout
+   ↓ Check out                          (payment, shipping, tax, 21+ signature)
+Shopify checkout
+```
+
+The two buttons map onto Shopify's own:
+
+| Button | Where it goes |
+|---|---|
+| **Add to Cart** | `https://shop.denadatequila.com/cart/add?id=<variantId>&quantity=<n>&return_to=/cart` — Shopify adds the item and shows its cart page |
+| **Buy It Now** | `https://shop.denadatequila.com/cart/<variantId>:<n>` — Shopify cart permalink, straight into checkout |
+
+No payment or customer data ever touches this site.
+
+---
+
 ## The five SKUs
 
 | Key in config | Product | Size | Site price | Product page |
@@ -25,8 +64,8 @@ That's the whole job. No HTML to touch, no other files.
 | `aluminum-blanco` | The Original Blanco (aluminum) | 700mL | $41.99 | `product-aluminum-blanco.html` |
 | `aluminum-reposado` | The Original Reposado (aluminum) | 700mL | $45.99 | `product-aluminum-reposado.html` |
 
-Prices shown on the site come from `js/shop-config.js` too — keep them in sync
-with Shopify so the cart subtotal matches what customers see at checkout.
+Prices displayed on the site come from `js/shop-config.js`. Keep them in sync
+with Shopify so the product page matches what the customer pays.
 
 ---
 
@@ -62,53 +101,24 @@ https://shop.denadatequila.com/cart/PASTE_VARIANT_ID:1
 
 ---
 
-## The customer flow
-
-```
-shop.html                 → grid of all five bottles
-   ↓ Buy
-product-*.html            → full product page: tasting notes, specs,
-                            quantity selector, Add to Cart / Buy Now
-   ↓ Add to Cart                    ↓ Buy Now
-cart.html                 → review, change quantities, remove
-   ↓ Checkout
-Shopify secure checkout   → payment, shipping, tax, 21+ signature
-```
-
-**Buy Now** skips the cart and goes straight to Shopify checkout with that one
-item. **Add to Cart** lets a customer collect several bottles, then hands the
-whole order to Shopify in a single link.
-
-The site never collects payment or customer data. Shopify handles all of it.
-The handoff uses a standard Shopify cart permalink:
-
-```
-https://shop.denadatequila.com/cart/<variantId>:<qty>,<variantId>:<qty>
-```
-
----
-
 ## Nothing breaks while you're mid-setup
 
 Each product falls back on its own, so you can turn SKUs on one at a time:
 
 | State of the config | What the customer sees |
 |---|---|
-| `variantId` filled in | Add to Cart + Buy Now → Shopify checkout |
-| `variantId` empty, `productUrl` filled in | Single button: **Buy on Our Shop** → that Shopify product page |
-| both empty | Single button: **Shop This** → the store homepage |
+| `variantId` filled in | **Add to Cart** + **Buy It Now** → Shopify |
+| `variantId` empty, `productUrl` filled in | One button: **Buy on Our Shop** → that Shopify product page |
+| both empty | One button: **Shop This** → the store homepage |
 
 The two aluminum SKUs already have `productUrl` pre-filled with their existing
 Shopify pages, so those buttons work right now.
-
-If someone has a bottle in their cart that later loses its variant ID, the cart
-warns them and checks out the rest rather than failing silently.
 
 ---
 
 ## Attribution
 
-Checkout links carry UTM parameters so Shopify analytics can attribute these
+Handoff links carry UTM parameters so Shopify analytics can attribute these
 orders to the website:
 
 ```
@@ -123,12 +133,11 @@ Change or clear this in the `utm` field of `js/shop-config.js`.
 
 | File | What it is |
 |---|---|
-| `js/shop-config.js` | **The only file you edit.** Variant IDs, prices, store URL. |
-| `js/checkout.js` | Cart + checkout logic. No need to touch. |
+| `js/shop-config.js` | **The only file you edit.** Variant IDs, prices, store domain, UTM. |
+| `js/checkout.js` | Builds the Shopify handoff URLs. No need to touch. |
 | `product-*.html` | The five product pages. |
-| `cart.html` | Cart page. |
 | `shop.html` | Shop grid; Buy buttons link to the product pages. |
-| `img/*.webp` | Bottle images used by product pages and the cart. |
+| `img/*.webp` | Bottle images used by the product pages. |
 
 ---
 
@@ -136,7 +145,8 @@ Change or clear this in the `utm` field of `js/shop-config.js`.
 
 - **Prices live in two places** — `js/shop-config.js` (what the site shows) and
   Shopify (what customers actually pay). Keep them matched.
-- **The cart is per-browser** (localStorage). It does not sync across devices,
-  which is normal for this kind of static-site + Shopify setup.
-- **Shipping rules, state restrictions, and 21+ signature** are all configured
-  on the Shopify side, not here.
+- **Shipping rules, state restrictions, discount codes, and the 21+ signature**
+  are all configured on the Shopify side, not here.
+- **Product page imagery** is a single bottle shot per SKU. If you want the
+  multi-image gallery the Shopify pages have, send the additional shots and we
+  can add a thumbnail strip.
