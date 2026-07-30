@@ -76,6 +76,32 @@ returning posts, and the token now refreshes itself weekly.
 
 ## Troubleshooting
 
+### "Insufficient Developer Role" when generating the token
+
+Seen as a redirect to
+`instagram.com/oauth/authorize/third_party/error/?message=Insufficient%20Developer%20Role`.
+
+The app is in Development mode, so only Instagram accounts holding a role on
+the app may authorize it. Instagram's OAuth uses **whichever account is
+currently logged into instagram.com in that browser** — so being signed in as
+a personal account (or any account without a role) triggers this. In order:
+
+1. **Fix the browser session.** Open an incognito window, sign in to
+   instagram.com as **@denadatequila**, then restart token generation from the
+   Meta dashboard. This is the usual cause: the Meta app is typically owned by
+   a personal Facebook login while the Instagram account is the brand's.
+2. **Grant the role.** Meta app dashboard → **App roles → Roles → Add People**
+   → add the @denadatequila Instagram account (Admin or Developer).
+3. **Accept the invite** — the commonly missed step. On Instagram as
+   @denadatequila: **Settings → Apps and Websites → Tester Invites → Accept**.
+   A sent-but-unaccepted invite throws this same error while the dashboard may
+   still show the app as connected.
+4. **Reset the connection.** On Instagram: Settings → Apps and Websites →
+   Active → remove the app, then reconnect from the Meta dashboard. Use a
+   desktop browser, not the phone app.
+
+### Other issues
+
 | Symptom | Likely cause | Fix |
 |---|---|---|
 | `/api/instagram` returns `{"error":"not configured"}` | Env var missing or deploy predates it | Set `IG_ACCESS_TOKEN`, redeploy |
