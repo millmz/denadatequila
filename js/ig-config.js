@@ -19,18 +19,26 @@
    3. Paste the feed URL it gives you below, commit, deploy. Done — the
       carousel appears and stays in sync with the account automatically.
 
-   This site is set up for the SELF-HOSTED route: /api/instagram below is a
-   Netlify function in this repo that talks to the Instagram API directly and
-   refreshes its own token automatically (see INSTAGRAM-SETUP.md). To go live,
-   set the IG_ACCESS_TOKEN environment variable in Netlify — no edit needed
-   here. To use a feed service like Behold instead, replace the URL below
-   with the service's feed URL.
+   TO CONNECT THE CAROUSEL: set feedUrl below. Two ways to get that URL —
+   full instructions in INSTAGRAM-SETUP.md.
+
+     Option A (recommended, ~10 min, no Meta developer app):
+       Create a free feed at behold.so, connect @denadatequila, and paste the
+       JSON feed URL here, e.g.
+         feedUrl: "https://feeds.behold.so/XXXXXXXXXXXX",
+
+     Option B (self-hosted, no third party):
+       Set IG_ACCESS_TOKEN in Netlify, then use this repo's own endpoint:
+         feedUrl: "/api/instagram",
+       The Netlify functions refresh the Instagram token automatically.
+
+   Either way the renderer handles the response format. While feedUrl is
+   empty the carousel simply stays hidden, so nothing looks broken.
    ============================================================================ */
 
 window.DENADA_IG = {
-  /* The feed endpoint. Until IG_ACCESS_TOKEN is configured in Netlify this
-     returns an error and the carousel stays hidden, which is safe. */
-  feedUrl: "/api/instagram",
+  /* Paste the feed URL here (see above). Empty = carousel stays hidden. */
+  feedUrl: "",
 
   /* Shown in the section heading and the Follow button. */
   handle: "@denadatequila",
