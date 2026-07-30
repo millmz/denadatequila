@@ -1,0 +1,11 @@
+# Netlify configuration for denadatequila.com
+#
+# The site itself is static (no build step). The functions below power the
+# Instagram carousel: /api/instagram serves the feed, and instagram-refresh
+# keeps the API token alive on a weekly schedule. See INSTAGRAM-SETUP.md.
+
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"

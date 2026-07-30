@@ -1,65 +1,111 @@
 # Instagram Carousel — Setup
 
 The homepage has a "Proof of good hosting" carousel wired to the Instagram
-feed. It is **hidden until connected**, so the site looks unchanged until this
-one-time setup is done. Connecting it is pasting a single URL.
+feed. It stays **hidden until connected**, so the site looks unchanged until
+setup is done.
+
+The site is pre-wired for the **self-hosted route**: the feed comes from this
+repo's own Netlify functions, which talk to Instagram's API directly and
+**refresh the API token automatically, forever**. No third-party service, no
+subscription. Going live requires exactly one thing: putting an Instagram
+access token into Netlify.
 
 ---
 
-## Why a URL is needed at all
+## How it works
 
-Instagram does not let websites read a profile's posts directly. Feeds require
-an API access token that **expires and must be refreshed on a schedule**, which
-a static Netlify site cannot do by itself. (Meta also retired the old Basic
-Display API in December 2024, which killed most DIY embed snippets.)
+```
+Instagram Graph API
+   ▲            ▲
+   │            └── instagram-refresh (scheduled, weekly)
+   │                refreshes the 60-day token, stores it in Netlify Blobs
+   │
+/api/instagram  ── instagram-feed function
+   ▲               serves posts, cached 45 min; if the weekly refresh ever
+   │               stops running, it refreshes the token itself after 7 days
+homepage carousel
+```
 
-The practical fix: a small feed service owns the token problem and republishes
-the account's posts as a stable JSON URL. The site fetches that URL in the
-browser and renders the carousel. Posts stay in sync with the account
-automatically.
-
----
-
-## Setup (~10 minutes, once)
-
-1. Go to **https://behold.so** and create a free account.
-   (Any equivalent service that outputs an Instagram JSON feed works the same —
-   Behold's free tier covers one feed, which is all this needs.)
-2. **Connect the @denadatequila Instagram account** when prompted.
-3. Create a feed, choose **JSON** as the output.
-4. Copy the feed URL it gives you.
-5. Open **`js/ig-config.js`** and paste it:
-
-   ```js
-   feedUrl: "https://feeds.behold.so/XXXXXXXXXXXX",
-   ```
-
-6. Commit and deploy. The carousel appears on the homepage between the
-   "Quiet Craft" band and "The Guest List" signup.
+- Instagram tokens last **60 days**; each refresh restarts the clock. A weekly
+  schedule plus the 7-day lazy fallback means the token effectively never dies.
+- The refreshed token lives in **Netlify Blobs** (key-value storage included
+  in Netlify), so it survives deploys. The environment variable is only the
+  seed that starts the system.
+- Feed responses are **cached for 45 minutes**, so Instagram sees ~32 calls a
+  day no matter the traffic. If Instagram is down, the last good feed is
+  served; if nothing works, the carousel hides rather than looking broken.
 
 ---
 
-## Behavior
+## One-time setup (~30 minutes)
 
-- **Not configured / feed down / network error** → the section stays hidden.
-  The page never shows a broken or empty band.
-- Posts render newest-first as square tiles; each links to the post on
-  Instagram in a new tab. Videos show their cover image.
-- `limit` in `js/ig-config.js` caps how many posts show (default 12).
-- Arrows page through on desktop; on mobile it is swipe-to-scroll.
+### 1. Get an Instagram access token
 
-## If the team ever wants to self-host instead
+Requirements: the @denadatequila Instagram account must be a **Professional
+account** (Business or Creator — Settings → Account type in the app).
 
-`js/instagram.js` also understands raw **Instagram Graph API** responses
-(`{ data: [...] }`), so a Netlify scheduled function that refreshes a token
-and caches the API response would drop in with no renderer changes. That
-setup requires a Meta developer app, a Business/Creator Instagram account,
-and token-refresh plumbing — the feed-service route above avoids all of it.
+1. Go to **https://developers.facebook.com** and log in.
+2. **Create App** → use case: **Other** → type: **Business**.
+3. In the app dashboard, **Add product → Instagram**, choose
+   **"API setup with Instagram business login"**.
+4. Under **Generate access tokens**, add the @denadatequila account and log
+   in with its credentials when prompted.
+5. Click **Generate token** next to the account and copy it (a long string).
+   This is a 60-day long-lived token — the site takes care of it from here.
+
+### 2. Put the token in Netlify
+
+1. Netlify → the denadatequila site → **Site configuration →
+   Environment variables → Add a variable**.
+2. Key: `IG_ACCESS_TOKEN` — Value: the token from step 1.
+3. **Trigger a deploy** (Deploys → Trigger deploy) so functions pick it up.
+
+That's it. The carousel appears on the homepage once `/api/instagram` starts
+returning posts, and the token now refreshes itself weekly.
+
+### 3. Verify (optional but recommended)
+
+- Open `https://www.denadatequila.com/api/instagram` — should return JSON
+  starting with `{"data":[{...`.
+- Load the homepage — the carousel appears between Quiet Craft and the
+  Guest List signup.
+- Netlify → **Logs → Functions** shows `instagram-feed` runs, and
+  `instagram-refresh` appears each Monday.
+
+---
+
+## Troubleshooting
+
+| Symptom | Likely cause | Fix |
+|---|---|---|
+| `/api/instagram` returns `{"error":"not configured"}` | Env var missing or deploy predates it | Set `IG_ACCESS_TOKEN`, redeploy |
+| Worked, then died weeks later | Token invalidated (account password change, security checkpoint, or >60 days with functions failing) | Generate a fresh token (step 1.5), update the env var, redeploy |
+| Carousel hidden but `/api/instagram` returns posts | Browser cached an old failure | Hard refresh; it self-heals |
+
+Note: changing the Instagram account's password, or Meta flagging the account,
+invalidates the token. The fix is always the same two minutes: regenerate the
+token in the Meta app dashboard and update `IG_ACCESS_TOKEN`.
+
+---
+
+## Alternative: feed service (no Meta app)
+
+If the team ever prefers not to own a Meta developer app, a service like
+**behold.so** (free tier) does the same job: connect the Instagram account
+there, then set `feedUrl` in `js/ig-config.js` to the JSON URL it provides.
+The renderer accepts both formats. The functions can be left in place; unused,
+they cost nothing.
+
+---
 
 ## Files
 
 | File | Role |
 |---|---|
-| `js/ig-config.js` | **The only file to edit.** Feed URL, handle, post limit. |
-| `js/instagram.js` | Fetches the feed and renders the carousel. |
-| `index.html` | The carousel section (`#ig`), hidden until posts load. |
+| `netlify/functions/instagram-feed.mjs` | Serves `/api/instagram` (cached feed, lazy token refresh) |
+| `netlify/functions/instagram-refresh.mjs` | Weekly scheduled token refresh |
+| `netlify/lib/ig.mjs` | Shared Instagram API + Blobs helpers |
+| `netlify.toml` | Declares the functions directory |
+| `js/ig-config.js` | Points the carousel at `/api/instagram` |
+| `js/instagram.js` | Fetches the feed and renders the carousel |
+| `index.html` | The carousel section (`#ig`), hidden until posts load |
