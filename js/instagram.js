@@ -20,6 +20,22 @@
 
   var CFG = window.DENADA_IG || {};
 
+  /* Pick the best image for a square tile.
+     Feed services expose pre-resized copies under `sizes`; preferring those
+     over the full-resolution `mediaUrl` keeps a 12-tile carousel light.
+     Videos have no still of their own, so use their cover thumbnail. */
+  function pickImage(p) {
+    var sizes = p.sizes || {};
+    var resized = (sizes.medium && sizes.medium.mediaUrl) ||
+                  (sizes.small && sizes.small.mediaUrl) ||
+                  (sizes.large && sizes.large.mediaUrl) || "";
+    var full = p.mediaUrl || p.media_url || "";
+    var thumb = p.thumbnailUrl || p.thumbnail_url || "";
+    var type = String(p.mediaType || p.media_type || "").toUpperCase();
+    if (type === "VIDEO") return thumb || resized || full;
+    return resized || full || thumb;
+  }
+
   function normalize(json) {
     var list = Array.isArray(json) ? json
              : (json && Array.isArray(json.posts)) ? json.posts
@@ -28,8 +44,7 @@
     var posts = [];
     for (var i = 0; i < list.length; i++) {
       var p = list[i] || {};
-      var img = p.thumbnailUrl || p.thumbnail_url || p.mediaUrl || p.media_url ||
-                (p.sizes && p.sizes.medium && p.sizes.medium.mediaUrl) || "";
+      var img = pickImage(p);
       var link = p.permalink || p.url || "";
       if (!img || !link) continue;
       var cap = (p.prunedCaption || p.caption || "").replace(/\s+/g, " ").trim();

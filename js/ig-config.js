@@ -38,7 +38,7 @@
 
 window.DENADA_IG = {
   /* Paste the feed URL here (see above). Empty = carousel stays hidden. */
-  feedUrl: "",
+  feedUrl: "https://feeds.behold.so/ALOsU8ffQo6VCjLHEtZL",
 
   /* Shown in the section heading and the Follow button. */
   handle: "@denadatequila",
