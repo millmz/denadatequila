@@ -44,14 +44,25 @@ homepage carousel
 Requirements: the @denadatequila Instagram account must be a **Professional
 account** (Business or Creator — Settings → Account type in the app).
 
+Do this in an **incognito window**, so Instagram authorizes as the brand
+account rather than whichever account the everyday browser is signed into.
+
 1. Go to **https://developers.facebook.com** and log in.
 2. **Create App** → use case: **Other** → type: **Business**.
-3. In the app dashboard, **Add product → Instagram**, choose
-   **"API setup with Instagram business login"**.
-4. Under **Generate access tokens**, add the @denadatequila account and log
-   in with its credentials when prompted.
-5. Click **Generate token** next to the account and copy it (a long string).
-   This is a 60-day long-lived token — the site takes care of it from here.
+   (If the app already exists, skip to step 3 and open it from **My Apps**.)
+3. In the app dashboard left sidebar: **Instagram** →
+   **API setup with Instagram business login**.
+4. Under **Generate access tokens**, click **Add account**. Instagram's login
+   opens: sign in as **@denadatequila** and click **Allow**.
+5. Click **Generate token** next to the connected account and copy it
+   immediately — **Meta will not show it again**. This is a 60-day
+   long-lived token; the site takes over from here.
+
+> **Not the same thing:** Business Manager → *Add people and set permissions*
+> assigns **advertising** permissions for an app ("measure app-related ad
+> performance, manage campaigns…"). It does not grant API access, and adding
+> the Instagram account there will not produce a token. Everything above
+> happens in the **App Dashboard** at developers.facebook.com.
 
 ### 2. Put the token in Netlify
 
