@@ -69,6 +69,8 @@ nav{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:2px s
 .p-card.blanco .p-swatch{background:var(--turquoise)}
 .p-card.repo .p-swatch{background:var(--orange)}
 .p-card.bundle .p-swatch{background:var(--green)}
+.cart-link{position:relative}
+.cart-count{display:none;margin-left:7px;background:var(--gold);color:var(--black);border-radius:999px;padding:1px 7px;font-size:.7rem;font-weight:600}
 .p-card.alu-blanco .p-swatch{background:var(--turquoise)}
 .p-card.alu-repo .p-swatch{background:var(--orange)}
 .p-card.anejo .p-swatch{background:var(--black)}
@@ -157,7 +159,8 @@ footer a:hover{color:var(--cream)}
       <a href="cocktails.html">Behind the Bar</a>
       <a href="index.html#craft">Quiet Craft</a>
       <a href="our-story.html">Our Story</a>
-      <a class="btn" href="shop.html">Shop</a>
+      <a href="shop.html">Shop</a>
+      <a class="btn cart-link" href="cart.html">Cart<span class="cart-count" data-cart-count></span></a>
     </div>
   </div>
 </nav>
@@ -192,7 +195,7 @@ footer a:hover{color:var(--cream)}
         <h3>Blanco</h3>
         <p>Bright and agave-forward with vanilla and lime. The house margarita starts here. Double Gold, Agavos Awards 2025.</p>
         <div class="p-price">$54.99</div>
-        <a class="btn" href="https://shop.denadatequila.com/products/denada-tequila-blanco">Buy Blanco</a>
+        <a class="btn" href="product-blanco.html">Buy Blanco</a>
       </div>
     </article>
     <article class="p-card repo rv">
@@ -203,7 +206,7 @@ footer a:hover{color:var(--cream)}
         <h3>Reposado</h3>
         <p>Four months in ex-bourbon oak. Vanilla, caramel, and the golden hour pour. Gold, Agavos Awards 2025.</p>
         <div class="p-price">$59.99</div>
-        <a class="btn" href="https://shop.denadatequila.com/products/denada-tequila-reposado">Buy Reposado</a>
+        <a class="btn" href="product-reposado.html">Buy Reposado</a>
       </div>
     </article>
     <article class="p-card anejo rv">
@@ -214,7 +217,7 @@ footer a:hover{color:var(--cream)}
         <h3>A&ntilde;ejo</h3>
         <p>A minimum of one year in ex-bourbon American oak. Chocolate, spice, and a delicate finish. Gold, Agavos Awards 2026.</p>
         <div class="p-price">$79.99</div>
-        <a class="btn" href="https://shop.denadatequila.com/">Buy A&ntilde;ejo</a>
+        <a class="btn" href="product-anejo.html">Buy A&ntilde;ejo</a>
       </div>
     </article>
   </div>
@@ -233,7 +236,7 @@ footer a:hover{color:var(--cream)}
         <h3>The Original Blanco</h3>
         <p>The bottle that put us on the map. Unbreakable, featherweight, and welcome everywhere glass isn&rsquo;t: the pool, the boat, the beach. When it&rsquo;s gone, it&rsquo;s gone.</p>
         <div class="p-price">$41.99</div>
-        <a class="btn" href="https://shop.denadatequila.com/products/denada-tequila-blanco">Buy the Original</a>
+        <a class="btn" href="product-aluminum-blanco.html">Buy the Original</a>
       </div>
     </article>
     <article class="p-card alu-repo rv">
@@ -243,7 +246,7 @@ footer a:hover{color:var(--cream)}
         <h3>The Original Reposado</h3>
         <p>Four months in oak, zero chance of breaking. The golden hour pour for places without a shelf in sight. The first of its kind, and the last of its run.</p>
         <div class="p-price">$45.99</div>
-        <a class="btn" href="https://shop.denadatequila.com/products/denada-tequila-reposado">Buy the Original</a>
+        <a class="btn" href="product-aluminum-reposado.html">Buy the Original</a>
       </div>
     </article>
   </div>
@@ -331,5 +334,7 @@ function dnAgeYes(){
   document.documentElement.style.overflow = '';
 }
 </script>
+<script src="js/shop-config.js"></script>
+<script src="js/checkout.js"></script>
 </body>
 </html>
