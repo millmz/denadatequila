@@ -13,6 +13,10 @@ only need to paste Shopify variant IDs into **one file**.
 
 That's the whole job. No HTML to touch, no other files.
 
+Testing before launch? See **[Testing against a draft theme](#testing-against-a-draft-theme-before-go-live)**
+— one extra line in the same file points every button at a draft Shopify theme,
+and `shop-preflight.html` verifies the whole set.
+
 ---
 
 ## Where the cart lives: Shopify
@@ -116,6 +120,69 @@ Shopify pages, so those buttons work right now.
 
 ---
 
+## Testing against a draft theme (before go-live)
+
+The site can hand off to a **draft** Shopify theme instead of the live one, so
+the full flow — product page → cart → checkout — is testable while the current
+store stays untouched for real customers.
+
+### What has to happen in Shopify (admin clicks, not code)
+
+1. **Online Store → Themes** → on the new theme, **… → Duplicate** if you want a
+   scratch copy, then leave it under **Draft themes**. Do *not* publish it.
+2. On that draft theme: **… → Preview**. The URL that opens contains the theme ID:
+
+   ```
+   https://shop.denadatequila.com/?preview_theme_id=123456789012
+                                                    ^^^^^^^^^^^^  ← this number
+   ```
+
+3. Send that theme ID to whoever is doing the testing. It is not a secret, and
+   it does not affect live shoppers — a draft theme only renders for requests
+   that carry the ID.
+
+### What to change on the site
+
+One line in `js/shop-config.js`:
+
+```js
+previewThemeId: "123456789012",   // draft theme — testing
+```
+
+Every Buy button now lands on Shopify rendered in that draft theme. Checkout
+still works normally, so orders can be placed end to end (use a test order or a
+100%-off discount code).
+
+### Verifying it
+
+Open **`shop-preflight.html`** in a browser. It reads the live config and shows,
+for each SKU, whether its variant ID is set and the exact URL its buttons will
+use — with one-click test links for both Add to Cart and Buy It Now. A banner at
+the top says whether you're in draft-theme mode or live mode.
+
+The page is `noindex` and is not linked from anywhere on the site.
+
+---
+
+## Going live
+
+Two things, in this order:
+
+1. **Variant IDs are filled in** for every SKU you want purchasable
+   (`shop-preflight.html` shows green pills for all of them).
+2. **Clear the draft theme switch** in `js/shop-config.js`:
+
+   ```js
+   previewThemeId: "",
+   ```
+
+3. Publish the new theme in Shopify, and deploy the site.
+
+That's the switch. Until step 2 happens, nothing the site links to touches the
+live theme.
+
+---
+
 ## Attribution
 
 Handoff links carry UTM parameters so Shopify analytics can attribute these
@@ -133,8 +200,9 @@ Change or clear this in the `utm` field of `js/shop-config.js`.
 
 | File | What it is |
 |---|---|
-| `js/shop-config.js` | **The only file you edit.** Variant IDs, prices, store domain, UTM. |
+| `js/shop-config.js` | **The only file you edit.** Variant IDs, prices, store domain, UTM, draft theme ID. |
 | `js/checkout.js` | Builds the Shopify handoff URLs. No need to touch. |
+| `shop-preflight.html` | Test page: shows every SKU's config state and its live handoff URLs. Not indexed, not linked. |
 | `product-*.html` | The five product pages. |
 | `shop.html` | Shop grid; Buy buttons link to the product pages. |
 | `img/*.webp` | Bottle images used by the product pages. |

@@ -28,20 +28,32 @@
 
   function base() { return "https://" + CFG.storeDomain; }
 
-  function withUtm(url) {
-    if (!CFG.utm) return url;
-    return url + (url.indexOf("?") === -1 ? "?" : "&") + CFG.utm;
+  function previewId() { return String(CFG.previewThemeId || "").trim(); }
+
+  function join(url, param) {
+    return url + (url.indexOf("?") === -1 ? "?" : "&") + param;
+  }
+
+  /* Shopify renders the draft theme for any request carrying preview_theme_id,
+     and sets a cookie so the rest of the session stays in that theme. */
+  function withPreview(url) {
+    var id = previewId();
+    return id ? join(url, "preview_theme_id=" + encodeURIComponent(id)) : url;
+  }
+
+  function decorate(url) {
+    return withPreview(CFG.utm ? join(url, CFG.utm) : url);
   }
 
   /* Shopify: add to cart, then land on Shopify's cart page. */
   function addToCartUrl(variantId, qty) {
-    return withUtm(base() + "/cart/add?id=" + encodeURIComponent(variantId) +
-                   "&quantity=" + qty + "&return_to=/cart");
+    return decorate(base() + "/cart/add?id=" + encodeURIComponent(variantId) +
+                    "&quantity=" + qty + "&return_to=/cart");
   }
 
   /* Shopify cart permalink: straight into checkout. */
   function buyNowUrl(variantId, qty) {
-    return withUtm(base() + "/cart/" + encodeURIComponent(variantId) + ":" + qty);
+    return decorate(base() + "/cart/" + encodeURIComponent(variantId) + ":" + qty);
   }
 
   /* How far along a product is in Shopify setup decides what its buttons do. */
@@ -51,15 +63,16 @@
       return { mode: "variant", variantId: String(p.variantId).trim() };
     }
     if (String(p.productUrl || "").trim()) {
-      return { mode: "product", url: p.productUrl };
+      return { mode: "product", url: withPreview(p.productUrl) };
     }
-    return { mode: "store", url: CFG.storeUrl };
+    return { mode: "store", url: withPreview(CFG.storeUrl) };
   }
 
   window.DenadaShop = {
     buyTarget: buyTarget,
     addToCartUrl: addToCartUrl,
     buyNowUrl: buyNowUrl,
+    previewThemeId: previewId(),
     config: CFG
   };
 

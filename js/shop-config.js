@@ -62,6 +62,23 @@ window.DENADA_SHOP = {
   utm: "utm_source=website&utm_medium=shop&utm_campaign=dtc",
 
   /* --------------------------------------------------------------------------
+     DRAFT THEME PREVIEW — the staging switch
+     --------------------------------------------------------------------------
+     While this holds a theme ID, every Buy button lands on Shopify rendered in
+     that DRAFT theme instead of the live storefront. Checkout still works, so
+     the whole flow is testable end to end before anything ships.
+
+     Find the ID in Shopify admin > Online Store > Themes > (draft theme) >
+     ... > Preview. The preview URL contains it:
+
+       https://shop.denadatequila.com/?preview_theme_id=123456789012
+                                                        ^^^^^^^^^^^^
+
+     GO LIVE: set this back to "" and deploy. That is the whole switch.
+     -------------------------------------------------------------------------- */
+  previewThemeId: "",
+
+  /* --------------------------------------------------------------------------
      PRODUCTS
      Keys (blanco, reposado, ...) are used by the site. Do not rename them.
      Prices here are what the website displays. Keep them in sync with Shopify.
@@ -83,7 +100,7 @@ window.DENADA_SHOP = {
     },
 
     "anejo": {
-      name: "Anejo",
+      name: "Añejo",
       price: "79.99",
       variantId: "",                 // <-- PASTE SHOPIFY VARIANT ID
       productUrl: ""
