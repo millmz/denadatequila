@@ -83,33 +83,34 @@ window.DENADA_SHOP = {
      Keys (blanco, reposado, ...) are used by the site. Do not rename them.
      Prices here are what the website displays. Keep them in sync with Shopify.
 
-     STATUS (checked against shop.denadatequila.com/products.json):
-       - The two aluminum SKUs exist on Shopify and are wired up below.
-       - The three glass SKUs below do NOT exist on Shopify yet. Create them,
-         then paste their variant IDs in. Until then their buttons fall back
-         to the store homepage, which is the intended safe default.
+     STATUS: all five SKUs are wired and verified against
+     shop.denadatequila.com/products.json (19 Aug 2026). Every variant ID
+     resolves to a live Shopify product and every price below matches the
+     price Shopify charges. productUrl is also filled in as a safety net: if a
+     variant is ever deleted, change the variantId back to "" and the button
+     falls back to the product page instead of breaking.
      -------------------------------------------------------------------------- */
   products: {
 
     "blanco": {
       name: "Blanco",
       price: "49.99",
-      variantId: "",                 // <-- PASTE SHOPIFY VARIANT ID
-      productUrl: ""                 // optional Shopify product page
+      variantId: "52046465892640",   // Shopify SKU 24628, confirmed $49.99
+      productUrl: "https://shop.denadatequila.com/products/de-nada-tequila-blanco-700ml"
     },
 
     "reposado": {
       name: "Reposado",
       price: "54.99",
-      variantId: "",                 // <-- PASTE SHOPIFY VARIANT ID
-      productUrl: ""
+      variantId: "52046468317472",   // Shopify SKU 24627, confirmed $54.99
+      productUrl: "https://shop.denadatequila.com/products/de-nada-tequila-reposado-700ml"
     },
 
     "anejo": {
       name: "Añejo",
       price: "79.99",
-      variantId: "",                 // <-- PASTE SHOPIFY VARIANT ID
-      productUrl: ""
+      variantId: "52046488600864",   // Shopify SKU 24629, confirmed $79.99
+      productUrl: "https://shop.denadatequila.com/products/de-nada-tequila-anejo-700ml"
     },
 
     /* The original aluminum bottles. These two already exist on Shopify, so
