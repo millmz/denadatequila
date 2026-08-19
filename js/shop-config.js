@@ -87,14 +87,14 @@ window.DENADA_SHOP = {
 
     "blanco": {
       name: "Blanco",
-      price: "54.99",
+      price: "49.99",
       variantId: "",                 // <-- PASTE SHOPIFY VARIANT ID
       productUrl: ""                 // optional Shopify product page
     },
 
     "reposado": {
       name: "Reposado",
-      price: "59.99",
+      price: "54.99",
       variantId: "",                 // <-- PASTE SHOPIFY VARIANT ID
       productUrl: ""
     },

@@ -62,8 +62,8 @@ No payment or customer data ever touches this site.
 
 | Key in config | Product | Size | Site price | Product page |
 |---|---|---|---|---|
-| `blanco` | Blanco | 700mL | $54.99 | `product-blanco.html` |
-| `reposado` | Reposado | 700mL | $59.99 | `product-reposado.html` |
+| `blanco` | Blanco | 700mL | $49.99 | `product-blanco.html` |
+| `reposado` | Reposado | 700mL | $54.99 | `product-reposado.html` |
 | `anejo` | Añejo | 700mL | $79.99 | `product-anejo.html` |
 | `aluminum-blanco` | The Original Blanco (aluminum) | 700mL | $41.99 | `product-aluminum-blanco.html` |
 | `aluminum-reposado` | The Original Reposado (aluminum) | 700mL | $45.99 | `product-aluminum-reposado.html` |
@@ -88,7 +88,7 @@ Paste it as a string:
 ```js
 "blanco": {
   name: "Blanco",
-  price: "54.99",
+  price: "49.99",
   variantId: "44445556667778",   // ← here
   productUrl: ""
 },
