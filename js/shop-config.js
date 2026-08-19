@@ -82,6 +82,12 @@ window.DENADA_SHOP = {
      PRODUCTS
      Keys (blanco, reposado, ...) are used by the site. Do not rename them.
      Prices here are what the website displays. Keep them in sync with Shopify.
+
+     STATUS (checked against shop.denadatequila.com/products.json):
+       - The two aluminum SKUs exist on Shopify and are wired up below.
+       - The three glass SKUs below do NOT exist on Shopify yet. Create them,
+         then paste their variant IDs in. Until then their buttons fall back
+         to the store homepage, which is the intended safe default.
      -------------------------------------------------------------------------- */
   products: {
 
@@ -112,14 +118,14 @@ window.DENADA_SHOP = {
     "aluminum-blanco": {
       name: "The Original Blanco",
       price: "41.99",
-      variantId: "",                 // <-- PASTE SHOPIFY VARIANT ID
+      variantId: "49037824852256",   // Shopify SKU 16154, confirmed $41.99
       productUrl: "https://shop.denadatequila.com/products/denada-tequila-blanco"
     },
 
     "aluminum-reposado": {
       name: "The Original Reposado",
       price: "45.99",
-      variantId: "",                 // <-- PASTE SHOPIFY VARIANT ID
+      variantId: "49037825376544",   // Shopify SKU 16153, confirmed $45.99
       productUrl: "https://shop.denadatequila.com/products/denada-tequila-reposado"
     }
 
