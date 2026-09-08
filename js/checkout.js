@@ -68,10 +68,17 @@
     return { mode: "store", url: withPreview(CFG.storeUrl) };
   }
 
+  /* Shipping note for a SKU on pre-order, or "" when it ships normally. */
+  function preorderNote(sku) {
+    var p = CFG.products[sku] || {};
+    return String(p.preorder || "").trim();
+  }
+
   window.DenadaShop = {
     buyTarget: buyTarget,
     addToCartUrl: addToCartUrl,
     buyNowUrl: buyNowUrl,
+    preorderNote: preorderNote,
     previewThemeId: previewId(),
     config: CFG
   };
@@ -111,7 +118,44 @@
       // The shipping note below the buttons already explains that the cart and
       // checkout live on the store, so nothing extra is shown here.
     }
+
+    // Pre-order: same handoff, different promise. The customer pays now and
+    // the note says when it ships. Set per SKU in shop-config.js.
+    var pre = preorderNote(sku);
+    if (pre) {
+      addBtn.textContent = "Pre-Order";
+      buyBtn.textContent = "Pre-Order Now";
+      var noteEl = document.getElementById("buy-note");
+      if (noteEl) {
+        noteEl.textContent = "Pre-order — " + pre.charAt(0).toLowerCase() + pre.slice(1) + ".";
+        noteEl.classList.add("preorder");
+      }
+    }
   }
 
-  document.addEventListener("DOMContentLoaded", wireProductPage);
+  /* --------------------------------------------------- grid button labels */
+  // Any link marked data-buy-sku="<sku>" reads "Pre-Order ..." instead of
+  // "Buy ..." while that SKU is on pre-order, with the shipping note beside it.
+  // Used by the shop grid, the homepage bottles and the QR landing page.
+  function wireGridLabels() {
+    document.querySelectorAll("[data-buy-sku]").forEach(function (el) {
+      var pre = preorderNote(el.getAttribute("data-buy-sku"));
+      if (!pre) return;
+      el.textContent = el.textContent.replace(/^\s*Buy\b/, "Pre-Order");
+      var tag = document.createElement("span");
+      tag.className = "preorder-note";
+      tag.textContent = pre;
+      // Cards laid out as a row put the note next to the price instead of
+      // under the button, via data-preorder-note-into=".selector".
+      var into = el.getAttribute("data-preorder-note-into");
+      var card = el.closest("article, .bcard, .p-card, .b-card");
+      var host = into && card ? card.querySelector(into) : null;
+      if (host) host.appendChild(tag); else el.insertAdjacentElement("afterend", tag);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    wireProductPage();
+    wireGridLabels();
+  });
 })();

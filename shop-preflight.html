@@ -80,6 +80,7 @@
       : t.mode === "product"
         ? '<span class="pill warn">product page only</span>'
         : '<span class="pill off">not set up</span>';
+    if (p.preorder) status += ' <span class="pill warn" title="' + p.preorder + '">pre-order</span>';
 
     var dest = t.mode === "variant"
       ? "Shopify cart + checkout"

@@ -183,6 +183,35 @@ live theme.
 
 ---
 
+## Pre-orders
+
+A SKU can be sold before it ships. Set `preorder` on it in `js/shop-config.js`:
+
+```js
+"blanco": {
+  ...
+  preorder: "Orders will ship early October"
+},
+```
+
+While that is set, every button for that bottle reads **Pre-Order** instead of
+**Buy**, with the note beside it — on the product page, the shop grid, the
+homepage bottles and the QR landing page. Checkout is unchanged: the customer
+pays now. `shop-preflight.html` shows a `pre-order` pill on affected SKUs.
+
+When the bottle is shipping, set `preorder: ""` and everything reverts to
+**Buy** in one deploy.
+
+**Shopify side, so the pre-order can actually be placed:** the product must be
+purchasable while it has no stock. On each glass product, under *Inventory*,
+either enter the quantity you are willing to pre-sell, or turn on **Continue
+selling when out of stock**. Otherwise Shopify shows "Sold out" at checkout and
+the pre-order fails. The Shopify product page itself will still say "Add to
+cart" — only the website carries the pre-order wording, which is fine as long as
+the store's navigation points back to the website.
+
+---
+
 ## Attribution
 
 Handoff links carry UTM parameters so Shopify analytics can attribute these
