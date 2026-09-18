@@ -15,6 +15,6 @@
         tagged with where it came from, and Netlify keeps a backup copy.
    ============================================================================ */
 window.DENADA_LIST = {
-  klaviyoCompanyId: "",   // <-- PUBLIC API key
-  klaviyoListId: ""       // <-- List ID
+  klaviyoCompanyId: "UvBtKg",   // PUBLIC API key
+  klaviyoListId: "WXrq3N"  // List ID
 };
