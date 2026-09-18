@@ -116,11 +116,12 @@ function dnAgeYes(){
 /* Netlify Forms: post in the background, then show the thank-you inline. */
 function dnRsvp(e, form){
   e.preventDefault();
-  var data = new FormData(form);
-  fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() })
-    .then(function(r){ if (!r.ok) throw new Error(r.status); form.style.display = 'none'; document.getElementById('thanks').style.display = 'block'; })
-    .catch(function(){ form.submit(); }); // plain POST as a fallback; Netlify shows its own confirmation or error
+  window.DenadaList.subscribe(form)
+    .then(function(){ form.style.display = 'none'; document.getElementById('thanks').style.display = 'block'; })
+    .catch(function(){ form.submit(); }); // plain POST as a last resort; Netlify shows its own confirmation or error
 }
 </script>
+<script src="js/list-config.js"></script>
+<script src="js/signup.js"></script>
 </body>
 </html>
