@@ -16,5 +16,5 @@
    ============================================================================ */
 window.DENADA_LIST = {
   klaviyoCompanyId: "UvBtKg",   // PUBLIC API key
-  klaviyoListId: ""       // <-- List ID
+  klaviyoListId: "WXrq3N"  // List ID
 };
