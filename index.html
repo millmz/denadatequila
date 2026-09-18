@@ -592,7 +592,7 @@ function dnRsvp(e, form){
   var data = new URLSearchParams(new FormData(form)).toString();
   btn.disabled = true; btn.textContent = 'One sec\u2026';
   fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:data})
-    .then(function(){ btn.textContent = 'You\u2019re in. De Nada.'; form.querySelector('input[name=email]').value=''; })
+    .then(function(r){ if (!r.ok) throw new Error(r.status); btn.textContent = 'You\u2019re in. De Nada.'; form.querySelector('input[name=email]').value=''; })
     .catch(function(){ btn.disabled = false; btn.textContent = 'RSVP'; alert('Something hiccuped. Try again?'); });
 }
 function toggleNav(btn){
