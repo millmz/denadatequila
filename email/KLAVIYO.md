@@ -95,11 +95,11 @@ yet.
 **Subject:** The house margarita
 **Preview:** Three ingredients. No excuses.
 
-> This is the one we make when people come over. It's the reason the Blanco
+> This is the one we make when people come over. It's the reason the Reposado
 > exists.
 >
 > **Tommy's Margarita**
-> 2 oz De Nada Blanco
+> 2 oz De Nada Reposado
 > 1 oz fresh lime
 > ½ oz agave nectar
 >
@@ -110,7 +110,7 @@ yet.
 > every one of them tells you which bottle it wants.
 >
 > [ **Behind the Bar** → denadatequila.com/cocktails.html ]
-> [ **Pre-order the Blanco** → denadatequila.com/product-blanco.html ]
+> [ **Pre-order the Reposado** → denadatequila.com/product-reposado.html ]
 >
 > De nada,
 > Danny & Adam
@@ -185,9 +185,9 @@ Shopify's own order confirmation goes out first; these add what it can't say.
 >
 > *(Conditional split on the item — one recipe per bottle:)*
 >
-> **Blanco → Tommy's Margarita** — 2 oz Blanco, 1 oz lime, ½ oz agave. Shake, strain, fresh ice.
-> **Reposado → De Nada Paloma** — 2 oz Reposado, top with grapefruit soda, squeeze of lime, salt rim.
-> **Añejo → Neat, one large cube** — and if you must: an Old Fashioned. 2 oz Añejo, ¼ oz agave, 2 dashes bitters, orange peel.
+> **Blanco → De Nada Paloma** — 2 oz Blanco, 2 oz fresh grapefruit, ½ oz lime, ¼ oz agave. Shake, strain over ice, top with club soda. Grapefruit wedge.
+> **Reposado → Tommy's Margarita** — 2 oz Reposado, 1 oz lime, ½ oz agave. Shake hard, strain over fresh ice.
+> **Añejo → Neat.** One large cube if you like. Let it sit a minute before the first sip; it opens up.
 >
 > Then invite someone over. That's the whole point.
 >
