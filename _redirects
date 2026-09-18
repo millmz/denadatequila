@@ -1,0 +1,9 @@
+# TEASER BRANCH — everything lands on the teaser until launch.
+# QR codes keep their attribution so scans still show up in analytics.
+/w/b   /?src=blanco-trailer&utm_source=fleet&utm_medium=qr&utm_campaign=blanco-trailer      301
+/w/r   /?src=reposado-trailer&utm_source=fleet&utm_medium=qr&utm_campaign=reposado-trailer  301
+/w/a   /?src=anejo-trailer&utm_source=fleet&utm_medium=qr&utm_campaign=anejo-trailer        301
+/w     /                                                                                    301
+# Old-site URLs and anything else: temporary redirect to the teaser (302, so
+# search engines keep the old URLs on file until the real site replaces them).
+/*     /   302

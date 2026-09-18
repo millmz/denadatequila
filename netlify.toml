@@ -1,0 +1,3 @@
+# Teaser branch: static, no functions.
+[build]
+  publish = "."
