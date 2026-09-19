@@ -6,6 +6,8 @@ one-time setup that makes them deliverable. Signups already land in the list
 
 **Voice, in one line:** a good host. Warm, direct, a little dry. Never "we're
 so excited". Never an exclamation mark doing the work a sentence should.
+**Never an em dash**, anywhere in an email. Rewrite the sentence. And the
+emails sell the glass bottles; the aluminum line is never the thing promoted.
 
 **Every email footer (compliance):**
 > De Nada Tequila · DNA Spirits LLC · [physical mailing address] · Must be 21+ to
@@ -71,23 +73,23 @@ yet.
 
 > **De Nada means "you're welcome."**
 >
-> Not the polite reflex — the real thing. The feeling of walking into a
+> Not the polite reflex. The real thing. The feeling of walking into a
 > friend's place and being handed a drink before you've taken your coat off.
 > That's what we're trying to bottle.
 >
-> We're Danny and Adam. We started De Nada going door to door with aluminum
-> bottles and an idea about hospitality. A few years on, the tequila is made at
+> We're Danny and Adam. We started De Nada going door to door with a few cases
+> and an idea about hospitality. A few years on, the tequila is made at
 > NOM 1414 in the highlands of Jalisco, from estate-grown agave, with nothing
-> added — and it's about to get a new home.
+> added. And it's about to get a new home.
 >
-> **On October 1st** we relaunch: three new glass bottles — Blanco, Reposado
-> and a first-ever Añejo — and a site built around the thing we actually care
-> about, which is what happens when you open one.
+> **On October 1st** the new De Nada opens. Three glass bottles: Blanco,
+> Reposado and a first-ever Añejo. And a site built around the thing we
+> actually care about, which is what happens when you open one.
 >
-> You're on the list, so you'll hear first. Until then, the Originals are still
-> pouring.
+> You're on the list, so you'll hear first. If you'd rather not wait, the
+> bottles are open for pre-order now and ship in early October.
 >
-> [ **Shop the Originals** → shop.denadatequila.com ]
+> [ **Pre-order the bottles** → shop.denadatequila.com ]
 >
 > De nada,
 > Danny & Adam
@@ -99,13 +101,13 @@ yet.
 
 > **The rule:** these are made to be opened, not collected.
 >
-> **Blanco** — bright and agave-forward, vanilla and lime. The house margarita
+> **Blanco:** bright and agave-forward, vanilla and lime. The house margarita
 > starts here. Double Gold, Agavos Awards 2025. *$49.99*
 >
-> **Reposado** — four months in ex-bourbon American oak. Vanilla, caramel and a
+> **Reposado:** four months in ex-bourbon American oak. Vanilla, caramel and a
 > smoky finish. The golden-hour pour. Gold, Agavos 2025. *$54.99*
 >
-> **Añejo** — our first. A year and more in oak. Chocolate, spice, a delicate
+> **Añejo:** our first. A year and more in oak. Chocolate, spice, a delicate
 > finish. Sip it. Gold, Agavos 2026. *$79.99*
 >
 > All three: additive-free, estate-grown agave, cooked slow in brick ovens,
@@ -133,7 +135,7 @@ yet.
 > Shake hard with ice. Strain over fresh ice. Salt if you want it; we usually
 > don't. Lime wheel.
 >
-> That's it. If you'd like the other twenty-four, they're on the site — and
+> That's it. If you'd like the other twenty-four, they're on the site, and
 > every one of them tells you which bottle it wants.
 >
 > [ **Behind the Bar** → denadatequila.com/cocktails.html ]
@@ -151,7 +153,7 @@ yet.
 
 > **The new De Nada is open.**
 >
-> Three glass bottles — Blanco, Reposado and our first Añejo — and a site
+> Three glass bottles: Blanco, Reposado and our first Añejo. And a site
 > that's less about the tequila than about what you do with it.
 >
 > The bottles ship early October. Pre-orders are open now, and the guest list
@@ -182,7 +184,8 @@ Shopify's own order confirmation goes out first; these add what it can't say.
 > the day they arrive, and you'll get a shipping email with tracking. An adult
 > (21+) needs to sign for it.
 >
-> Between now and then, we'll send exactly one more email — when it ships. If
+> Between now and then, we'll send exactly one more email: the one that says
+> it shipped. If
 > anything changes, you'll hear it from us first.
 >
 > De nada,
@@ -212,9 +215,9 @@ Shopify's own order confirmation goes out first; these add what it can't say.
 >
 > *(Conditional split on the item — one recipe per bottle:)*
 >
-> **Blanco → Tommy's Margarita** — 2 oz Blanco, 1 oz lime, ½ oz agave. Shake hard, strain over fresh ice. Lime wedge.
-> **Reposado → Mexican Style Old Fashioned** — 2 oz Reposado, ¼ oz mezcal, ¼ oz agave, 4 dashes Mexican chocolate bitters. Stir over ice, one large cube, orange peel.
-> **Añejo → Neat.** One large cube if you like. Let it sit a minute before the first sip; it opens up.
+> **Blanco: Tommy's Margarita.** 2 oz Blanco, 1 oz lime, ½ oz agave. Shake hard, strain over fresh ice. Lime wedge.
+> **Reposado: Mexican Style Old Fashioned.** 2 oz Reposado, ¼ oz mezcal, ¼ oz agave, 4 dashes Mexican chocolate bitters. Stir over ice, one large cube, orange peel.
+> **Añejo: Neat.** One large cube if you like. Let it sit a minute before the first sip; it opens up.
 >
 > Then invite someone over. That's the whole point.
 >
@@ -236,8 +239,8 @@ Shopify's own order confirmation goes out first; these add what it can't say.
 >
 > [ **Back to checkout** → {{ checkout URL }} ]
 >
-> If something got in the way — a question, a shipping worry — reply to this
-> email. A person reads it.
+> If a question got in the way, shipping or otherwise, reply to this email.
+> A person reads it.
 >
 > De nada,
 > Danny & Adam
@@ -259,9 +262,9 @@ Shopify's own order confirmation goes out first; these add what it can't say.
 **Subject:** Still pouring?
 **Preview:** One recipe, no strings.
 
-> It's been a while. No hard feelings — here's the best thing we've made all
-> season, and if you'd rather not hear from us, the link at the bottom does
-> that in one click.
+> It's been a while. No hard feelings. Here's the best thing we've made all
+> season. If you'd rather not hear from us, the link at the bottom does that
+> in one click.
 >
 > *(Current Behind the Bar recipe)*
 >
