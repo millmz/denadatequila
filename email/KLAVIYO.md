@@ -16,6 +16,33 @@ fill the address in there once.
 
 ---
 
+## Built in Klaviyo — Sept 19, 2026
+
+Everything below exists in the account. Edit copy in Klaviyo → Content →
+Templates (each flow email uses a *clone* of the master template, so edit the
+flow's own copy, not the master).
+
+| Thing | Klaviyo ID | Status | Trigger / rule |
+|---|---|---|---|
+| Welcome flow | `UQqXn7` | **Live** | Added to list `WXrq3N`; every email skips anyone who has *Placed Order* |
+| — Welcome 1 "You're welcome." | action `117746850` | Live | immediately |
+| — Welcome 2 "Three bottles. One rule." | action `117746852` | **Draft until Oct 1** | +3 days |
+| — Welcome 3 "The house margarita" | action `117746854` | **Draft until Oct 1** | +4 days |
+| Pre-order flow | `TiTQhi` | Live | *Placed Order* where an item name contains `700ml` → 1 h → "What happens next" |
+| Abandoned checkout | `YrGtJd` | Live | *Checkout Started* → 1 h → "Left something at the bar?" unless they ordered since. Re-entry after 7 days |
+| Post-purchase | `XDqUqN` | Live | *Fulfilled Order* → 5 d "The first pour" → 25 d "How was it?" → 30 d "The other one" (skipped if they re-ordered). 10 am local |
+| Win-back | `SwCgXT` | Live | joins segment *Unengaged 90* → "Still pouring?" |
+| Segment: Unengaged 90 — win-back | `TXVT4s` | active | on list ≥ 90 days, no email open in 90 days, still subscribed |
+| Segment: Unengaged 180 — sunset | `QVtUiH` | active | on list ≥ 180 days, no open and no order in 180 days → **suppress these monthly** (Audience → segment → ⋯ → Suppress) |
+| Launch campaign "It's here." | `01M2XKA0THK4TZ2PFTV4TVRD4Y` | **Draft**, send time pre-set Oct 1 9:00 am ET | Press *Schedule* on launch morning after the site is confirmed live |
+| Master templates | Welcome 1 `WczNp9`, 2 `X44RVM`, 3 `T44PbR`, Launch `TXzT3x`, Pre-order `RdBVwR`, Abandoned `UBcbGw`, Post-purchase `RkRs58` / `Redbzd` / `XJSEPZ`, Win-back `UK2Wh9` | | Reuse for new campaigns: Content → Templates → clone |
+
+**Still needed from you (Settings → Organization):** street address (footer is
+blank without it; legally required) and default sender email
+`orders@denadatequila.com`. Then Settings → Domains → branded sending domain.
+
+---
+
 ## Timing: what goes live when
 
 | | Now (teaser) | October 1st |

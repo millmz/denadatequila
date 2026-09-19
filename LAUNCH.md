@@ -13,9 +13,11 @@ you say "go" in the session — none of them run on their own.
 | 2 | **Shopify theme published** — the GitHub-connected theme is the live theme | you | Themes page shows *denadatequila-shopify-theme/main* as current |
 | 3 | **Checkout branding** — Settings → Checkout → Customize → Branding (colours, logo, fonts, square corners) | you | Reach checkout; it's cream/green, not white/blue |
 | 4 | **Email templates** — Settings → Notifications → Customize email templates → wordmark + `#018769` | you | Send a test order confirmation to yourself |
-| 5 | **Klaviyo flows built** — Welcome 1 live; Welcome 2 & 3 built and in *Draft*; Pre-order, Abandoned checkout, Post-purchase live | you | Flows page |
-| 6 | **Launch campaign drafted** in Klaviyo (copy in `email/KLAVIYO.md`), scheduled Oct 1, 9:00 am ET, to Guest List | you | Campaigns page shows it scheduled |
-| 7 | **Klaviyo sending domain verified** — Settings → Domains → `send.denadatequila.com` shows verified | you | Green check in Klaviyo |
+| 5 | ~~Klaviyo flows built~~ **Done (Sept 19).** Welcome 1 live; Welcome 2 & 3 in *Draft*; Pre-order, Abandoned checkout, Post-purchase, Win-back live. IDs in `email/KLAVIYO.md` | — | Flows page |
+| 5a | **Klaviyo organization address** — Settings → Organization → street address. Every email footer prints it; it is blank right now, and CAN-SPAM requires it | you | Send yourself a preview of Welcome 1; footer shows the address |
+| 5b | **Klaviyo default sender** — Settings → Organization → default sender email `orders@denadatequila.com` | you | Field is filled |
+| 6 | ~~Launch campaign drafted~~ **Done.** Campaign "Launch — It's here. (Oct 1)" is a draft with send time pre-set to Oct 1, 9:00 am ET. **Do not press Schedule until launch-day step 2 passes** — its button goes to `denadatequila.com/shop.html` | you (on the day) | Campaigns page |
+| 7 | **Klaviyo sending domain verified** — Settings → Domains → add `send.denadatequila.com`, add the CNAMEs at Squarespace, verify. None exists yet | you | Green check in Klaviyo |
 | 8 | **Old subscriber list imported** — Squarespace export → Klaviyo, tagged `legacy` | you | Member count |
 | 9 | **Old-site URL list** sent to Claude for redirects — or accept that old links 404 after launch | you → Claude | `_redirects` on `main` has the entries |
 | 10 | **Netlify Forms limit** — Forms → check current month's count; if near 100, upgrade or rely on Klaviyo | you | Forms page |
@@ -36,8 +38,8 @@ Pick a quiet morning. Everything below is reversible.
 | 4 | Verify on shop.denadatequila.com: header logo → website; menu items → website pages; add to cart → *Continue shopping* → `denadatequila.com/shop.html` | you | 2 min |
 | 5 | **Test a pre-order end to end** — from `denadatequila.com/shop.html` → Blanco → Pre-Order → Shopify cart → checkout. Use a 100%-off discount code to complete it, then cancel/refund the order | you | 5 min |
 | 6 | Check `shop-preflight.html` on the live domain — five green pills, three *pre-order* pills | you | 1 min |
-| 7 | **Klaviyo** → Welcome 2 and 3 → **Live** | you | 1 min |
-| 8 | **Launch campaign** — confirm it's scheduled (or send it now if the time has passed) | you | 1 min |
+| 7 | **Klaviyo** → Welcome 2 and 3 → **Live** (flow `UQqXn7`, or say "go" and Claude flips them) | you / [Claude] | 1 min |
+| 8 | **Launch campaign** → open "Launch — It's here. (Oct 1)" → Review → **Schedule** (time is pre-set; if 9 am has passed, send now) | you | 1 min |
 | 9 | **Instagram** bio link → `denadatequila.com`; post the launch | you | — |
 | 10 | Check QR: `denadatequila.com/w/b` → welcome page with Blanco highlighted | you | 1 min |
 
