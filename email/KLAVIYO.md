@@ -12,7 +12,10 @@ so excited". Never an exclamation mark doing the work a sentence should.
 2. **No puns.** No "pour" jokes, no "raise a glass", no "cheers to". Say the
    plain thing. "Behind the Bar" is the name of the cocktail section on the
    site, so it may appear as a label; nothing else bar-themed.
-3. **The emails sell the glass bottles.** The aluminum line is the Travel
+3. **Warm, not clipped.** Dry is fine; cold is not. Every email should read
+   like a note from a host who is glad you came, and the sign-off is always
+   "De Nada," with a capital N.
+4. **The emails sell the glass bottles.** The aluminum line is the Travel
    Bottle. It exists on the site and can be bought, but no email promotes it.
 
 **Every email footer (compliance):**
@@ -71,26 +74,28 @@ title. Keep those words in every title, glass and Travel Bottle alike.
 
 > **De Nada means "you're welcome."**
 >
-> Not the polite reflex. The real thing. The feeling of walking into a
-> friend's place and being handed a drink before you've taken your coat off.
-> That's what we're trying to bottle.
+> Not the polite reflex. The real thing.
+>
+> Thank you for signing up. We're glad you're here. What we're after is the
+> feeling of walking into a friend's place and being handed a drink before
+> you've taken your coat off. That's what we're trying to bottle.
 >
 > We're Danny and Adam. We started De Nada going door to door with a few cases
 > and an idea about hospitality. A few years on, the tequila is made at
 > NOM 1414 in the highlands of Jalisco, from estate-grown agave, with nothing
-> added.
+> added. We're pretty proud of it.
 >
 > There are three glass bottles now: **Blanco, Reposado and our first Añejo.**
-> And a site built around the thing we actually care about, which is what
-> happens when you open one.
+> And a site built around the thing we care about most, which is what happens
+> when you open one with people you like.
 >
-> You're on the list, so you'll hear about new bottles, new recipes and the
-> occasional dinner before anyone else. Not often. Only when it's worth your
-> time.
+> We'll write when there's something worth your time: a new bottle, a recipe
+> we can't stop making, the occasional dinner. Never more than that. And if
+> you ever have a question, just reply. It comes straight to us.
 >
 > [ **See the bottles** → denadatequila.com/shop.html ]
 >
-> De nada,
+> De Nada,
 > Danny & Adam
 
 ### Email 2, day 3
@@ -98,8 +103,9 @@ title. Keep those words in every title, glass and Travel Bottle alike.
 **Subject:** Three bottles. One rule.
 **Preview:** Made to be opened, not collected.
 
-> Three expressions from one distillery, NOM 1414 in the highlands of Jalisco,
-> and nothing added to any of them. Open the one that fits the evening.
+> A quick introduction to the three of them, since you'll be seeing them
+> around. All from one distillery, NOM 1414 in the highlands of Jalisco, and
+> nothing added to any of them. Open whichever one fits the evening.
 >
 > **Blanco:** bright and agave-forward, vanilla and lime. The house margarita
 > starts here. Double Gold, Agavos Awards 2025. *$49.99*
@@ -112,19 +118,20 @@ title. Keep those words in every title, glass and Travel Bottle alike.
 >
 > Estate-grown agave, cooked slow in brick ovens, twice distilled in copper.
 > Classical music during fermentation, because that's the kind of place it is.
+> We think you'll taste the difference.
 >
 > [ **See the bottles** → denadatequila.com/shop.html ]
 >
-> De nada,
+> De Nada,
 > Danny & Adam
 
 ### Email 3, day 7
 
 **Subject:** The house margarita
-**Preview:** Three ingredients. No excuses.
+**Preview:** Three ingredients. You probably have two of them.
 
-> This is the one we make when people come over. It's the reason the Blanco
-> exists.
+> This is the one we make when people come over, and it's the reason the
+> Blanco exists. We'd love for it to become your house drink too.
 >
 > **Tommy's Margarita**
 > 2 oz De Nada Blanco
@@ -135,12 +142,13 @@ title. Keep those words in every title, glass and Travel Bottle alike.
 > wedge. Salt if you want it; we usually don't.
 >
 > That's it. If you'd like the other twenty-four, they're on the site, and
-> every one of them tells you which bottle it wants.
+> every one of them tells you which bottle it wants. Make one this weekend and
+> let us know how it goes.
 >
 > [ **Behind the Bar** → denadatequila.com/cocktails.html ]
 > [ **Get the Blanco** → denadatequila.com/product-blanco.html ]
 >
-> De nada,
+> De Nada,
 > Danny & Adam
 
 ---
@@ -152,15 +160,16 @@ title. Keep those words in every title, glass and Travel Bottle alike.
 
 > **It's here.** New bottles. New home.
 >
-> The new De Nada is open. Three glass bottles: Blanco, Reposado and our first
-> Añejo. And a site that's less about the tequila than about what you do with
-> it.
+> The new De Nada is open, and we wanted you to be the first to see it. Three
+> glass bottles: Blanco, Reposado and our first Añejo. And a site that's less
+> about the tequila than about what you do with it and who you share it with.
 >
-> You're hearing about it first because you asked to. Come in.
+> Come in and have a look around. And thank you for waiting with us. It means
+> a lot.
 >
 > [ **See the bottles** → denadatequila.com/shop.html ]
 >
-> De nada,
+> De Nada,
 > Danny & Adam
 
 ---
@@ -171,19 +180,19 @@ title. Keep those words in every title, glass and Travel Bottle alike.
 1 hour later. No discount; it trains people to abandon.
 
 **Subject:** Your cart is still here.
-**Preview:** We kept it for you.
+**Preview:** We kept it for you. No rush.
 
-> **Still here.** We kept it for you.
+> **Still here.** We kept it for you. No rush.
 >
-> You were a click away from the {{ item name }}. It's still in your cart, and
-> it's not going anywhere.
+> Hi. You were a click away from the {{ item name }}, so we saved it in your
+> cart for whenever you're ready.
 >
 > [ **Back to checkout** → {{ checkout URL }} ]
 >
-> If a question got in the way, shipping or otherwise, reply to this email.
-> A person reads it.
+> If a question got in the way, about shipping or anything else, just reply to
+> this email. One of us will get back to you personally.
 >
-> De nada,
+> De Nada,
 > Danny & Adam
 
 ---
@@ -203,7 +212,8 @@ go out first; these add what they can't say.
 
 **Preview:** One recipe. The right one.
 
-> By now the bottle should be on your counter. This is what to do with it.
+> By now the bottle should be on your counter. Thank you, truly, for bringing
+> it home. Here's what we'd make first.
 >
 > *(Conditional on the item name, one recipe per bottle:)*
 >
@@ -211,52 +221,55 @@ go out first; these add what they can't say.
 > **Reposado: Mexican Style Old Fashioned.** 2 oz Reposado, ¼ oz mezcal, ¼ oz agave, 4 dashes Mexican chocolate bitters. Stir over ice, one large cube, orange peel.
 > **Añejo: Neat.** One large cube if you like. Let it sit a minute before the first sip; it opens up.
 >
-> Then invite someone over. That's the whole point.
+> Then invite someone over. That's the part we care about most, and we hope
+> it's a good night.
 >
 > [ **More recipes** → denadatequila.com/cocktails.html ]
 >
-> De nada,
+> De Nada,
 > Danny & Adam
 
 ### Email 2: How was it?
 
-**Preview:** One question. Thirty seconds.
+**Preview:** We'd genuinely like to know.
 
-> It's been a month since the bottle arrived. We'd like to know what you made
-> with it, who you shared it with, and whether it earned a second one.
+> It's been about a month since the bottle arrived, and we'd love to hear how
+> it went. What you made with it, who you shared it with, whether it earned a
+> spot on the counter.
 >
-> Hit reply and tell us. One line is plenty. It goes to Danny and Adam, not a
-> form.
+> Just hit reply. One line is plenty, and it comes straight to Danny and Adam,
+> not a form. Thank you for being one of the first.
 >
 > [ **Tell us** → mailto:orders@denadatequila.com ]
 >
-> De nada,
+> De Nada,
 > Danny & Adam
 
 ### Email 3: The other one
 
 **Preview:** You've met one bottle. Here's the next.
 
-> *(Bought Añejo:)* You started at the top. The Añejo is a sipper; the
+> *(Bought Añejo:)* You started at the top, and we respect that. The Añejo is a sipper; the
 > **Blanco** is the one that makes the drinks. Bright and agave-forward,
 > vanilla and lime. The house margarita starts here, and so does most of the
 > cocktail book.
 >
 > *(Bought Reposado:)* The Reposado is the bottle for the end of the day. The
 > **Añejo** is what comes after: a year and more in oak, chocolate and spice,
-> a delicate finish. Our first, and the one to sip neat when the evening slows
-> down.
+> a delicate finish. It's our first, and we're a little sentimental about it.
+> Sip it neat when the evening slows down.
 >
 > *(Bought Blanco:)* The Blanco is where the drinks start. The **Reposado** is
 > where the evening goes: four months in ex-bourbon oak, vanilla and caramel,
 > a smoky finish. Gold at the Agavos Awards, and the bottle for an Old
 > Fashioned.
 >
-> No pressure. But you know how the first one went.
+> No pressure at all. We just had a feeling you'd like it, and we'd rather you
+> hear about it from us.
 >
 > [ **Meet the …** → that bottle's product page ]
 >
-> De nada,
+> De Nada,
 > Danny & Adam
 
 ---
@@ -267,10 +280,13 @@ go out first; these add what they can't say.
 days). One email.
 
 **Subject:** It's been a while.
-**Preview:** One recipe, no strings.
+**Preview:** A recipe, and a hello.
 
-> No hard feelings. Here's the drink we've been making most lately. If you'd
-> rather not hear from us, the link at the bottom does that in one click.
+> Hi again. We've been quiet in your inbox, or maybe you've been quiet with
+> ours, and either way there are no hard feelings. Here's the drink we've been
+> making most lately, in case it's useful this weekend. If you'd rather not
+> hear from us anymore, the link at the bottom takes care of it, no questions
+> asked.
 >
 > **De Nada Paloma**
 > 2 oz De Nada Blanco · 2 oz fresh grapefruit juice · ½ oz fresh lime ·
@@ -279,7 +295,7 @@ days). One email.
 >
 > [ **Behind the Bar** → denadatequila.com/cocktails.html ]
 >
-> De nada,
+> De Nada,
 > Danny & Adam
 
 Then a **sunset**: anyone still unengaged at 180 days → suppress. Unengaged
