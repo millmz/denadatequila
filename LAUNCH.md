@@ -13,7 +13,7 @@ you say "go" in the session — none of them run on their own.
 | 2 | **Shopify theme published** — the GitHub-connected theme is the live theme | you | Themes page shows *denadatequila-shopify-theme/main* as current |
 | 3 | **Checkout branding** — Settings → Checkout → Customize → Branding (colours, logo, fonts, square corners) | you | Reach checkout; it's cream/green, not white/blue |
 | 4 | **Email templates** — Settings → Notifications → Customize email templates → wordmark + `#018769` | you | Send a test order confirmation to yourself |
-| 5 | ~~Klaviyo flows built~~ **Done (Sept 19).** Welcome, Abandoned checkout, Post-purchase and Win-back are built and **all in Draft** until launch day. Nothing sends before Oct 1. IDs in `email/KLAVIYO.md` | — | Flows page |
+| 5 | ~~Klaviyo flows built~~ **Done (Sept 20).** Welcome, Abandoned checkout, Post-purchase, Win-back and the Behind the Bar recipe series (24 emails, one every two weeks) are built and **all in Draft** until launch day. Nothing sends before Oct 1. IDs in `email/KLAVIYO.md` | — | Flows page |
 | 5a | **Klaviyo organization address** — Settings → Organization → street address. Every email footer prints it; it is blank right now, and CAN-SPAM requires it | you | Send yourself a preview of Welcome 1; footer shows the address |
 | 5b | **Klaviyo default sender** — Settings → Organization → default sender email `orders@denadatequila.com` | you | Field is filled |
 | 6 | ~~Launch campaign drafted~~ **Done.** Campaign "Launch — It's here. (Oct 1)" is a draft with send time pre-set to Oct 1, 9:00 am ET. **Do not press Schedule until launch-day step 2 passes** — its button goes to `denadatequila.com/shop.html` | you (on the day) | Campaigns page |
@@ -39,7 +39,8 @@ Pick a quiet morning. Everything below is reversible.
 | 4a | **Shopify** → the three glass products → status **Active** | you | 1 min |
 | 5 | **Test an order end to end** — from `denadatequila.com/shop.html` → Blanco → Add to Cart → Shopify cart → checkout. Use a 100%-off discount code to complete it, then cancel/refund the order | you | 5 min |
 | 6 | Check `shop-preflight.html` on the live domain — five green pills, no *pre-order* pills | you | 1 min |
-| 7 | **Klaviyo flows → Live**: Welcome (all three emails), Abandoned checkout, Post-purchase, Win-back. Say "go" and Claude flips all four, or do it in Flows | you / [Claude] | 1 min |
+| 7 | **Klaviyo flows → Live**: Welcome (all three emails), Abandoned checkout, Post-purchase, Win-back, Behind the Bar. Say "go" and Claude flips all five, or do it in Flows | you / [Claude] | 1 min |
+| 7a | **Klaviyo → Flows → Behind the Bar → ⋯ → Back-populate** → segment *Email subscribers (all)*. Puts everyone already on the list into the recipe series; the API can't do this part | you | 1 min |
 | 8 | **Launch campaign** → open "Launch — It's here. (Oct 1)" → Review → **Schedule** (time is pre-set; if 9 am has passed, send now) | you | 1 min |
 | 9 | **Instagram** bio link → `denadatequila.com`; post the launch | you | — |
 | 10 | Check QR: `denadatequila.com/w/b` → welcome page with Blanco highlighted | you | 1 min |
