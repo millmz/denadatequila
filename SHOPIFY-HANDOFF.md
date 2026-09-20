@@ -65,8 +65,8 @@ No payment or customer data ever touches this site.
 | `blanco` | Blanco | 700mL | $49.99 | `product-blanco.html` |
 | `reposado` | Reposado | 700mL | $54.99 | `product-reposado.html` |
 | `anejo` | Añejo | 700mL | $79.99 | `product-anejo.html` |
-| `aluminum-blanco` | The Original Blanco (aluminum) | 700mL | $41.99 | `product-aluminum-blanco.html` |
-| `aluminum-reposado` | The Original Reposado (aluminum) | 700mL | $45.99 | `product-aluminum-reposado.html` |
+| `aluminum-blanco` | Travel Bottle Blanco (aluminum) | 700mL | $41.99 | `product-aluminum-blanco.html` |
+| `aluminum-reposado` | Travel Bottle Reposado (aluminum) | 700mL | $45.99 | `product-aluminum-reposado.html` |
 
 Prices displayed on the site come from `js/shop-config.js`. Keep them in sync
 with Shopify so the product page matches what the customer pays.
@@ -183,7 +183,10 @@ live theme.
 
 ---
 
-## Pre-orders
+## Pre-orders (mechanism kept in the code; not used for the Oct 1 launch)
+
+All `preorder` fields are blank. The glass bottles go on sale the day the site
+goes live, so nothing on the site or in email says "pre-order".
 
 A SKU can be sold before it ships. Set `preorder` on it in `js/shop-config.js`:
 

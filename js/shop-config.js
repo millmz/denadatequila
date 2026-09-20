@@ -90,13 +90,11 @@ window.DENADA_SHOP = {
      variant is ever deleted, change the variantId back to "" and the button
      falls back to the product page instead of breaking.
 
-     PRE-ORDERS
-     Set `preorder` on a product to a short shipping note, for example
-       preorder: "Orders will ship early October",
-     and every Buy button for that bottle reads "Pre-Order" with the note
-     beside it: product page, shop grid, homepage and the QR landing page.
-     Checkout itself is unchanged; the customer pays now. When the bottle is
-     shipping, set it back to "" and everything reverts to "Buy".
+     PRE-ORDERS (not used for the launch; every field below is "")
+     The mechanism stays for the future. Setting `preorder` on a product to a
+     short shipping note, for example "Orders ship in two weeks", makes every
+     Buy button for that bottle read "Pre-Order" with the note beside it.
+     Leave them blank and everything reads "Buy".
      -------------------------------------------------------------------------- */
   products: {
 
@@ -105,7 +103,7 @@ window.DENADA_SHOP = {
       price: "49.99",
       variantId: "52046465892640",   // Shopify SKU 24628, confirmed $49.99
       productUrl: "https://shop.denadatequila.com/products/de-nada-tequila-blanco-700ml",
-      preorder: "Orders will ship early October"
+      preorder: ""
     },
 
     "reposado": {
@@ -113,7 +111,7 @@ window.DENADA_SHOP = {
       price: "54.99",
       variantId: "52046468317472",   // Shopify SKU 24627, confirmed $54.99
       productUrl: "https://shop.denadatequila.com/products/de-nada-tequila-reposado-700ml",
-      preorder: "Orders will ship early October"
+      preorder: ""
     },
 
     "anejo": {
@@ -121,14 +119,14 @@ window.DENADA_SHOP = {
       price: "79.99",
       variantId: "52046488600864",   // Shopify SKU 24629, confirmed $79.99
       productUrl: "https://shop.denadatequila.com/products/de-nada-tequila-anejo-700ml",
-      preorder: "Orders will ship early October"
+      preorder: ""
     },
 
-    /* The original aluminum bottles. These two already exist on Shopify, so
+    /* The Travel Bottle line (aluminum). These two already exist on Shopify, so
        their product pages are pre-filled and the buttons work today. Add the
        variant IDs when you want them going straight to checkout instead. */
     "aluminum-blanco": {
-      name: "The Original Blanco",
+      name: "Travel Bottle Blanco",
       price: "41.99",
       variantId: "49037824852256",   // Shopify SKU 16154, confirmed $41.99
       productUrl: "https://shop.denadatequila.com/products/denada-tequila-blanco",
@@ -136,7 +134,7 @@ window.DENADA_SHOP = {
     },
 
     "aluminum-reposado": {
-      name: "The Original Reposado",
+      name: "Travel Bottle Reposado",
       price: "45.99",
       variantId: "49037825376544",   // Shopify SKU 16153, confirmed $45.99
       productUrl: "https://shop.denadatequila.com/products/denada-tequila-reposado",
