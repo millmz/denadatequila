@@ -75,3 +75,10 @@ Nothing else needs undoing; DNS never changes.
 | Email | Klaviyo — list `WXrq3N`; copy in `email/KLAVIYO.md` |
 | Shop config | `js/shop-config.js` — variant IDs, prices. `preorder` fields are blank and stay blank |
 | Pre-flight | `denadatequila.com/shop-preflight.html` |
+
+## Added September 22 (site audit fixes)
+
+| # | Item | Owner | How to check |
+|---|---|---|---|
+| 13 | **Shipping page facts.** `shipping.html` says orders leave in 1 to 2 business days, arrive in 2 to 5, three delivery attempts, replacements for breakage within 48 hours. Confirm each with the fulfilment retailer and edit the page if any differ | you | Read `shipping.html` once |
+| 14 | **GA4 cross-domain.** The site tag now links `shop.denadatequila.com`. In GA4: Admin → Data streams → the web stream → Configure tag settings → Configure your domains → add both `denadatequila.com` and `shop.denadatequila.com`. Then make sure the same GA4 stream is installed on Shopify (Google & YouTube channel, or Customer events) | you | Realtime report shows one session from site into checkout |

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /shop-preflight.html
+Disallow: /welcome.html
+
+Sitemap: https://www.denadatequila.com/sitemap.xml
