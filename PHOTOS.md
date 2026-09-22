@@ -121,7 +121,7 @@ Thirty-six picks are in the repo as `img/photos/<name>-1600.webp` and
 forehead mark is retouched on all six shots that had it. The Lakewood carton
 and the Gerolsteiner bottle are cropped out.
 
-The first pass used most of them. The revision keeps thirteen, on one rule: a
+The first pass used most of them. The revision (and Adam's notes on it) keeps twelve, on one rule: a
 photo earns its place only where the copy is about people, a place or a
 bottle, and nothing else on the page is already doing that job. Recipes keep
 their cocktail renders on the site and in every email (the renders are also
@@ -130,14 +130,13 @@ exported to `img/email/cocktails/<slug>.jpg`). Nudges (abandoned checkout,
 
 | Name | DSCF | Where it is used |
 |---|---|---|
-| toast | 2718 | Homepage hero, Launch email |
+| lineup / lineup-sq | 2220 | Homepage hero (the square crop, all three bottles) |
+| toast | 2718 | Launch email |
 | tray-pour | 2434 | Homepage "Great hosting isn't about", Welcome 1, Blanco page |
 | lineup-2 | 2222 | Welcome 2 |
-| founders | 3024 | Our Story header |
-| adam-bottles | 2977 | Our Story "Door to door" |
+| adam-portrait / danny-portrait | gold curtain, one bottle each | Our Story headshots ("The two behind the bottle") |
 | danny-anejo | 2994 | Añejo page |
 | dinner | 2614 | Our Story "The table is set" |
-| bar-table | 2532 | Cocktails page band |
 | blanco-table | 3096 | Blanco page |
 | reposado-table | 3125 | Reposado page |
 | reposado-back | 2952 | Reposado page |
@@ -145,10 +144,14 @@ exported to `img/email/cocktails/<slug>.jpg`). Nudges (abandoned checkout,
 | set-table | 2338 | Post-purchase 3 |
 
 Exported but not placed (in the repo, ready if a use comes up): toast-2,
-lineup, tray-pour-2, tray, table-overhead, kitchen-laugh, founders-cheers,
-founders-laugh, founders-drinks, kitchen-founders, adam, danny, bar-table-2,
-paloma-pour, strain, strain-2, danny-jigger, adam-shaker, cutting, uncork,
-rocks-glass, pink-drink, yellow-sip. The strongest of these for Instagram and
+tray-pour-2, tray, table-overhead, kitchen-laugh, founders, founders-cheers,
+founders-laugh, founders-drinks, kitchen-founders, adam, danny, adam-bottles,
+bar-table, bar-table-2, paloma-pour, strain, strain-2, danny-jigger,
+adam-shaker, cutting, uncork, rocks-glass, pink-drink, yellow-sip. No header
+photos on Behind the Bar or Our Story: both pages open on type. The hero
+stickers ("Additive Free", "NOM 1414") are gone; the marquee and the stats
+row still carry both facts. Handwritten captions stay only where they say
+something the photo does not: the tray on the homepage, the Añejo card. The strongest of these for Instagram and
 Host's Notes campaigns: founders-cheers, kitchen-founders, table-overhead,
 paloma-pour, yellow-sip.
 
