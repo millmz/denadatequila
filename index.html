@@ -102,11 +102,6 @@ nav{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:2px s
 .manif-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:48px;align-items:center;max-width:1180px;margin:0 auto}
 .manif-grid .card{max-width:none;margin:0}
 .manif-grid .ph-card{transform:rotate(-1.4deg)}
-.photo-band{position:relative;background:var(--black);border-top:2px solid var(--black);border-bottom:2px solid var(--black)}
-.photo-band img{width:100%;height:clamp(300px,50vw,620px);object-fit:cover;display:block}
-.photo-band .hand{position:absolute;right:36px;bottom:24px;font-family:'Caveat',cursive;font-weight:600;font-size:clamp(1.4rem,2.6vw,2rem);color:var(--cream);text-shadow:0 2px 12px rgba(0,0,0,.55);transform:rotate(-2deg)}
-.craft-photo{margin:0 0 56px;border:2px solid var(--gray);overflow:hidden}
-.craft-photo img{width:100%;height:auto;display:block;aspect-ratio:2/1;object-fit:cover}
 
 /* occasions marquee */
 .strip{background:var(--green);color:var(--cream);overflow:hidden;border-bottom:2px solid var(--black)}
@@ -272,8 +267,7 @@ footer a:hover{color:var(--cream)}
   .hero-photo{padding:0 0 30px;margin-top:6px}
   .manif-grid{grid-template-columns:1fr;gap:34px}
   .manif-grid .ph-card{max-width:420px;margin:0 auto}
-  .photo-band .hand{right:18px;bottom:14px}
-  .sticker.star{left:1%;top:2%;width:86px;height:86px;font-size:.5rem}
+    .sticker.star{left:1%;top:2%;width:86px;height:86px;font-size:.5rem}
   .sticker.dot{right:2%;top:6%;bottom:auto;width:74px;height:74px;font-size:.52rem}
   .counter{height:52px}
   .strip span{font-size:.68rem;letter-spacing:.16em;padding:0 20px}
@@ -489,11 +483,6 @@ footer a:hover{color:var(--cream)}
   </div>
 </section>
 
-<div class="photo-band rv">
-  <img src="img/photos/table-overhead-1600.webp" srcset="img/photos/table-overhead-800.webp 800w, img/photos/table-overhead-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="The table after dinner: pappardelle, beet salad, a bottle of De Nada Reposado and a margarita" loading="lazy">
-  <span class="hand">what happens after you open one</span>
-</div>
-
 <section class="menu" id="menu">
   <div class="wrap">
     <div class="card rv">
@@ -532,9 +521,6 @@ footer a:hover{color:var(--cream)}
     <div class="rule-set rv"><div class="tri"></div><div class="ticks"></div></div>
     <h2 class="disp rv">Quiet Craft</h2>
     <p class="kicker serif-i rv">Serious tequila, made without the show.</p>
-    <figure class="craft-photo rv">
-      <img src="img/photos/kitchen-founders-1600.webp" srcset="img/photos/kitchen-founders-800.webp 800w, img/photos/kitchen-founders-1600.webp 1600w" sizes="(max-width:960px) 100vw, 1280px" width="1600" height="1200" alt="Danny and Adam making drinks in the kitchen with the Blanco, Añejo and Reposado on the counter" loading="lazy">
-    </figure>
     <div class="stats rv">
       <div class="stat"><div class="n">6,600 FT</div><div class="l">Los Altos Elevation</div></div>
       <div class="stat"><div class="n">NOM 1414</div><div class="l">Familia Vivanco, Arandas</div></div>
@@ -552,26 +538,19 @@ footer a:hover{color:var(--cream)}
 </section>
 
 
-<section class="ig" id="ig">
+<section class="ig" id="ig" hidden>
   <div class="ig-head">
     <div class="rv">
       <span class="eyebrow">@denadatequila</span>
       <h2 class="disp">Proof of good hosting</h2>
-      <span class="serif-i">From a dinner at ours. Pull up a chair.</span>
+      <span class="serif-i">Live from the feed. Pull up a chair.</span>
     </div>
     <div class="ig-nav rv">
       <button type="button" data-ig-prev aria-label="Previous posts">&larr;</button>
       <button type="button" data-ig-next aria-label="Next posts">&rarr;</button>
     </div>
   </div>
-  <div class="ig-track" id="ig-track" aria-label="Photos from a De Nada dinner">
-    <a class="ig-tile" href="https://www.instagram.com/denadatequila/" target="_blank" rel="noopener"><img src="img/photos/kitchen-laugh-800.webp" alt="Adam and Danny laughing while a friend pours a margarita from a shaker" loading="lazy" decoding="async"></a>
-    <a class="ig-tile" href="https://www.instagram.com/denadatequila/" target="_blank" rel="noopener"><img src="img/photos/tray-pour-2-800.webp" alt="Pouring De Nada Blanco into tajín-rimmed shot glasses on a tray" loading="lazy" decoding="async"></a>
-    <a class="ig-tile" href="https://www.instagram.com/denadatequila/" target="_blank" rel="noopener"><img src="img/photos/founders-laugh-800.webp" alt="Danny and Adam laughing with drinks in hand" loading="lazy" decoding="async"></a>
-    <a class="ig-tile" href="https://www.instagram.com/denadatequila/" target="_blank" rel="noopener"><img src="img/photos/dinner-800.webp" alt="Friends around the dinner table, one holding up a bottle of De Nada Blanco" loading="lazy" decoding="async"></a>
-    <a class="ig-tile" href="https://www.instagram.com/denadatequila/" target="_blank" rel="noopener"><img src="img/photos/reposado-back-800.webp" alt="A bottle of De Nada Reposado held behind a guest's back" loading="lazy" decoding="async"></a>
-    <a class="ig-tile" href="https://www.instagram.com/denadatequila/" target="_blank" rel="noopener"><img src="img/photos/pink-drink-800.webp" alt="A guest raising a pink cocktail" loading="lazy" decoding="async"></a>
-  </div>
+  <div class="ig-track" id="ig-track" aria-label="Recent Instagram posts"></div>
   <div class="ig-cta rv">
     <a class="btn" href="https://www.instagram.com/denadatequila/" target="_blank" rel="noopener">Follow @denadatequila</a>
   </div>

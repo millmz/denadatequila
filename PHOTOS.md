@@ -114,47 +114,43 @@ Party, 05 Southside): the cilantro reach and the woman in yellow sipping.
 
 ---
 
-## Done (Sept 22)
+## Done (Sept 22, revised)
 
 Thirty-six picks are in the repo as `img/photos/<name>-1600.webp` and
 `-800.webp` (site) and `img/email/<name>.jpg` (Klaviyo, 1200 px). Adam's
 forehead mark is retouched on all six shots that had it. The Lakewood carton
 and the Gerolsteiner bottle are cropped out.
 
+The first pass used most of them. The revision keeps thirteen, on one rule: a
+photo earns its place only where the copy is about people, a place or a
+bottle, and nothing else on the page is already doing that job. Recipes keep
+their cocktail renders on the site and in every email (the renders are also
+exported to `img/email/cocktails/<slug>.jpg`). Nudges (abandoned checkout,
+"how was it") carry no image.
+
 | Name | DSCF | Where it is used |
 |---|---|---|
-| toast | 2718 | Homepage hero, Launch email, QR welcome page |
-| toast-2 | 2719 | Our Story closing band, Behind the Bar 24 |
-| lineup / lineup-2 | 2220 / 2222 | Cocktails "Stock the bar" / Welcome 2 |
-| tray-pour / tray-pour-2 | 2434 / 2437 | Homepage manifesto, Welcome 1, Blanco page, BtB 17 and 23 / homepage gallery |
-| tray | 2428 | spare |
-| table-overhead | 2784 | Homepage band, BtB 12 |
-| kitchen-laugh | 2530 | Homepage gallery |
+| toast | 2718 | Homepage hero, Launch email |
+| tray-pour | 2434 | Homepage "Great hosting isn't about", Welcome 1, Blanco page |
+| lineup-2 | 2222 | Welcome 2 |
 | founders | 3024 | Our Story header |
-| founders-cheers | 3036 | Our Story "The two behind the bottle" |
-| founders-laugh | 3043 | Homepage gallery |
-| founders-drinks | 3034 | spare |
-| kitchen-founders | 2505 | Homepage Quiet Craft |
 | adam-bottles | 2977 | Our Story "Door to door" |
-| danny-anejo | 2994 | Our Story "Then, we made history", Añejo page |
-| adam / danny | 2236 / 2417 | Our Story headshots |
-| bar-table | 2532 | Cocktails band, shop banner |
-| bar-table-2 | 2479 | Cocktails Garden Party card |
-| paloma-pour | 2325 | Cocktails Paloma card, Win-back, BtB 01 and 11 |
-| strain / strain-2 | 2647 / 2649 | BtB 04 and 18 / BtB 08 |
-| danny-jigger | 2279 | BtB 07 and 20 |
+| danny-anejo | 2994 | Añejo page |
+| dinner | 2614 | Our Story "The table is set" |
+| bar-table | 2532 | Cocktails page band |
+| blanco-table | 3096 | Blanco page |
+| reposado-table | 3125 | Reposado page |
+| reposado-back | 2952 | Reposado page |
 | danny-cap | 2266 | Post-purchase 1 |
-| adam-shaker | 2514 | Welcome 3, BtB 09 and 21 |
-| cutting | 2420 | BtB 05 and 19 |
-| uncork | 3086 | spare (the uncorking shot) |
-| blanco-table | 3096 | Blanco page, Abandoned checkout, BtB 13 and 22 |
-| reposado-table | 3125 | Reposado page, BtB 06 and 14 |
 | set-table | 2338 | Post-purchase 3 |
-| reposado-back | 2952 | Reposado page, homepage gallery, BtB 10 |
-| rocks-glass | 2959 | Cocktails Espresso Martini card, Añejo page, BtB 02 and 16 |
-| pink-drink | 2871 | Cocktails Tequila Sunrise card, Post-purchase 2, homepage gallery, BtB 15 |
-| yellow-sip | 2883 | Cocktails Tommy's card, BtB 03 |
-| dinner | 2614 | Our Story "The table is set", homepage gallery |
+
+Exported but not placed (in the repo, ready if a use comes up): toast-2,
+lineup, tray-pour-2, tray, table-overhead, kitchen-laugh, founders-cheers,
+founders-laugh, founders-drinks, kitchen-founders, adam, danny, bar-table-2,
+paloma-pour, strain, strain-2, danny-jigger, adam-shaker, cutting, uncork,
+rocks-glass, pink-drink, yellow-sip. The strongest of these for Instagram and
+Host's Notes campaigns: founders-cheers, kitchen-founders, table-overhead,
+paloma-pour, yellow-sip.
 
 Still wanted: a silent 15 to 20 second cut of Faith's recap (MP4, 1920x1080,
 under 8 MB) for a homepage hero loop, and the music version for Our Story.
