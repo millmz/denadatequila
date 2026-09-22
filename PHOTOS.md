@@ -157,9 +157,9 @@ paloma-pour, yellow-sip.
 
 **Hero video (Sept 22).** The homepage hero card is now a muted, looping cut
 of Faith's no-music recap: from the two-bottle lineup to the toast at the
-table, 17.8 seconds, cropped to 4:5 (the reel is vertical). Files:
-`video/hero-loop-1080.mp4` (864x1080, 3.4 MB, desktop) and
-`video/hero-loop-540.mp4` (432x540, 1.1 MB, phones). The three-bottle still
+table, 16.6 seconds, cropped to 4:5 (the reel is vertical). Files:
+`video/hero-loop-1080.mp4` (864x1080, 3.2 MB, desktop) and
+`video/hero-loop-540.mp4` (432x540, 1 MB, phones). The three-bottle still
 (`img/photos/lineup-hero-800.webp`) is the poster and the fallback for
 reduced-motion and data-saver settings. To recut: the source is the
 `recap-video` GitHub release; the cut starts at 14.77 s.
