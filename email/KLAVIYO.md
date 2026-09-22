@@ -50,6 +50,17 @@ again), or edit the flow's own copy directly.
 | Launch campaign "It's here." | `01M2XKA0THK4TZ2PFTV4TVRD4Y` | Draft, send time pre-set Oct 1 9:00 am ET | Press *Schedule* on launch morning after the site is confirmed live |
 | Master templates | Welcome 1 `WczNp9`, 2 `X44RVM`, 3 `T44PbR`, Launch `TXzT3x`, Abandoned `UBcbGw`, Post-purchase `RkRs58` / `Redbzd` / `XJSEPZ`, Win-back `UK2Wh9`, Behind the Bar 01–24 (IDs in Flow 5 below) | | Reuse for new campaigns: Content → Templates → clone |
 
+**Hero photos (added Sept 22).** Every email now carries one photo from the
+dinner shoot under the wordmark, served from `denadatequila.com/img/email/`
+(1200 px JPEG; the files are on `main` and on `teaser`, so previews work
+before launch). Landscape shots run full width; portraits sit in a 440 px
+framed card. Welcome 1 the tray pour, Welcome 2 the sideboard lineup,
+Welcome 3 Adam at the shaker, Launch the table toast, Abandoned the Blanco on
+the table, Post-purchase 1 Danny pouring, 2 the pink drink, 3 the two set
+bottles, Win-back the Paloma pour. To swap one: change the `<img src>` in the
+master, then re-select the master on the flow email (or, for the campaign,
+re-assign it to the message). Full photo index in `PHOTOS.md`.
+
 **Launch morning, in Klaviyo (or say "go" and Claude does the first two):**
 1. Flows → set Welcome, Abandoned checkout, Post-purchase, Win-back and Behind the Bar to **Live**.
 2. Campaigns → "Launch: It's here." → Review → **Schedule**.
@@ -355,7 +366,17 @@ because it is already Welcome 3.
 | 24 | Sip N' Sin | Blanco | Stirred, cold, no ice. Closes the series with a thank-you. | `Wgiybz` |
 
 Flow actions in Klaviyo: entry delay `117762873`, then email/delay pairs from
-`117762874` to `117762922` in order (the flow editor shows them numbered).
+`117762874` to `117762922` in order (the flow editor shows them numbered;
+email 16 onward are `117762906` to `117762922`, there is no action `117762904`).
+
+**Photos (Sept 22):** each recipe email has a hero under the wordmark.
+Blanco recipes rotate through the Paloma pour (01, 11), the guest sipping
+(03), the grapefruit board (05, 19), Danny's jigger (07, 20), Adam at the
+shaker (09, 21), the Blanco on the table (13, 22), the pink drink (15), the
+tray pour (17, 23) and the table toast (24). Reposado recipes rotate through
+the rocks glass (02, 16), the strain (04, 18), the Reposado on the table
+(06, 14), the second strain (08), the bottle behind the back (10) and the
+overhead table (12).
 
 **To change one email:** edit its master template above, then open the flow
 email in Klaviyo and re-select that template (Klaviyo clones it again). To
