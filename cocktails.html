@@ -149,6 +149,7 @@ footer a:hover{color:var(--cream)}
 .bk-tag{position:absolute;top:10px;left:10px;font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.16em;font-size:.62rem;padding:5px 11px;border:1.5px solid var(--black);color:var(--black)}
 .bk-tag.blanco{background:var(--turquoise)}
 .bk-tag.repo{background:var(--gold)}
+.bk-tag.anejo{background:var(--burnt);color:#FDFBF2}
 .bk-star{position:absolute;bottom:10px;right:10px;font-family:'Caveat',cursive;font-weight:600;font-size:1.05rem;color:#FDFBF2;background:var(--burnt);padding:3px 12px;transform:rotate(2deg);border:1.5px solid var(--black)}
 .bk-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
 .bk-body h3{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:1.28rem;line-height:1.1;margin:0}
@@ -463,15 +464,59 @@ main .serve .s-photo img{aspect-ratio:auto;object-fit:unset;height:auto;max-heig
     <div class="sec-head rv">
       <span class="eyebrow">From the De Nada Booklet</span>
       <h2 class="disp">The Full Book</h2>
-      <p class="lede">Twenty more, built for De Nada by friends behind some of the world&rsquo;s great bars: Jillian Vose, Lucinda Sterling, and Anthony Baker.</p>
+      <p class="lede">Twenty-two more. Twenty built for De Nada by friends behind some of the world&rsquo;s great bars, Jillian Vose, Lucinda Sterling and Anthony Baker, and two of our own for the A&ntilde;ejo.</p>
       <span class="bk-hand">for when the night calls for a deep cut</span>
     </div>
     <div class="bk-filters rv" role="group" aria-label="Filter recipes by expression">
-      <button class="bk-chip on" data-f="all">All Twenty</button>
+      <button class="bk-chip on" data-f="all">All Twenty-Two</button>
       <button class="bk-chip" data-f="blanco">Blanco</button>
       <button class="bk-chip" data-f="reposado">Reposado</button>
+      <button class="bk-chip" data-f="anejo">A&ntilde;ejo</button>
     </div>
     <div class="bk-grid">
+    <article class="bk-card rv" data-exp="anejo" id="anejo-old-fashioned">
+      <div class="bk-photo"><img width="460" height="575" src="img/cocktails/anejo-old-fashioned.webp" alt="A&ntilde;ejo Old Fashioned in a rocks glass over one large cube" loading="lazy">
+        <span class="bk-tag anejo">A&ntilde;ejo</span>
+      </div>
+      <div class="bk-body">
+        <h3>A&ntilde;ejo Old Fashioned</h3>
+        <span class="bk-by">by De Nada</span>
+        <div class="bk-serve">Rocks Glass &middot; Orange Peel</div>
+        <details>
+          <summary>The Recipe</summary>
+          <ul>
+              <li>2 oz De Nada A&ntilde;ejo</li>
+              <li>1 barspoon Agave Nectar</li>
+              <li>2 dashes Angostura Bitters</li>
+              <li>1 dash Orange Bitters</li>
+          </ul>
+          <p class="bk-method">Add everything to a mixing glass with ice and stir for twenty seconds. Strain into a rocks glass over one large cube. Squeeze an orange peel over the top to express the oils, then drop it in.</p>
+        </details>
+        <a class="made-with sm" href="product-anejo.html">Made with De Nada A&ntilde;ejo <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </article>
+    <article class="bk-card rv" data-exp="anejo" id="cafe-de-olla">
+      <div class="bk-photo"><img width="460" height="575" src="img/cocktails/cafe-de-olla.webp" alt="Danny with the bottle of De Nada A&ntilde;ejo" loading="lazy">
+        <span class="bk-tag anejo">A&ntilde;ejo</span>
+      </div>
+      <div class="bk-body">
+        <h3>Caf&eacute; de Olla</h3>
+        <span class="bk-by">by De Nada</span>
+        <div class="bk-serve">Mug &middot; Cinnamon Stick</div>
+        <details>
+          <summary>The Recipe</summary>
+          <ul>
+              <li>1.5 oz De Nada A&ntilde;ejo</li>
+              <li>3 oz Hot Coffee, brewed strong</li>
+              <li>&frac12; oz Piloncillo Syrup (or brown sugar syrup)</li>
+              <li>1 Cinnamon Stick</li>
+              <li>1 strip Orange Peel</li>
+          </ul>
+          <p class="bk-method">Warm a mug with hot water and empty it. Add the syrup and the A&ntilde;ejo, then pour in the coffee and stir with the cinnamon stick. Twist the orange peel over the top and drop it in, cinnamon stick and all. For the syrup, simmer equal parts chopped piloncillo (or dark brown sugar) and water with a cinnamon stick until it dissolves.</p>
+        </details>
+        <a class="made-with sm" href="product-anejo.html">Made with De Nada A&ntilde;ejo <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </article>
     <article class="bk-card rv" data-exp="reposado" id="muchas-gracias">
       <div class="bk-photo"><img width="460" height="575" src="img/cocktails/muchas-gracias.webp" alt="Muchas Gracias cocktail made with De Nada Reposado" loading="lazy">
         <span class="bk-tag repo">Reposado</span><span class="bk-star">the deep end</span>
@@ -1080,9 +1125,10 @@ function dnRsvp(e, form){
   var btn = form.querySelector('button');
   btn.disabled = true; btn.textContent = 'One sec\u2026';
   window.DenadaList.subscribe(form)
-    .then(function(){ btn.textContent = 'You\u2019re in. De Nada.'; form.querySelector('input[name=email]').value=''; })
+    .then(function(){ btn.textContent = 'You\u2019re in. De Nada.'; try{localStorage.setItem('dn_subscribed','1')}catch(e){} form.querySelector('input[name=email]').value=''; })
     .catch(function(){ btn.disabled = false; btn.textContent = 'RSVP'; alert('Something hiccuped. Try again?'); });
 }
 </script>
+<script src="js/signup-modal.js"></script>
 </body>
 </html>

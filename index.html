@@ -603,7 +603,7 @@ function dnRsvp(e, form){
   var btn = form.querySelector('button');
   btn.disabled = true; btn.textContent = 'One sec\u2026';
   window.DenadaList.subscribe(form)
-    .then(function(){ btn.textContent = 'You\u2019re in. De Nada.'; form.querySelector('input[name=email]').value=''; })
+    .then(function(){ btn.textContent = 'You\u2019re in. De Nada.'; try{localStorage.setItem('dn_subscribed','1')}catch(e){} form.querySelector('input[name=email]').value=''; })
     .catch(function(){ btn.disabled = false; btn.textContent = 'RSVP'; alert('Something hiccuped. Try again?'); });
 }
 function toggleNav(btn){
@@ -652,5 +652,6 @@ function dnAgeYes(){
 <script src="js/shop-config.js"></script>
 <script src="js/checkout.js"></script>
 <script>(function(){var v=document.querySelector('.hero-video');if(!v)return;if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;var c=navigator.connection;if(c&&c.saveData)return;v.src=matchMedia('(max-width:960px)').matches?v.dataset.srcSmall:v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){});})();</script>
+<script src="js/signup-modal.js"></script>
 </body>
 </html>
