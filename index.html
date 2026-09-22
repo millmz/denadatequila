@@ -92,7 +92,7 @@ nav{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:2px s
 .ph-card{margin:0;border:2px solid var(--black);background:#FBFDF3;padding:12px 12px 14px;box-shadow:8px 8px 0 var(--black);transform:rotate(1.2deg)}
 .ph-card img{width:100%;height:auto;display:block;border:1px solid rgba(35,31,32,.25);aspect-ratio:4/3;object-fit:cover}
 .ph-card.tall img{aspect-ratio:4/5}
-.ph-card.sq img{aspect-ratio:1/1}
+.ph-card.vid video{width:100%;aspect-ratio:4/5;height:auto;object-fit:cover;display:block;border:1px solid rgba(35,31,32,.25);background:#1d1815}
 .ph-card figcaption{font-family:'Caveat',cursive;font-weight:600;font-size:1.45rem;color:var(--burnt);text-align:right;margin-top:8px;transform:rotate(-1.5deg)}
 .manif-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:48px;align-items:center;max-width:1180px;margin:0 auto}
 .manif-grid .card{max-width:none;margin:0}
@@ -354,8 +354,8 @@ footer a:hover{color:var(--cream)}
       </div>
     </div>
     <div class="hero-photo li d3">
-      <figure class="ph-card sq">
-        <img src="img/photos/lineup-sq-1000.webp" srcset="img/photos/lineup-sq-600.webp 600w, img/photos/lineup-sq-1000.webp 1000w" sizes="(max-width:960px) 100vw, 46vw" width="1000" height="1000" alt="De Nada Blanco, Reposado and Añejo on a wood sideboard in afternoon light, with limes and a margarita" fetchpriority="high">
+      <figure class="ph-card vid">
+        <video class="hero-video" poster="img/photos/lineup-hero-800.webp" width="864" height="1080" muted loop playsinline autoplay preload="metadata" aria-label="A dinner at ours: the three bottles on the sideboard, drinks being made, and a toast at the table" data-src="video/hero-loop-1080.mp4" data-src-small="video/hero-loop-540.mp4"></video>
       </figure>
     </div>
   </div>
@@ -650,5 +650,6 @@ function dnAgeYes(){
 <script src="js/instagram.js"></script>
 <script src="js/shop-config.js"></script>
 <script src="js/checkout.js"></script>
+<script>(function(){var v=document.querySelector('.hero-video');if(!v)return;if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;var c=navigator.connection;if(c&&c.saveData)return;v.src=matchMedia('(max-width:960px)').matches?v.dataset.srcSmall:v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){});})();</script>
 </body>
 </html>

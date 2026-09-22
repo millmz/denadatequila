@@ -155,5 +155,13 @@ something the photo does not: the tray on the homepage, the Añejo card. The str
 Host's Notes campaigns: founders-cheers, kitchen-founders, table-overhead,
 paloma-pour, yellow-sip.
 
-Still wanted: a silent 15 to 20 second cut of Faith's recap (MP4, 1920x1080,
-under 8 MB) for a homepage hero loop, and the music version for Our Story.
+**Hero video (Sept 22).** The homepage hero card is now a muted, looping cut
+of Faith's no-music recap: from the two-bottle lineup to the toast at the
+table, 17.8 seconds, cropped to 4:5 (the reel is vertical). Files:
+`video/hero-loop-1080.mp4` (864x1080, 3.4 MB, desktop) and
+`video/hero-loop-540.mp4` (432x540, 1.1 MB, phones). The three-bottle still
+(`img/photos/lineup-hero-800.webp`) is the poster and the fallback for
+reduced-motion and data-saver settings. To recut: the source is the
+`recap-video` GitHub release; the cut starts at 14.77 s.
+
+Still wanted: the music version for a click-to-play on Our Story.
