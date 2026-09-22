@@ -131,6 +131,12 @@ footer a:hover{color:var(--cream)}
 .bfly-foot{display:block;margin-top:14px;opacity:.75}
 .fulfill-note{font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.18em;font-size:.68rem;color:var(--gray);text-align:center;margin:26px auto 6px}
 .preorder-note{display:block;font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.18em;font-size:.64rem;color:var(--burnt,#B83F26);margin-top:10px}
+/* photography */
+.shop-band{position:relative;max-width:1280px;margin:0 auto 34px;padding:0 32px}
+.shop-band .in{position:relative;border:2px solid var(--black);box-shadow:8px 8px 0 var(--black);overflow:hidden;background:var(--black)}
+.shop-band img{width:100%;height:clamp(240px,34vw,440px);object-fit:cover;object-position:50% 55%;display:block}
+.shop-band .hand{position:absolute;right:28px;bottom:18px;font-family:'Caveat',cursive;font-weight:600;font-size:clamp(1.3rem,2.4vw,1.9rem);color:var(--cream);text-shadow:0 2px 12px rgba(0,0,0,.6);transform:rotate(-2deg)}
+@media(max-width:760px){.shop-band{padding:0 20px;margin-bottom:26px}.shop-band .hand{right:14px;bottom:10px}}
 </style>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -180,6 +186,12 @@ footer a:hover{color:var(--cream)}
       <span>Estate-Grown Agave</span>
       <span>Carbon Neutral</span>
       <span>Kosher Certified</span>
+  </div>
+</div>
+<div class="shop-band">
+  <div class="in">
+    <img src="img/photos/bar-table-1600.webp" srcset="img/photos/bar-table-800.webp 800w, img/photos/bar-table-1600.webp 1600w" sizes="(max-width:760px) 100vw, 1216px" width="1600" height="1200" alt="De Nada Añejo, Reposado and Blanco lined up on a steel bar table with limes, chilies and a jalapeño margarita" fetchpriority="high">
+    <span class="hand">the counter, stocked</span>
   </div>
 </div>
 <div class="shop-grid-wrap">
