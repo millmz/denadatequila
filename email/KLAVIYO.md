@@ -46,7 +46,7 @@ again), or edit the flow's own copy directly.
 
 | Thing | Klaviyo ID | Status | Trigger / rule |
 |---|---|---|---|
-| **Pre-launch confirmation** "You're on the list." | `RW2Gnc` | **Live now. Turn OFF on Oct 1** | Added to list `WXrq3N` → 15 min → one short email. Skips anyone in the *Legacy subscribers* segment, so the old-list import does not trigger it. A signup with an address that is *already on the list* (yours, for instance, which came in with the Sept 18 import) updates the profile but never re-adds it, so nothing sends; to test with such an address, remove it from the list in Klaviyo first, then sign up again |
+| **Pre-launch confirmation** "You're on the list." | `RW2Gnc` | **Live now, verified Sept 23. Turn OFF on Oct 1** | Added to list `WXrq3N` → 15 min → one short email. Skips anyone in the *Legacy subscribers* segment, so the old-list import does not trigger it. A signup with an address that is *already on the list* (yours, for instance, which came in with the Sept 18 import) updates the profile but never re-adds it, so nothing sends; to test with such an address, remove it from the list in Klaviyo first, then sign up again |
 | Welcome flow | `UQqXn7` | Draft until Oct 1 | Added to list `WXrq3N`; every email skips anyone who has *Placed Order* |
 | Welcome 1 "You're welcome." | action `117746850` | | immediately. Two paragraphs, the bottles, and the five easiest recipes with links |
 | Welcome 2 "The house margarita" | action `117746852` | | +3 days. Tommy's Margarita |
