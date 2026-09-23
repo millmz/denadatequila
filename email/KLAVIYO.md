@@ -56,7 +56,7 @@ again), or edit the flow's own copy directly.
 | Win-back | `SwCgXT` | Draft until Oct 1 | joins segment *Unengaged 90* → "It's been a while." |
 | Behind the Bar (recipe series) | `WWi5g9` | Draft until Oct 1 | joins segment *Email subscribers (all)* → 14 days → one recipe every 14 days, **26 emails**, about a year. 10 am local. Each profile goes through once |
 | Segment: Email subscribers (all) | `S2hYpZ` | active | anyone subscribed to email marketing. Trigger for the recipe series |
-| Segment: Legacy subscribers (old list import) | `SwxJSs` | active | `signup_source` equals `legacy` (set it on the CSV import). Excluded from the launch email and the pre-launch confirmation; gets its own hello |
+| Segment: Legacy subscribers (old list import + old store) | `SwxJSs` | active | Subscribed by list import, or by the Shopify sync, or has `signup_source` = `legacy`. Covers the Squarespace list and the old store's customers without any tagging; teaser-form signups come in as "API" and stay out. Excluded from the launch email and the pre-launch confirmation; gets its own hello |
 | Segment: Opened an email since Oct 1 | `VeuGeB` | active | *Opened Email* at least once after Oct 1. The launch resend excludes it, so only non-openers get the second send |
 | Segment: Unengaged 90 (win-back) | `TXVT4s` | active | on list ≥ 90 days, no email open in 90 days, still subscribed |
 | Segment: Unengaged 180 (sunset) | `QVtUiH` | active | on list ≥ 180 days, no open and no order in 180 days → **suppress these monthly** (Audience → segment → ⋯ → Suppress) |
@@ -677,13 +677,13 @@ Unengaged 90, Unengaged 180). Worth adding when there are orders:
 | VIP | Placed Order at least 2 times |
 | Engaged 90 | Opened email at least once in last 90 days |
 
-### 4. The old list
-Squarespace → Marketing → Email Campaigns → Mailing lists → Export CSV.
-Klaviyo → Audience → Lists → the list → Import → upload → set the property
-`signup_source` = `legacy` on import. That property is what puts them in the
-*Legacy subscribers* segment, which keeps them out of the pre-launch
-confirmation and the launch email and gives them the "We moved" hello on
-Oct 2 instead. Import before Oct 1.
+### 4. The old list (done)
+The Squarespace list was imported on Sept 18 and the old store's customers
+arrived with the Shopify connection. The *Legacy subscribers* segment is
+defined by subscribe method (list import, or the Shopify integration), so
+there is nothing to tag. If another old list ever needs importing, import it
+the same way and the segment picks it up; or set `signup_source` = `legacy`
+on the import, which the segment also honours.
 
 ### 5. Launch day
 - Pre-launch confirmation flow → **Draft** (off)
