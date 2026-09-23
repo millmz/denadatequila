@@ -18,7 +18,7 @@ so excited". Never an exclamation mark doing the work a sentence should.
 4. **The emails sell the glass bottles.** The aluminum line is the Travel
    Bottle. It exists on the site and can be bought, but no email promotes it.
 5. **Buttons.** Green (`#018769`) is always shop intent and always says
-   "Shop" or "Shop the Blanco / Reposado / Añejo", and it sits on the left.
+   "Shop now" or "Shop the Blanco / Reposado / Añejo", and it sits on the left.
    Orange (`#D37240`) is every other action: recipes, our story, tell us.
    Never "See the bottles", never "Get the".
 6. **Nothing about the machinery.** No email says how often we write, when
@@ -73,12 +73,16 @@ again), or edit the flow's own copy directly.
 about people or the brand gets one photo from the dinner shoot; an email that
 carries a recipe gets the same cocktail render the site uses for that drink,
 in a 340 px framed card under the wordmark; an email that is just a nudge gets
-no image at all. Welcome 1 Danny and Adam at the bright kitchen counter with
-all three bottles (`bar-table-2.jpg`), Welcome 2 the Tommy's Margarita render,
+no image at all. Welcome 1 Adam opening the Blanco at the dinner table with
+the Reposado and Añejo beside him (`uncork.jpg`; alternatives with all three
+bottles in frame: `lineup-2.jpg`, `bar-table.jpg`, `bar-table-2.jpg`), Welcome
+2 the Tommy's Margarita render,
 Welcome 3 Danny and Adam in the kitchen, Launch the table toast (full width),
 Legacy hello the three bottles on the counter mid-drink (`bar-table.jpg`),
-Post-purchase 1 Danny pouring, Post-purchase 3 the two set bottles, Gifts the
-three bottles on the sunlit sideboard (`lineup-2.jpg`), Thanksgiving the set
+Post-purchase 1 Danny pouring, Post-purchase 3 the photo of the bottle it
+introduces (`blanco-table.jpg`, `reposado-table.jpg`, `danny-anejo.jpg`, or
+`lineup-2.jpg` for the full set), Gifts the three bottles on the sunlit
+sideboard (`lineup-2.jpg`), Thanksgiving the set
 table, Holidays the toast, Win-back the De Nada Paloma render. The two Añejo
 recipes use crops from the shoot (Adam with the rocks glass; Danny with the
 Añejo) because there is no render for them yet. Abandoned checkout,
@@ -101,10 +105,10 @@ Settings → Domains → branded sending domain.
 cross-sell and the reorder button by looking for "Blanco", "Reposado" or
 "ejo" in the Shopify product title. Keep those words in every title, glass and
 Travel Bottle alike. If none of the three is found, the emails fall back to a
-generic version (Tommy's Margarita, all three bottles, a plain "Shop"). An
-order with two bottles gets both recipe cards, is introduced to the bottle it
-is missing, and gets a plain "Shop" reorder button; the full set gets a
-suggestion for each bottle instead of a cross-sell.
+generic version (Tommy's Margarita, the Blanco cross-sell, a plain "Shop
+now"). An order with two bottles gets both recipe cards, is introduced to the
+bottle it is missing, and gets a plain "Shop now" reorder button; the full set
+gets a suggestion for each bottle instead of a cross-sell.
 
 ---
 
@@ -139,7 +143,7 @@ subscribers* segment. Smart sending off, so it always sends.
 **Subject:** You're welcome.
 **Preview:** That's what De Nada means. It's also the whole idea.
 
-> *(photo: Danny and Adam at the counter, all three bottles)*
+> *(photo: Adam opening the Blanco at the table, Reposado and Añejo beside him)*
 >
 > **You're welcome.** Not the polite reflex. The real thing.
 >
@@ -161,7 +165,7 @@ subscribers* segment. Smart sending off, so it always sends.
 > Make one this week. And if you ever have a question, just reply. It comes
 > straight to us.
 >
-> [ **Shop** → shop.html ] [ **All the recipes** → cocktails.html ]
+> [ **Shop now** → shop.html ] [ **All the recipes** → cocktails.html ]
 >
 > De Nada,
 > Danny & Adam
@@ -220,10 +224,7 @@ this email is what delivers them. Keep the list in both places the same.
 > year. Each of them has picked up a medal at the Agavos Awards, which we'll
 > mention once and then try to stop mentioning.
 >
-> All three are in the shop, and every recipe on the site tells you which one
-> it wants.
->
-> [ **Shop** → shop.html ] [ **Our story** → our-story.html ]
+> [ **Shop now** → shop.html ] [ **Our story** → our-story.html ]
 >
 > De Nada,
 > Danny & Adam
@@ -248,7 +249,7 @@ this email is what delivers them. Keep the list in both places the same.
 > Come in and have a look around. And thank you for waiting with us. It means
 > a lot.
 >
-> [ **Shop** → shop.html ]
+> [ **Shop now** → shop.html ]
 >
 > De Nada,
 > Danny & Adam
@@ -273,7 +274,7 @@ this email is what delivers them. Keep the list in both places the same.
 > Come in and have a look around. We think you'll like what we've done with
 > the place.
 >
-> [ **Shop** → shop.html ] [ **The recipes** → cocktails.html ]
+> [ **Shop now** → shop.html ] [ **The recipes** → cocktails.html ]
 >
 > De Nada,
 > Danny & Adam
@@ -348,10 +349,10 @@ Order* and make the first delay 6 days.
 
 | When | Subject | The one thing it does |
 |---|---|---|
-| Delivered + 1 day, 10 am | The first drink | The recipe for their bottle, and the three-day damage window |
+| Delivered + 1 day, 10 am | The first drink | The recipe for each bottle in the order, nothing else |
 | + 28 days | How was it? | One question, reply by email, nothing else |
-| + 30 days | The other one | Introduces the bottle they do not have yet: Blanco → Reposado, Reposado → Añejo, Añejo → Blanco, Blanco + Reposado → Añejo, Blanco + Añejo → Reposado, Reposado + Añejo → Blanco. All three → "The full set", a suggestion for each bottle, button to the recipes. Skipped if they re-ordered |
-| + 16 days (about 75 after delivery) | Running low? | One bottle bought → "Shop the <bottle>"; two or three → "Shop". Skipped if they re-ordered |
+| + 30 days | The other one | Four versions, each with the photo of the bottle it introduces: no Blanco in the order (Reposado, Añejo, or both) → the Blanco; Blanco (alone or with the Añejo) → the Reposado; Blanco + Reposado → the Añejo; all three → "The full set", a suggestion for each bottle, button to the recipes. Skipped if they re-ordered |
+| + 16 days (about 75 after delivery) | Running low? | One bottle bought → "Shop the <bottle>"; two or three → "Shop now". Skipped if they re-ordered |
 
 ### Email 1: The first drink
 
@@ -371,10 +372,6 @@ Order* and make the first delay 6 days.
 >
 > Then invite someone over. That's the part we care about most, and we hope
 > it's a good night.
->
-> *One practical thing: if the box arrived less than perfect, reply with a
-> photo of the bottle and the box within three days and we will sort out a
-> replacement or a refund.*
 >
 > [ **More recipes** → cocktails.html ]
 >
@@ -399,55 +396,40 @@ Order* and make the first delay 6 days.
 
 ### Email 3: The other one
 
-**Preview:** You've met one bottle. Here's the next.
+**Preview:** The one you haven't met yet.
 
-> *(photo: the two set bottles)*
->
-> *(Bought Añejo:)* You started at the top, and we respect that. The Añejo is a sipper; the
-> **Blanco** is the one that makes the drinks. Bright and agave-forward,
+Four versions in one template, keyed off every bottle in the order. Each
+carries the photo of the bottle it introduces, and the headline is "The other
+one." / "The one you haven't met yet." except for the full set.
+
+> *(No Blanco in the order, so Reposado, Añejo or both. Photo: the Blanco on
+> the table.)* You have the aged side of the range covered, so here is the
+> one that makes the drinks. The **Blanco** is bright and agave-forward,
 > vanilla and lime. The house margarita starts here, and so does most of the
-> cocktail book.
+> cocktail book. [ **Shop the Blanco** ]
 >
-> *(Bought Reposado:)* The Reposado is the bottle for the end of the day. The
-> **Añejo** is what comes after: a year and more in oak, chocolate and spice,
-> a delicate finish. It's our first, and we're a little sentimental about it.
-> Sip it neat when the evening slows down.
+> *(Blanco, alone or with the Añejo. Photo: the Reposado on the table.)* The
+> Blanco is where the drinks start. The **Reposado** is where the evening
+> goes: four months in ex-bourbon oak, vanilla and caramel, a smoky finish.
+> Gold at the Agavos Awards, and the bottle for an Old Fashioned.
+> [ **Shop the Reposado** ]
 >
-> *(Bought Blanco:)* The Blanco is where the drinks start. The **Reposado** is
-> where the evening goes: four months in ex-bourbon oak, vanilla and caramel,
-> a smoky finish. Gold at the Agavos Awards, and the bottle for an Old
-> Fashioned.
+> *(Blanco and Reposado. Photo: Danny with the Añejo.)* You have the Blanco
+> and the Reposado, so there is one left to meet. The **Añejo** is our first:
+> a year and more in oak, chocolate and spice, a delicate finish. Sip it neat
+> when the evening slows down. [ **Shop the Añejo** ]
 >
-> *(Bought Blanco and Reposado:)* You have the Blanco and the Reposado, so
-> there is one left to meet. The **Añejo** is our first: a year and more in
-> oak, chocolate and spice, a delicate finish. Sip it neat when the evening
-> slows down.
+> Each of the three ends: No pressure at all. We just had a feeling you'd like
+> it, and we'd rather you hear about it from us.
 >
-> *(Bought Blanco and Añejo:)* You have the two ends of the range. The
-> **Reposado** sits between them: four months in ex-bourbon oak, vanilla and
-> caramel, a smoky finish, and the bottle for a Mexican Style Old Fashioned.
->
-> *(Bought Reposado and Añejo:)* You have the two aged bottles, so the one
-> left is the one that makes the drinks. The **Blanco** is bright and
-> agave-forward, vanilla and lime. The house margarita starts here, and so
-> does most of the cocktail book.
->
-> *(No bottle recognised:)* You've met one of the three. The other two are
-> worth knowing: the Blanco makes the drinks, the Reposado is for the end of
-> the day, and the Añejo is for sipping when the evening slows down.
->
-> No pressure at all. We just had a feeling you'd like it, and we'd rather you
-> hear about it from us.
->
-> [ **Shop the …** → the missing bottle's product page, or **Shop** → shop.html ]
->
-> *(Bought all three: headline "The full set." / "Which one to open for what.")*
-> You have all three, which we appreciate more than we can say. So instead of
-> a bottle, a suggestion for each: the **Blanco** in a Paloma when people
-> arrive, the **Reposado** in a Mexican Style Old Fashioned when they stay,
-> and the **Añejo** neat, after dinner, for whoever is still at the table.
-> Every recipe in the book tells you which bottle it wants, so the rest is up
-> to you. [ **The recipes** → cocktails.html, orange ]
+> *(All three. Headline "The full set." / "Which one to open for what."
+> Photo: the three bottles on the sideboard.)* You have all three, which we
+> appreciate more than we can say. So instead of a bottle, a suggestion for
+> each: the **Blanco** in a Paloma when people arrive, the **Reposado** in a
+> Mexican Style Old Fashioned when they stay, and the **Añejo** neat, after
+> dinner, for whoever is still at the table. Every recipe in the book tells
+> you which bottle it wants, so the rest is up to you.
+> [ **The recipes** → cocktails.html, orange ]
 >
 > De Nada,
 > Danny & Adam
@@ -464,7 +446,7 @@ Order* and make the first delay 6 days.
 > And if it's still going strong, ignore this entirely. We'd rather you drink
 > it slowly, with people you like.
 >
-> [ **Shop the Blanco / Reposado / Añejo** → that product page when they bought one bottle; **Shop** → shop.html when they bought two or three ]
+> [ **Shop the Blanco / Reposado / Añejo** → that product page when they bought one bottle; **Shop now** → shop.html when they bought two or three ]
 >
 > De Nada,
 > Danny & Adam
@@ -604,7 +586,7 @@ dates with the retailer.
 > Sending it straight to them? Put their address at checkout. Someone 21 or
 > over has to sign for the box, so pick a day they'll be home.
 >
-> [ **Shop** → shop.html ]
+> [ **Shop now** → shop.html ]
 
 ### Thu Nov 12: What to bring on Thursday.
 
@@ -627,7 +609,7 @@ dates with the retailer.
 >
 > Order by Monday, November 16 and it should be there in time.
 >
-> [ **Shop** → shop.html ]
+> [ **Shop now** → shop.html ]
 
 ### Thu Dec 10: Order by December 15.
 
@@ -644,7 +626,7 @@ dates with the retailer.
 >
 > Thank you for a good first few months. We'll see you in the new year.
 >
-> [ **Shop** → shop.html ]
+> [ **Shop now** → shop.html ]
 
 **Gift notes.** The emails deliberately do not promise a note in the box. If
 the retailer will print order notes, turn on the cart note in the Shopify
