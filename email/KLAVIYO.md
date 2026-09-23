@@ -17,6 +17,15 @@ so excited". Never an exclamation mark doing the work a sentence should.
    "De Nada," with a capital N.
 4. **The emails sell the glass bottles.** The aluminum line is the Travel
    Bottle. It exists on the site and can be bought, but no email promotes it.
+5. **Buttons.** Green (`#018769`) is always shop intent and always says
+   "Shop" or "Shop the Blanco / Reposado / Añejo", and it sits on the left.
+   Orange (`#D37240`) is every other action: recipes, our story, tell us.
+   Never "See the bottles", never "Get the".
+6. **Nothing about the machinery.** No email says how often we write, when
+   the next one comes, or when orders leave and arrive. The two holiday
+   emails may give an order-by date. Nothing points at the unsubscribe link.
+7. **Orders can hold two or three bottles.** Any copy keyed to the bottle
+   bought must read right for Blanco + Añejo and for the full set.
 
 **Every email footer (compliance):**
 > De Nada Tequila · [physical mailing address] · Must be 21+ to receive these
@@ -43,8 +52,7 @@ again), or edit the flow's own copy directly.
 | Welcome 2 "The house margarita" | action `117746852` | | +3 days. Tommy's Margarita |
 | Welcome 3 "Nothing added." | action `117746854` | | +4 days. How it's made, then the shop |
 | Abandoned checkout | `TDe5uV` | Draft until Oct 1 | *Checkout Started* → 1 h "Your cart is still here." → 23 h later "Still thinking?" (shipping, the signature, breakage, answered). Both skipped if they ordered since. Re-entry after 7 days |
-| Added to cart | `YeeaGX` | Draft until Oct 1 | *Added to Cart* → 4 h → "Your cart, saved." Skipped if they started checkout or ordered since. Re-entry after 7 days. **Needs Klaviyo onsite tracking on the Shopify theme** (see setup 6) |
-| Post-purchase | `Ycdays` | Draft until Oct 1 | *Delivered Shipment* → next day 10 am "The first drink" → +28 d "How was it?" → +30 d "The other one" → +16 d "Running low?" (last two skipped if they re-ordered). Re-entry after 90 days |
+| Post-purchase | `Ycdays` | Draft until Oct 1 | *Delivered Shipment* → next day 10 am "The first drink" → +28 d "How was it?" → +30 d "The other one" → +16 d "Running low?" (last two skipped if they re-ordered). Re-entry after 90 days. Copy keys off every bottle in the order, so two- and three-bottle orders read right |
 | Win-back | `SwCgXT` | Draft until Oct 1 | joins segment *Unengaged 90* → "It's been a while." |
 | Behind the Bar (recipe series) | `WWi5g9` | Draft until Oct 1 | joins segment *Email subscribers (all)* → 14 days → one recipe every 14 days, **26 emails**, about a year. 10 am local. Each profile goes through once |
 | Segment: Email subscribers (all) | `S2hYpZ` | active | anyone subscribed to email marketing. Trigger for the recipe series |
@@ -58,26 +66,28 @@ again), or edit the flow's own copy directly.
 | Campaign: Gifts "The gift that gets opened." | `01M35J51EZ660MEHZDWJ8C2PRJ` | Draft, pre-set Thu Nov 5, 4:00 pm ET | Whole list |
 | Campaign: Thanksgiving "What to bring on Thursday." | `01M35J54SJA1MTPZBQX80PRNSK` | Draft, pre-set Thu Nov 12, 4:00 pm ET | Whole list. Says "order by Monday, November 16": confirm that date with the retailer first |
 | Campaign: Holidays "Order by December 15." | `01M35J57KR82T7H99SQ72G3YMH` | Draft, pre-set Thu Dec 10, 4:00 pm ET | Whole list. Confirm the Dec 15 cut-off with the retailer first |
-| Master templates | Welcome 1 `WczNp9`, 2 `T44PbR` (the margarita, formerly Welcome 3), 3 `WLcyAA`, Pre-launch `VBYdMs`, Launch `TXzT3x`, Legacy hello `WEJNbp`, Abandoned 1 `UBcbGw`, Abandoned 2 `W7avPs`, Added to cart `S2xcJ8`, Post-purchase `RkRs58` / `Redbzd` / `XJSEPZ` / `RYwczB`, Win-back `UK2Wh9`, Gifts `SkdJ3T`, Thanksgiving `SFjZtP`, Holidays `S6FX2C`, Behind the Bar 01–26 (IDs in Flow 5 below). The old "Three bottles. One rule." template `X44RVM` is unused | | Reuse for new campaigns: Content → Templates → clone |
+| Master templates | Welcome 1 `WczNp9`, 2 `T44PbR` (the margarita, formerly Welcome 3), 3 `WLcyAA`, Pre-launch `VBYdMs`, Launch `TXzT3x`, Legacy hello `WEJNbp`, Abandoned 1 `UBcbGw`, Abandoned 2 `W7avPs`, Post-purchase `RkRs58` / `Redbzd` / `XJSEPZ` / `RYwczB`, Win-back `UK2Wh9`, Gifts `SkdJ3T`, Thanksgiving `SFjZtP`, Holidays `S6FX2C`, Behind the Bar 01–26 (IDs in Flow 5 below). The old "Three bottles. One rule." template `X44RVM` is unused | | Reuse for new campaigns: Content → Templates → clone |
 
 **Hero images.** Served from `denadatequila.com/img/email/` (the files are on
 `main` and on `teaser`, so previews work before launch). The rule: an email
 about people or the brand gets one photo from the dinner shoot; an email that
 carries a recipe gets the same cocktail render the site uses for that drink,
 in a 340 px framed card under the wordmark; an email that is just a nudge gets
-no image at all. Welcome 1 the three bottles on the sideboard, Welcome 2 the
-Tommy's Margarita render, Welcome 3 Danny and Adam in the kitchen, Launch the
-table toast (full width), Legacy hello the bottles, Post-purchase 1 Danny
-pouring, Post-purchase 3 the two set bottles, Gifts the bottles, Thanksgiving
-the set table, Holidays the toast, Win-back the De Nada Paloma render. The two
-Añejo recipes use crops from the shoot (Adam with the rocks glass; Danny with
-the Añejo) because there is no render for them yet. Abandoned checkout, Added
-to cart, Post-purchase 2 and 4 and the pre-launch confirmation have no image.
+no image at all. Welcome 1 Danny and Adam at the bright kitchen counter with
+all three bottles (`bar-table-2.jpg`), Welcome 2 the Tommy's Margarita render,
+Welcome 3 Danny and Adam in the kitchen, Launch the table toast (full width),
+Legacy hello the three bottles on the counter mid-drink (`bar-table.jpg`),
+Post-purchase 1 Danny pouring, Post-purchase 3 the two set bottles, Gifts the
+three bottles on the sunlit sideboard (`lineup-2.jpg`), Thanksgiving the set
+table, Holidays the toast, Win-back the De Nada Paloma render. The two Añejo
+recipes use crops from the shoot (Adam with the rocks glass; Danny with the
+Añejo) because there is no render for them yet. Abandoned checkout,
+Post-purchase 2 and 4 and the pre-launch confirmation have no image.
 Full photo index in `PHOTOS.md`.
 
 **Launch morning, in Klaviyo (or say "go" and Claude does the first three):**
 1. Flows → **Pre-launch confirmation → Draft** (off). Welcome 1 takes over.
-2. Flows → set Welcome, Abandoned checkout, Added to cart, Post-purchase, Win-back and Behind the Bar to **Live**.
+2. Flows → set Welcome, Abandoned checkout, Post-purchase, Win-back and Behind the Bar to **Live**.
 3. Campaigns → "Launch: It's here." → Review → **Schedule**. Then "Legacy hello" → **Schedule** (it is pre-set for the next morning).
 4. Flows → Behind the Bar → ⋯ → **Back-populate** → everyone already in *Email subscribers (all)*. This is the one thing the API can't do; without it the existing subscribers never enter the series.
 5. Oct 2 or 3: Campaigns → "Launch resend" → **Schedule**. It only goes to people who have not opened the launch email.
@@ -91,7 +101,10 @@ Settings → Domains → branded sending domain.
 cross-sell and the reorder button by looking for "Blanco", "Reposado" or
 "ejo" in the Shopify product title. Keep those words in every title, glass and
 Travel Bottle alike. If none of the three is found, the emails fall back to a
-generic version (Tommy's Margarita, "see all three", "see the bottles").
+generic version (Tommy's Margarita, all three bottles, a plain "Shop"). An
+order with two bottles gets both recipe cards, is introduced to the bottle it
+is missing, and gets a plain "Shop" reorder button; the full set gets a
+suggestion for each bottle instead of a cross-sell.
 
 ---
 
@@ -101,13 +114,13 @@ generic version (Tommy's Margarita, "see all three", "see the bottles").
 subscribers* segment. Smart sending off, so it always sends.
 
 **Subject:** You're on the list.
-**Preview:** October 1st. We'll write then.
+**Preview:** October 1st. You'll be the first to know.
 
 > **You're on the list.** Thank you. Genuinely.
 >
 > The new De Nada opens on October 1st: three glass bottles, a new site, and
-> a cocktail book we've been working on for a while. You'll hear from us that
-> morning, and not much before.
+> a cocktail book we've been working on for a while. You'll be the first to
+> know.
 >
 > Until then, if you have a question, just reply. It comes straight to us.
 >
@@ -126,7 +139,7 @@ subscribers* segment. Smart sending off, so it always sends.
 **Subject:** You're welcome.
 **Preview:** That's what De Nada means. It's also the whole idea.
 
-> *(photo: the three bottles)*
+> *(photo: Danny and Adam at the counter, all three bottles)*
 >
 > **You're welcome.** Not the polite reflex. The real thing.
 >
@@ -148,7 +161,7 @@ subscribers* segment. Smart sending off, so it always sends.
 > Make one this week. And if you ever have a question, just reply. It comes
 > straight to us.
 >
-> [ **See the bottles** → shop.html ] [ **All the recipes** → cocktails.html ]
+> [ **Shop** → shop.html ] [ **All the recipes** → cocktails.html ]
 >
 > De Nada,
 > Danny & Adam
@@ -174,11 +187,11 @@ this email is what delivers them. Keep the list in both places the same.
 > Shake hard with plenty of ice, fifteen seconds. Strain over fresh ice. Lime
 > wedge. Salt if you want it; we usually don't.
 >
-> That's it. If you'd like the other twenty-four, they're on the site, and
+> That's it. If you'd like the other twenty-six, they're on the site, and
 > every one of them tells you which bottle it wants. Make one this weekend and
 > let us know how it goes.
 >
-> [ **Behind the Bar** → cocktails.html ] [ **Get the Blanco** → product-blanco.html ]
+> [ **Shop the Blanco** → product-blanco.html ] [ **Behind the Bar** → cocktails.html ]
 >
 > De Nada,
 > Danny & Adam
@@ -207,10 +220,10 @@ this email is what delivers them. Keep the list in both places the same.
 > year. Each of them has picked up a medal at the Agavos Awards, which we'll
 > mention once and then try to stop mentioning.
 >
-> If you're wondering which bottle fits your evenings, the shop page says so
-> plainly. And if you already know, checkout takes about two minutes.
+> All three are in the shop, and every recipe on the site tells you which one
+> it wants.
 >
-> [ **See the bottles** → shop.html ] [ **Our story** → our-story.html ]
+> [ **Shop** → shop.html ] [ **Our story** → our-story.html ]
 >
 > De Nada,
 > Danny & Adam
@@ -232,13 +245,10 @@ this email is what delivers them. Keep the list in both places the same.
 > glass bottles: Blanco, Reposado and our first Añejo. And a site that's less
 > about the tequila than about what you do with it and who you share it with.
 >
-> Orders leave in a day or two and arrive in two to five, so a bottle ordered
-> this week is on your counter by next weekend.
->
 > Come in and have a look around. And thank you for waiting with us. It means
 > a lot.
 >
-> [ **See the bottles** → shop.html ]
+> [ **Shop** → shop.html ]
 >
 > De Nada,
 > Danny & Adam
@@ -248,7 +258,7 @@ this email is what delivers them. Keep the list in both places the same.
 **Subject:** We moved. Here's the new De Nada.
 **Preview:** Three glass bottles, a new site, and a cocktail book.
 
-> *(photo: the bottles on the sideboard)*
+> *(photo: the three bottles on the counter, mid-drink)*
 >
 > **We moved.** Same tequila. New bottles. New home.
 >
@@ -257,14 +267,13 @@ this email is what delivers them. Keep the list in both places the same.
 >
 > There are three glass bottles now: **Blanco**, **Reposado** and our first
 > **Añejo**. A new site built around what you do with them. And a cocktail
-> book with twenty-six recipes, which we'll send you one at a time, every two
-> weeks, starting soon.
+> book with twenty-six recipes, every one of which tells you which bottle it
+> wants.
 >
-> That's the pace: a recipe every couple of weeks, the occasional note, and
-> nothing else. If that's not for you anymore, the link at the bottom takes
-> care of it, no hard feelings.
+> Come in and have a look around. We think you'll like what we've done with
+> the place.
 >
-> [ **See the bottles** → shop.html ] [ **The recipes** → cocktails.html ]
+> [ **Shop** → shop.html ] [ **The recipes** → cocktails.html ]
 >
 > De Nada,
 > Danny & Adam
@@ -288,16 +297,11 @@ since. No discount; it trains people to abandon.
 
 > **Still here.** We kept it for you. No rush.
 >
-> Hi. You were a click away from the {{ item name }}, so we saved it in your
-> cart for whenever you're ready.
+> Hi. You were a click away from the {{ item names, "the Blanco and the
+> Añejo" }}, so we saved it in your cart for whenever you're ready.
 >
-> If a question got in the way, the short version: a licensed retailer ships
-> to most states, an adult has to sign for the box, and if anything arrives
-> damaged you send us a photo within three days and we replace it or refund
-> it. The rest is on our shipping and returns page.
->
-> Anything else, just reply to this email. One of us will get back to you
-> personally.
+> If a question got in the way, about shipping or anything else, just reply
+> to this email. One of us will get back to you personally.
 >
 > [ **Back to checkout** → {{ checkout URL }} ]
 >
@@ -311,11 +315,11 @@ since. No discount; it trains people to abandon.
 
 > **Still thinking?** Fair. Here's what usually gets asked.
 >
-> Hi again. Your cart, with the {{ item name }} in it, is still saved. In case
+> Hi again. Your cart, with the {{ item names }} in it, is still saved. In case
 > a question got in the way, here are the three we hear most.
 >
-> **Where do you ship, and how long does it take?** A licensed retailer ships
-> to most states. Orders leave in a day or two and arrive in two to five.
+> **Where do you ship?** A licensed retailer ships to most states, straight
+> to your door.
 >
 > **Who needs to be home?** Someone 21 or over has to sign for the box, so
 > send it where an adult will be, at home or at work.
@@ -327,33 +331,6 @@ since. No discount; it trains people to abandon.
 > email and one of us will answer personally.
 >
 > [ **Back to checkout** → {{ checkout URL }} ]
->
-> De Nada,
-> Danny & Adam
-
----
-
-## Flow 2b: Added to cart
-
-**Trigger:** *Added to Cart* (needs Klaviyo's onsite tracking on the Shopify
-theme; see setup 6). 4 hours later, one email. Skipped if they started
-checkout or ordered since. Re-entry after 7 days.
-
-**Subject:** Your cart, saved.
-**Preview:** In case you got pulled away.
-
-> **Saved for you.** In case you got pulled away.
->
-> You added the {{ product name }} to your cart a little while ago, and then
-> life probably happened. It's still there.
->
-> If it helps: a licensed retailer ships to most states, orders arrive in two
-> to five days, and someone 21 or over signs for the box. The rest is on our
-> shipping and returns page.
->
-> Questions, just reply. One of us will get back to you.
->
-> [ **Back to my cart** → {{ checkout URL, or shop.denadatequila.com/cart }} ]
 >
 > De Nada,
 > Danny & Adam
@@ -373,8 +350,8 @@ Order* and make the first delay 6 days.
 |---|---|---|
 | Delivered + 1 day, 10 am | The first drink | The recipe for their bottle, and the three-day damage window |
 | + 28 days | How was it? | One question, reply by email, nothing else |
-| + 30 days | The other one | Blanco buyers meet the Reposado; Reposado → Añejo; Añejo → the Blanco for cocktails. Skipped if they re-ordered |
-| + 16 days (about 75 after delivery) | Running low? | A reorder button for the bottle they bought. Skipped if they re-ordered |
+| + 30 days | The other one | Introduces the bottle they do not have yet: Blanco → Reposado, Reposado → Añejo, Añejo → Blanco, Blanco + Reposado → Añejo, Blanco + Añejo → Reposado, Reposado + Añejo → Blanco. All three → "The full set", a suggestion for each bottle, button to the recipes. Skipped if they re-ordered |
+| + 16 days (about 75 after delivery) | Running low? | One bottle bought → "Shop the <bottle>"; two or three → "Shop". Skipped if they re-ordered |
 
 ### Email 1: The first drink
 
@@ -382,10 +359,10 @@ Order* and make the first delay 6 days.
 
 > *(photo: Danny pouring)*
 >
-> The box landed a day or so ago, so the bottle should be on your counter by
-> now. Thank you, truly, for bringing it home. Here's what we'd make first.
+> The bottle should be on your counter by now. Thank you, truly, for bringing
+> it home. Here's what we'd make first.
 >
-> *(Conditional on the item name, one recipe per bottle:)*
+> *(One card per bottle in the order. Blanco + Añejo shows both:)*
 >
 > **Blanco: Tommy's Margarita.** 2 oz Blanco, 1 oz lime, ½ oz agave. Shake hard, strain over fresh ice. Lime wedge.
 > **Reposado: Mexican Style Old Fashioned.** 2 oz Reposado, ¼ oz mezcal, ¼ oz agave, 4 dashes Mexican chocolate bitters. Stir over ice, one large cube, orange peel.
@@ -395,10 +372,9 @@ Order* and make the first delay 6 days.
 > Then invite someone over. That's the part we care about most, and we hope
 > it's a good night.
 >
-> *One practical thing: if the box arrived less than perfect, reply now with
-> a photo of the bottle and the box (we need it within three days of
-> delivery) and we will sort out a replacement or a refund. Details on our
-> shipping and returns page.*
+> *One practical thing: if the box arrived less than perfect, reply with a
+> photo of the bottle and the box within three days and we will sort out a
+> replacement or a refund.*
 >
 > [ **More recipes** → cocktails.html ]
 >
@@ -409,9 +385,9 @@ Order* and make the first delay 6 days.
 
 **Preview:** We'd genuinely like to know.
 
-> It's been about a month since the bottle arrived, and we'd love to hear how
-> it went. What you made with it, who you shared it with, whether it earned a
-> spot on the counter.
+> Now that the bottle has had some time on your counter, we'd love to hear
+> how it went. What you made with it, who you shared it with, whether it
+> earned its spot.
 >
 > Just hit reply. One line is plenty, and it comes straight to Danny and Adam,
 > not a form. Thank you for being one of the first.
@@ -442,6 +418,20 @@ Order* and make the first delay 6 days.
 > a smoky finish. Gold at the Agavos Awards, and the bottle for an Old
 > Fashioned.
 >
+> *(Bought Blanco and Reposado:)* You have the Blanco and the Reposado, so
+> there is one left to meet. The **Añejo** is our first: a year and more in
+> oak, chocolate and spice, a delicate finish. Sip it neat when the evening
+> slows down.
+>
+> *(Bought Blanco and Añejo:)* You have the two ends of the range. The
+> **Reposado** sits between them: four months in ex-bourbon oak, vanilla and
+> caramel, a smoky finish, and the bottle for a Mexican Style Old Fashioned.
+>
+> *(Bought Reposado and Añejo:)* You have the two aged bottles, so the one
+> left is the one that makes the drinks. The **Blanco** is bright and
+> agave-forward, vanilla and lime. The house margarita starts here, and so
+> does most of the cocktail book.
+>
 > *(No bottle recognised:)* You've met one of the three. The other two are
 > worth knowing: the Blanco makes the drinks, the Reposado is for the end of
 > the day, and the Añejo is for sipping when the evening slows down.
@@ -449,7 +439,15 @@ Order* and make the first delay 6 days.
 > No pressure at all. We just had a feeling you'd like it, and we'd rather you
 > hear about it from us.
 >
-> [ **Meet the …** → that bottle's product page, or "See all three" → shop.html ]
+> [ **Shop the …** → the missing bottle's product page, or **Shop** → shop.html ]
+>
+> *(Bought all three: headline "The full set." / "Which one to open for what.")*
+> You have all three, which we appreciate more than we can say. So instead of
+> a bottle, a suggestion for each: the **Blanco** in a Paloma when people
+> arrive, the **Reposado** in a Mexican Style Old Fashioned when they stay,
+> and the **Añejo** neat, after dinner, for whoever is still at the table.
+> Every recipe in the book tells you which bottle it wants, so the rest is up
+> to you. [ **The recipes** → cocktails.html, orange ]
 >
 > De Nada,
 > Danny & Adam
@@ -460,14 +458,13 @@ Order* and make the first delay 6 days.
 
 > **Running low?** It happens to the best of us.
 >
-> It's been a couple of months since the box arrived, which in our house is
-> about when the bottle starts looking worryingly light. If yours is the same,
-> here's the quickest way to fix it.
+> A couple of months in, a bottle in our house starts looking worryingly
+> light. If yours is the same, here's the quickest way to fix it.
 >
 > And if it's still going strong, ignore this entirely. We'd rather you drink
 > it slowly, with people you like.
 >
-> [ **Reorder the Blanco / Reposado / Añejo** → that product page; one button per bottle they bought, or "See the bottles" ]
+> [ **Shop the Blanco / Reposado / Añejo** → that product page when they bought one bottle; **Shop** → shop.html when they bought two or three ]
 >
 > De Nada,
 > Danny & Adam
@@ -484,16 +481,14 @@ days). One email.
 
 > Hi again. We've been quiet in your inbox, or maybe you've been quiet with
 > ours, and either way there are no hard feelings. Here's the drink we've been
-> making most lately, in case it's useful this weekend. If you'd rather not
-> hear from us anymore, the link at the bottom takes care of it, no questions
-> asked.
+> making most lately, in case it's useful this weekend.
 >
 > **De Nada Paloma**
 > 2 oz De Nada Blanco · 2 oz fresh grapefruit juice · ½ oz fresh lime ·
 > ¼ oz agave nectar · club soda to top. Shake everything but the soda. Strain
 > over ice, top with soda. Grapefruit wedge.
 >
-> [ **Behind the Bar** → denadatequila.com/cocktails.html ]
+> [ **Shop the Blanco** → product-blanco.html ] [ **Behind the Bar** → cocktails.html ]
 >
 > De Nada,
 > Danny & Adam
@@ -523,9 +518,10 @@ turn before the holidays.
 **One template per email**, all from the same layout: wordmark, the cocktail
 render in a framed card, eyebrow *Behind the bar · Blanco* (no numbers, so the
 order can change without touching a template), cocktail name, one serif line,
-the recipe as a spec list, the method in plain words, two buttons ("More
-recipes" → `cocktails.html#<anchor>`, "Get the Blanco/Reposado/Añejo" → the
-product page), the sign-off, green footer. Every link carries
+the recipe as a spec list, the method in plain words, two buttons (green
+"Shop the Blanco/Reposado/Añejo" → the product page on the left, orange "More
+recipes" → `cocktails.html#<anchor>` on the right; the last email says "The
+whole book"), the sign-off, green footer. Every link carries
 `utm_campaign=btb-<anchor>` so Shopify can attribute orders to the specific
 recipe. The nine ambitious recipes carry a grey "The short version" line with a
 three-ingredient way in. Recipes and credits (Jillian Vose, Anthony Baker,
@@ -595,7 +591,7 @@ dates with the retailer.
 
 **Preview:** One bottle for every kind of person on your list.
 
-> *(photo: the three bottles)*
+> *(photo: the three bottles on the sunlit sideboard)*
 >
 > Most gifts get put on a shelf. A bottle of tequila gets opened, usually
 > that evening, usually with the person who gave it. That's the whole reason
@@ -606,10 +602,9 @@ dates with the retailer.
 > everything and will still be quietly pleased.
 >
 > Sending it straight to them? Put their address at checkout. Someone 21 or
-> over has to sign for the box, so pick a day they'll be home. Orders leave in
-> a day or two and arrive in two to five.
+> over has to sign for the box, so pick a day they'll be home.
 >
-> [ **See the bottles** → shop.html ] [ **The Añejo** → product-anejo.html ]
+> [ **Shop** → shop.html ]
 
 ### Thu Nov 12: What to bring on Thursday.
 
@@ -620,18 +615,19 @@ dates with the retailer.
 > Wine is fine. A bottle of De Nada and an offer to make the first round is
 > better, and it gets you out of dish duty more often than you'd think.
 >
-> Bring the **Reposado** and make a Mexican Style Old Fashioned while the
-> turkey rests. Or the **Blanco** and a round of Palomas before people sit
-> down. Both recipes are below, and both scale to a pitcher.
+> Bring the **Blanco** and make a round of Palomas before people sit down.
+> The **Reposado** for a Mexican Style Old Fashioned while the turkey rests.
+> Or the **Añejo**, neat or in an Old Fashioned, for whoever is still at the
+> table after the pie. The recipes are below, and the first two scale to a
+> pitcher.
 >
-> Mexican Style Old Fashioned · Reposado, mezcal, agave, chocolate bitters
 > De Nada Paloma · Blanco, grapefruit, lime, soda
+> Mexican Style Old Fashioned · Reposado, mezcal, agave, chocolate bitters
+> Añejo Old Fashioned · Añejo, agave, two kinds of bitters
 >
-> Order by Monday, November 16 and it should be there in time. Orders leave
-> in a day or two and arrive in two to five, and someone 21 or over signs for
-> the box.
+> Order by Monday, November 16 and it should be there in time.
 >
-> [ **Get the Reposado** ] [ **Get the Blanco** ]
+> [ **Shop** → shop.html ]
 
 ### Thu Dec 10: Order by December 15.
 
@@ -640,17 +636,15 @@ dates with the retailer.
 > *(photo: the toast)*
 >
 > Quick and practical: if a bottle is going under a tree, into a suitcase, or
-> onto a table on the 24th, order it by Tuesday, December 15. Orders leave in
-> a day or two, arrive in two to five, and someone 21 or over has to sign for
-> the box, so give it the room.
+> onto a table on the 24th, order it by Tuesday, December 15. Someone 21 or
+> over has to sign for the box, so give it the room.
 >
 > If you're still deciding: **Blanco** for the margarita maker, **Reposado**
 > for the whiskey drinker, **Añejo** for the person who's hard to buy for.
 >
-> Thank you for a good first few months. We'll see you in the new year with a
-> recipe or two.
+> Thank you for a good first few months. We'll see you in the new year.
 >
-> [ **See the bottles** → shop.html ]
+> [ **Shop** → shop.html ]
 
 **Gift notes.** The emails deliberately do not promise a note in the box. If
 the retailer will print order notes, turn on the cart note in the Shopify
@@ -711,19 +705,18 @@ Oct 2 instead. Import before Oct 1.
 
 ### 5. Launch day
 - Pre-launch confirmation flow → **Draft** (off)
-- The six other flows → **Live**
+- The five other flows → **Live**
 - Launch campaign → **Schedule**; Legacy hello → **Schedule**
 - Behind the Bar flow → **Back-populate** with *Email subscribers (all)*
 - Two days later: Launch resend → **Schedule**
 
-### 6. Onsite tracking on the Shopify theme (for Added to cart and Viewed Product)
-Klaviyo → Integrations → Shopify → turn on **Onsite tracking** (Klaviyo adds
-its snippet to the theme). Then, in the theme's `theme.liquid`, make sure the
-Klaviyo script tag is present and that the "Added to Cart" event fires when
-the cart button is pressed (Klaviyo's Shopify guide has the three-line
-snippet). Without this the *Added to cart* flow never triggers and *Viewed
-Product* never records. Test: add a bottle to the cart on the store, then
-look for an *Added to Cart* event on your own Klaviyo profile.
+### 6. Onsite tracking on the Shopify theme (optional)
+There is no added-to-cart flow (it was cut on Sept 22 as one nudge too many;
+the two abandoned checkout emails cover it). Onsite tracking is therefore
+optional. Turning it on (Klaviyo → Integrations → Shopify → **Onsite
+tracking**) records *Viewed Product* and *Active on Site*, which feed
+Klaviyo's segments and analytics but nothing that sends. Do it when there is
+time; nothing waits on it.
 
 ### 7. The signup card on the site
 `js/signup-modal.js` shows a small Guest List card once per visitor (25
