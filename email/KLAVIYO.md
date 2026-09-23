@@ -46,7 +46,7 @@ again), or edit the flow's own copy directly.
 
 | Thing | Klaviyo ID | Status | Trigger / rule |
 |---|---|---|---|
-| **Pre-launch confirmation** "You're on the list." | `RW2Gnc` | **Live now. Turn OFF on Oct 1** | Added to list `WXrq3N` → 15 min → one short email. Skips anyone in the *Legacy subscribers* segment, so the old-list import does not trigger it |
+| **Pre-launch confirmation** "You're on the list." | `RW2Gnc` | **Live now. Turn OFF on Oct 1** | Added to list `WXrq3N` → 15 min → one short email. Skips anyone in the *Legacy subscribers* segment, so the old-list import does not trigger it. A signup with an address that is *already on the list* (yours, for instance, which came in with the Sept 18 import) updates the profile but never re-adds it, so nothing sends; to test with such an address, remove it from the list in Klaviyo first, then sign up again |
 | Welcome flow | `UQqXn7` | Draft until Oct 1 | Added to list `WXrq3N`; every email skips anyone who has *Placed Order* |
 | Welcome 1 "You're welcome." | action `117746850` | | immediately. Two paragraphs, the bottles, and the five easiest recipes with links |
 | Welcome 2 "The house margarita" | action `117746852` | | +3 days. Tommy's Margarita |
@@ -656,12 +656,11 @@ landing on top of a recipe.
 Done. Placed Order, Checkout Started, Fulfilled Order and Delivered Shipment
 events exist.
 
-### 2. Sending domain (15 min, then wait up to a day)
-Klaviyo → Settings → Domains → **Add branded sending domain** →
-`send.denadatequila.com`. It gives you **3 CNAME records**. Add them at
-Squarespace → DNS → Custom records, exactly as shown. Back in Klaviyo → Verify.
-Until this is done, emails send from a shared Klaviyo domain and Gmail is
-noticeably less kind to them.
+### 2. Sending domain (done Sept 23)
+`hello.denadatequila.com` is verified and active. It uses Klaviyo's dynamic
+setup: the subdomain is delegated to Klaviyo's four nameservers, plus one TXT
+record at the root of the domain. Every flow and campaign email now sends
+from it instead of the shared Klaviyo domain the Sept 19 test went out on.
 
 While you're in DNS: Gmail's own DKIM is still missing (Google Admin → Apps →
 Gmail → Authenticate email → add the TXT). And after a month of clean
