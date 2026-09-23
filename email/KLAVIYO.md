@@ -18,7 +18,7 @@ so excited". Never an exclamation mark doing the work a sentence should.
 4. **The emails sell the glass bottles.** The aluminum line is the Travel
    Bottle. It exists on the site and can be bought, but no email promotes it.
 5. **Buttons.** Green (`#018769`) is always shop intent and always says
-   "Shop now" or "Shop the Blanco / Reposado / Añejo", and it sits on the left.
+   "Shop" or "Shop the Blanco / Reposado / Añejo", and it sits on the left.
    Orange (`#D37240`) is every other action: recipes, our story, tell us.
    Never "See the bottles", never "Get the".
 6. **Nothing about the machinery.** No email says how often we write, when
@@ -56,7 +56,7 @@ again), or edit the flow's own copy directly.
 | Win-back | `SwCgXT` | Draft until Oct 1 | joins segment *Unengaged 90* → "It's been a while." |
 | Behind the Bar (recipe series) | `WWi5g9` | Draft until Oct 1 | joins segment *Email subscribers (all)* → 14 days → one recipe every 14 days, **26 emails**, about a year. 10 am local. Each profile goes through once |
 | Segment: Email subscribers (all) | `S2hYpZ` | active | anyone subscribed to email marketing. Trigger for the recipe series |
-| Segment: Legacy subscribers (old list import + old store) | `SwxJSs` | active | Subscribed by list import, or by the Shopify sync, or has `signup_source` = `legacy`. Covers the Squarespace list and the old store's customers without any tagging; teaser-form signups come in as "API" and stay out. Excluded from the launch email and the pre-launch confirmation; gets its own hello |
+| Segment: Legacy subscribers (old list import + old store) | `SwxJSs` | active | Has `signup_source` = `legacy`, which was set on Sept 23 on the 452 profiles that came from the Squarespace list import and the old store sync. Teaser-form signups stay out. Excluded from the launch email and the pre-launch confirmation; gets its own hello |
 | Segment: Opened an email since Oct 1 | `VeuGeB` | active | *Opened Email* at least once after Oct 1. The launch resend excludes it, so only non-openers get the second send |
 | Segment: Unengaged 90 (win-back) | `TXVT4s` | active | on list ≥ 90 days, no email open in 90 days, still subscribed |
 | Segment: Unengaged 180 (sunset) | `QVtUiH` | active | on list ≥ 180 days, no open and no order in 180 days → **suppress these monthly** (Audience → segment → ⋯ → Suppress) |
@@ -73,9 +73,9 @@ again), or edit the flow's own copy directly.
 about people or the brand gets one photo from the dinner shoot; an email that
 carries a recipe gets the same cocktail render the site uses for that drink,
 in a 340 px framed card under the wordmark; an email that is just a nudge gets
-no image at all. Welcome 1 Adam opening the Blanco at the dinner table with
-the Reposado and Añejo beside him (`uncork.jpg`; alternatives with all three
-bottles in frame: `lineup-2.jpg`, `bar-table.jpg`, `bar-table-2.jpg`), Welcome
+no image at all. Welcome 1 the three bottles on the sunlit sideboard (`lineup-2.jpg`, chosen
+from four options on Sept 23; the others were `uncork.jpg`, `bar-table.jpg` and
+`bar-table-2.jpg`), Welcome
 2 the Tommy's Margarita render,
 Welcome 3 Danny and Adam in the kitchen, Launch the table toast (full width),
 Legacy hello the three bottles on the counter mid-drink (`bar-table.jpg`),
@@ -107,7 +107,7 @@ cross-sell and the reorder button by looking for "Blanco", "Reposado" or
 Travel Bottle alike. If none of the three is found, the emails fall back to a
 generic version (Tommy's Margarita, the Blanco cross-sell, a plain "Shop
 now"). An order with two bottles gets both recipe cards, is introduced to the
-bottle it is missing, and gets a plain "Shop now" reorder button; the full set
+bottle it is missing, and gets a plain "Shop" reorder button; the full set
 gets a suggestion for each bottle instead of a cross-sell.
 
 ---
@@ -165,7 +165,7 @@ subscribers* segment. Smart sending off, so it always sends.
 > Make one this week. And if you ever have a question, just reply. It comes
 > straight to us.
 >
-> [ **Shop now** → shop.html ] [ **All the recipes** → cocktails.html ]
+> [ **Shop** → shop.html ] [ **All the recipes** → cocktails.html ]
 >
 > De Nada,
 > Danny & Adam
@@ -224,7 +224,7 @@ this email is what delivers them. Keep the list in both places the same.
 > year. Each of them has picked up a medal at the Agavos Awards, which we'll
 > mention once and then try to stop mentioning.
 >
-> [ **Shop now** → shop.html ] [ **Our story** → our-story.html ]
+> [ **Shop** → shop.html ] [ **Our story** → our-story.html ]
 >
 > De Nada,
 > Danny & Adam
@@ -249,7 +249,7 @@ this email is what delivers them. Keep the list in both places the same.
 > Come in and have a look around. And thank you for waiting with us. It means
 > a lot.
 >
-> [ **Shop now** → shop.html ]
+> [ **Shop** → shop.html ]
 >
 > De Nada,
 > Danny & Adam
@@ -274,7 +274,7 @@ this email is what delivers them. Keep the list in both places the same.
 > Come in and have a look around. We think you'll like what we've done with
 > the place.
 >
-> [ **Shop now** → shop.html ] [ **The recipes** → cocktails.html ]
+> [ **Shop** → shop.html ] [ **The recipes** → cocktails.html ]
 >
 > De Nada,
 > Danny & Adam
@@ -352,7 +352,7 @@ Order* and make the first delay 6 days.
 | Delivered + 1 day, 10 am | The first drink | The recipe for each bottle in the order, nothing else |
 | + 28 days | How was it? | One question, reply by email, nothing else |
 | + 30 days | The other one | Four versions, each with the photo of the bottle it introduces: no Blanco in the order (Reposado, Añejo, or both) → the Blanco; Blanco (alone or with the Añejo) → the Reposado; Blanco + Reposado → the Añejo; all three → "The full set", a suggestion for each bottle, button to the recipes. Skipped if they re-ordered |
-| + 16 days (about 75 after delivery) | Running low? | One bottle bought → "Shop the <bottle>"; two or three → "Shop now". Skipped if they re-ordered |
+| + 16 days (about 75 after delivery) | Running low? | One bottle bought → "Shop the <bottle>"; two or three → "Shop". Skipped if they re-ordered |
 
 ### Email 1: The first drink
 
@@ -446,7 +446,7 @@ one." / "The one you haven't met yet." except for the full set.
 > And if it's still going strong, ignore this entirely. We'd rather you drink
 > it slowly, with people you like.
 >
-> [ **Shop the Blanco / Reposado / Añejo** → that product page when they bought one bottle; **Shop now** → shop.html when they bought two or three ]
+> [ **Shop the Blanco / Reposado / Añejo** → that product page when they bought one bottle; **Shop** → shop.html when they bought two or three ]
 >
 > De Nada,
 > Danny & Adam
@@ -586,7 +586,7 @@ dates with the retailer.
 > Sending it straight to them? Put their address at checkout. Someone 21 or
 > over has to sign for the box, so pick a day they'll be home.
 >
-> [ **Shop now** → shop.html ]
+> [ **Shop** → shop.html ]
 
 ### Thu Nov 12: What to bring on Thursday.
 
@@ -609,7 +609,7 @@ dates with the retailer.
 >
 > Order by Monday, November 16 and it should be there in time.
 >
-> [ **Shop now** → shop.html ]
+> [ **Shop** → shop.html ]
 
 ### Thu Dec 10: Order by December 15.
 
@@ -626,7 +626,7 @@ dates with the retailer.
 >
 > Thank you for a good first few months. We'll see you in the new year.
 >
-> [ **Shop now** → shop.html ]
+> [ **Shop** → shop.html ]
 
 **Gift notes.** The emails deliberately do not promise a note in the box. If
 the retailer will print order notes, turn on the cart note in the Shopify
@@ -679,11 +679,12 @@ Unengaged 90, Unengaged 180). Worth adding when there are orders:
 
 ### 4. The old list (done)
 The Squarespace list was imported on Sept 18 and the old store's customers
-arrived with the Shopify connection. The *Legacy subscribers* segment is
-defined by subscribe method (list import, or the Shopify integration), so
-there is nothing to tag. If another old list ever needs importing, import it
-the same way and the segment picks it up; or set `signup_source` = `legacy`
-on the import, which the segment also honours.
+arrived with the Shopify connection. Klaviyo's segment engine would not match
+those profiles by subscribe method or subscribe date through the API (both
+definitions evaluated to zero), so on Sept 23 all 452 of them were tagged
+`signup_source` = `legacy` in one bulk job and the *Legacy subscribers*
+segment keys off that tag. If another old list ever needs importing, add a
+`signup_source` column with the value `legacy` and the segment picks it up.
 
 ### 5. Launch day
 - Pre-launch confirmation flow → **Draft** (off)

@@ -1,5 +1,67 @@
+# Netlify redirect rules for denadatequila.com
+#
+# Pretty URL for the FAQ (rewrite, the address bar keeps /faq).
 /faq   /faq.html                                                                                200
+
+# QR codes on the trailers. The attribution rides along so scans show up in analytics.
 /w/b   /welcome?src=blanco-trailer&utm_source=fleet&utm_medium=qr&utm_campaign=blanco-trailer    301
 /w/r   /welcome?src=reposado-trailer&utm_source=fleet&utm_medium=qr&utm_campaign=reposado-trailer  301
 /w/a   /welcome?src=anejo-trailer&utm_source=fleet&utm_medium=qr&utm_campaign=anejo-trailer        301
 /w     /welcome                                                                                    301
+
+# ---------------------------------------------------------------------------
+# Old Squarespace site (2021 to September 2026). These are the URLs Google
+# still has indexed for www.denadatequila.com. All permanent (301) so search
+# engines carry the old rankings over to the new pages. The shop subdomain
+# (shop.denadatequila.com) is unchanged and needs nothing here.
+# ---------------------------------------------------------------------------
+
+# Main pages (the later site used trailing slashes; the splat catches /shop/p/... product pages too)
+/shop            /shop.html          301
+/shop/*          /shop.html          301
+/cocktails       /cocktails.html     301
+/cocktails/*     /cocktails.html     301
+/our-story       /our-story.html     301
+/our-story/*     /our-story.html     301
+/faq/*           /faq.html           301
+/locations       /faq.html           301
+/locations/*     /faq.html           301
+/terms-of-use    /terms.html         301
+/terms-of-use/*  /terms.html         301
+/privacy-policy  /privacy.html       301
+/privacy-policy/* /privacy.html      301
+/privacy         /privacy.html       301
+/alchemy         /our-story.html     301
+/alchemy/*       /our-story.html     301
+
+# Recipe pages from the earlier site (one page per drink). Each one lands on
+# its recipe in the cocktail book.
+/margarita              /cocktails.html#tommys-margarita        301
+/tommys-margarita       /cocktails.html#tommys-margarita        301
+/michoacan-cafe         /cocktails.html#michoacan-cafe          301
+/paloma                 /cocktails.html#de-nada-paloma          301
+/de-nada-paloma         /cocktails.html#de-nada-paloma          301
+/tequila-sunrise        /cocktails.html#tequila-sunrise         301
+/old-fashioned          /cocktails.html#mexican-style-old-fashioned 301
+/mexican-style-old-fashioned /cocktails.html#mexican-style-old-fashioned 301
+/espresso-martini       /cocktails.html#espresso-martini        301
+/garden-party           /cocktails.html#garden-party            301
+/mexico-city-mule       /cocktails.html#mexico-city-mule        301
+/ranch-water            /cocktails.html                         301
+/behind-the-bar         /cocktails.html                         301
+/behind-the-bar/*       /cocktails.html                         301
+/recipes                /cocktails.html                         301
+/recipes/*              /cocktails.html                         301
+
+# Squarespace housekeeping paths
+/home            /                   301
+/cart            /shop.html          301
+/checkout        /shop.html          301
+/checkout/*      /shop.html          301
+/contact         /faq.html           301
+/contact/*       /faq.html           301
+/about           /our-story.html     301
+/about/*         /our-story.html     301
+/blog            /                   301
+/blog/*          /                   301
+/search          /                   301
