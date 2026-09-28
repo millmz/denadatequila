@@ -78,7 +78,7 @@ denadatequila.com/img/email/.
 
 | Email | Photo |
 |---|---|
-| Welcome 1 "You're welcome." | #2 the tray, or #3 founders clinking |
+| Welcome 1 "The best things are meant to be shared." | #2 the tray, or #3 founders clinking |
 | Welcome 2 "Three bottles. One rule." | #6 sideboard lineup |
 | Welcome 3 "The house margarita" | Adam pouring a shaker into a glass at the steel table, three bottles beside him |
 | Launch "It's here." | #1 the table toast |

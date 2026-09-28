@@ -48,7 +48,7 @@ again), or edit the flow's own copy directly.
 |---|---|---|---|
 | **Pre-launch confirmation** "You're on the list." | `RW2Gnc` | **Live now, verified Sept 23. Turn OFF on Oct 1** | Added to list `WXrq3N` → 15 min → one short email. Skips anyone in the *Legacy subscribers* segment, so the old-list import does not trigger it. A signup with an address that is *already on the list* (yours, for instance, which came in with the Sept 18 import) updates the profile but never re-adds it, so nothing sends; to test with such an address, remove it from the list in Klaviyo first, then sign up again |
 | Welcome flow | `UQqXn7` | Draft until Oct 1 | Added to list `WXrq3N`; every email skips anyone who has *Placed Order* |
-| Welcome 1 "You're welcome." | action `117746850` | | immediately. Two paragraphs, the bottles, and the five easiest recipes with links |
+| Welcome 1 "The best things are meant to be shared." | action `117746850` | | immediately. Two paragraphs, the bottles, and the five easiest recipes with links |
 | Welcome 2 "The house margarita" | action `117746852` | | +3 days. Tommy's Margarita |
 | Welcome 3 "Nothing added." | action `117746854` | | +4 days. How it's made, then the shop |
 | Abandoned checkout | `TDe5uV` | Draft until Oct 1 | *Checkout Started* → 1 h "Your cart is still here." → 23 h later "Still thinking?" (shipping, the signature, breakage, answered). Both skipped if they ordered since. Re-entry after 7 days |
@@ -140,16 +140,19 @@ subscribers* segment. Smart sending off, so it always sends.
 
 ### Email 1, immediately
 
-**Subject:** You're welcome.
-**Preview:** That's what De Nada means. It's also the whole idea.
+**Subject:** The best things are meant to be shared.
+**Preview:** A note from Danny and Adam, and the five drinks we make most.
 
-> *(photo: Adam opening the Blanco at the table, Reposado and Añejo beside him)*
+> *(photo: the three bottles on the sunlit sideboard)*
 >
-> **You're welcome.** Not the polite reflex. The real thing.
+> HELLO FROM DANNY AND ADAM
+> **The best things are meant to be shared.** That's the whole idea behind De Nada.
 >
-> Thanks for signing up. We're Danny and Adam, and this is the tequila we make
-> at NOM 1414 in the highlands of Jalisco: estate-grown agave, nothing added,
-> three glass bottles. **Blanco** for the drinks, **Reposado** for the end of
+> Thanks for signing up. We're Danny and Adam, and we started De Nada on one
+> idea: a good bottle belongs on the table, not the shelf. A door left open, a
+> drink made for whoever walks in, and enough to go around. The tequila is made
+> for exactly that, at NOM 1414 in the highlands of Jalisco: estate-grown agave,
+> nothing added, three glass bottles. **Blanco** for the drinks, **Reposado** for the end of
 > the day, **Añejo** for sipping.
 >
 > Here are the five drinks we make most. They're the easy ones, and every one
