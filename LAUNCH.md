@@ -9,7 +9,7 @@ you say "go" in the session — none of them run on their own.
 
 | # | Item | Owner | How to check |
 |---|---|---|---|
-| 1 | **Glass products stay Draft in Shopify until launch morning.** No pre-orders. Rename the two aluminum products to *Travel Bottle Blanco* and *Travel Bottle Reposado* (titles only; handles and variant IDs stay). Keep "Blanco", "Reposado" and "Añejo" in every product title: the post-purchase emails key off those words | you | Products page |
+| 1 | **Glass products stay Draft in Shopify until launch morning.** No pre-orders. ~~Rename the two aluminum products~~ **Done.** Checked against the live store Sept 30: the three 700 ml glass products are Draft, the two Travel Bottles are renamed and Active, every variant ID and price in `js/shop-config.js` matches Shopify, and all five have *continue selling when out of stock* on, so nothing shows Sold out on launch morning. Keep "Blanco", "Reposado" and "Añejo" in every product title: the post-purchase emails key off those words | you | Products page |
 | 2 | **Shopify theme published** — the GitHub-connected theme is the live theme | you | Themes page shows *denadatequila-shopify-theme/main* as current |
 | 3 | **Checkout branding** — Settings → Checkout → Customize → Branding. Every value to paste, the logo and favicon files, and a mock of the finished checkout are in `SHOPIFY-CHECKOUT.md` | you | Reach checkout; it's cream/green, not white/blue, and matches `shopify-theme/checkout-mock.jpg` |
 | 4 | **Email templates** — Settings → Notifications → Customize email templates → wordmark + `#018769` | you | Send a test order confirmation to yourself |

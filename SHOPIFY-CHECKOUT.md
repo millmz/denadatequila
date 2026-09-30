@@ -16,7 +16,17 @@ The target, mocked from the website's tokens:
 
 ---
 
+**Why this is a paste and not a script.** The store is on the Basic plan.
+Shopify's checkout branding API (`checkoutBrandingUpsert`) refuses Basic
+stores; it is Plus only. The editor in the admin is open to every plan, so
+that is where these values go. Checked September 30 against the live store.
+
 ## 1. Files to upload
+
+Both files are **already in the store's Files library** (Content → Files,
+uploaded September 30 as `denada-checkout-logo.png` and
+`denada-checkout-favicon.png`), so in the editor pick them from the library
+rather than uploading again.
 
 | Field | File in this repo | Notes |
 |---|---|---|
