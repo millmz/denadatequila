@@ -58,7 +58,7 @@ result of missing that distinction.
 
 | Surface | Where to brand it | Notes |
 |---|---|---|
-| **Checkout** | Settings → Checkout → **Branding** | Logo, colours, fonts, button shape. Set background `#F3F8E4`, buttons `#018769`, text `#231F20`, accent `#D37240`. On non-Plus plans this editor is the only control — no custom CSS. |
+| **Checkout** | Settings → Checkout → Customize → **Branding** | Logo, colours, fonts, button shape. Every field and value is in **`SHOPIFY-CHECKOUT.md`** at the repo root, with the logo and favicon files (`checkout-logo.png`, `checkout-favicon.png`) and a mock of the result (`checkout-mock.jpg`) in this folder. On non-Plus plans this editor is the only control — no custom CSS. |
 | **Order status / thank-you page** | Same checkout branding | Inherits from the checkout branding editor. |
 | **Email notifications** | Settings → **Notifications** → each template | Order confirmation, shipping confirmation, refund, abandoned cart. Each is its own Liquid/HTML template. At minimum swap the logo and accent colour. Customers see these more than any page on the site. |
 | **Accelerated checkout buttons** | Not controllable | Shop Pay, Google Pay and PayPal render in Shopify-controlled iframes. The CSS squares off the wrapper; the buttons keep their own brand colours. Expected. |
