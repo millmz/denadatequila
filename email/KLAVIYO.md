@@ -94,7 +94,7 @@ Full photo index in `PHOTOS.md`.
 1. Flows → **Pre-launch confirmation → Draft** (off). Welcome 1 takes over.
 2. Flows → set Welcome, Abandoned checkout, Post-purchase, Win-back and Behind the Bar to **Live**.
 3. Campaigns → "Launch: It's here." → Review → **Schedule**. Then "Legacy hello" → **Schedule** (it is pre-set for the next morning).
-4. Flows → Behind the Bar → ⋯ → **Back-populate** → everyone already in *Email subscribers (all)*. This is the one thing the API can't do; without it the existing subscribers never enter the series.
+4. ~~Flows → Behind the Bar → ⋯ → **Back-populate**~~ **Done Oct 1 by API** (see "Back-populating by API" below). All 480 subscribers are in the flow's first delay.
 5. Oct 2 or 3: Campaigns → "Launch resend" → **Schedule**. It only goes to people who have not opened the launch email.
 
 **Still needed from you (Settings → Organization):** street address (footer is
@@ -562,8 +562,22 @@ extra delay and email (the API cannot add a step to an existing flow; Claude
 can rebuild it in a minute, or add the step in the flow editor by hand).
 
 **Existing subscribers don't enter a segment-triggered flow on their own.**
-Launch morning: Flows → Behind the Bar → ⋯ → Back-populate → the *Email
+The UI way is Flows → Behind the Bar → ⋯ → Back-populate → the *Email
 subscribers (all)* segment. They all start at recipe 01, fourteen days later.
+
+**Back-populating by API (done Oct 1, 2026, 10:22 am ET).** Klaviyo has no
+back-populate endpoint, but a segment-triggered flow fires for every profile
+that newly qualifies for its segment, including after a definition change. So:
+the *Email subscribers (all)* segment (`S2hYpZ`, which feeds only this flow)
+was given a placeholder definition that matches nobody (email equals an
+`.invalid` address), its count was confirmed at 0 with processing finished, and
+the original definition (email marketing consent: subscribed) was put back.
+The count returned to 480 within fifteen seconds and all 480 were triggered
+into the flow. Nothing sent that day; the first step is a 14-day delay, so
+recipe 01 lands around Oct 15. Anyone who subscribes later enters the usual
+way. If this ever has to be repeated, the same two `update_segment` calls do
+it, but note that profiles already in the flow would re-enter it, so only do it
+on a flow nobody has entered yet.
 
 ---
 
@@ -693,7 +707,7 @@ segment keys off that tag. If another old list ever needs importing, add a
 - Pre-launch confirmation flow → **Draft** (off)
 - The five other flows → **Live**
 - Launch campaign → **Schedule**; Legacy hello → **Schedule**
-- Behind the Bar flow → **Back-populate** with *Email subscribers (all)*
+- ~~Behind the Bar flow → **Back-populate** with *Email subscribers (all)*~~ done Oct 1 by API
 - Two days later: Launch resend → **Schedule**
 
 ### 6. Onsite tracking on the Shopify theme (optional)
