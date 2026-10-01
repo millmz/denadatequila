@@ -198,7 +198,11 @@ footer a:hover{color:var(--cream)}
   .buy-row .btn{flex:1 1 100%;text-align:center}
 }
 /* photography */
-.pdp-shots{grid-column:1;display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:-18px}
+.pdp-shots{grid-column:1;grid-row:2;display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:-18px}
+/* the hero sits in column 1, the small shots under it, the details fill column 2 beside both */
+.pdp-media{grid-column:1;grid-row:1}
+.pdp-info{grid-column:2;grid-row:1 / span 2}
+@media (max-width:900px){.pdp-media{grid-column:1;grid-row:1}.pdp-info{grid-column:1;grid-row:2}.pdp-shots{grid-column:1;grid-row:3;margin-top:0}}
 .pdp-shots figure{margin:0;border:2px solid var(--black);background:#FBFDF3;padding:10px 10px 12px;box-shadow:6px 6px 0 var(--black)}
 .pdp-shots figure:first-child{transform:rotate(-1.2deg)}
 .pdp-shots figure:last-child{transform:rotate(1.1deg)}
