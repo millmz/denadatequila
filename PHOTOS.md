@@ -184,7 +184,10 @@ files 1500 × 2000. Exported as `img/photos/tyler-<name>-{800,1600}.webp` and
 | `tyler-reposado-flat` | Reposado lying down, medal catching the light | Reposado page, second photo; Shopify second image |
 | `tyler-anejo-flat` | Añejo lying down in late light | Añejo page, second photo; Shopify second image |
 | `tyler-trio` | The three standing shots as one triptych (built here, 1200 × 900) | Welcome 1, Legacy hello, Gifts, cross-sell (all-three version), `og.jpg` social preview |
-| `hero-blanco` | Blanco cropped from the stopper to just under the label (1200 × 1040) | Homepage hero |
+| `hero-blanco` | Blanco cropped from the stopper to just under the label, full frame width (1500 × 1050, sharpened 2400 for retina) | Homepage hero |
+| `tyler-pour-4x5` | The Añejo poured into a rocks glass, soft focus (Tyler's 4:5 crop) | Homepage Quiet Craft print, Añejo page second shot |
+| `tyler-pour` | Same frame, full height | Spare |
+| `tyler-glass` | A hand holding the rocks glass, soft focus | Post-purchase 1 "The first drink" hero (replaced `danny-cap`) |
 
 **Homepage hero (Oct 1).** The video polaroid is gone. The hero is now the
 Blanco alone: the photo fills the right half, its sky blue runs across the whole
@@ -193,13 +196,16 @@ with the eyebrow "Tequila for the host". The green button is "Shop the Blanco".
 To go back to the video hero, revert the hero block in `index.html` to the
 commit before this one; the video files are still in `video/`.
 
-**Still to come from Tyler:** the two pour shots (Añejo
-into a rocks glass, soft focus) and the glass shot, plus the founder portraits.
-The Blanco flat lay arrived on a second send (placed); the three others still
-need re-sending. Intended homes: a pour shot on the
-homepage Quiet Craft section and in Post-purchase 1 (replacing `danny-cap`);
-the glass shot on the Añejo page; founders on Our Story (hero and "The two
-behind the bottle") and in Welcome 3 (replacing `kitchen-founders`).
+**Resolution.** Everything placed so far came through chat (1500 px) or the
+Drive folder *De Nada Glass Launch* (Tyler's web exports, 1024 px). The
+homepage hero is the one place that shows it: it fills more than half a retina
+screen and is upscaled. When Tyler's full-size scans arrive, drop them in the
+same Drive folder and the hero, product heroes and Shopify images get rebuilt
+from them. Drive is the right pipe: files there arrive uncompressed, while
+images pasted into chat are downsized and, if sent mid-task, not saved at all.
+
+**Still to come:** the founder portraits, for Our Story (hero and "The two
+behind the bottle") and Welcome 3 (replacing `kitchen-founders`).
 
 The old renders and the September table shots stay in the repo. Nothing was
 deleted.
