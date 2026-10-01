@@ -45,5 +45,22 @@ window.DENADA_IG = {
   profileUrl: "https://www.instagram.com/denadatequila/",
 
   /* Maximum posts to show in the carousel. */
-  limit: 12
+  limit: 12,
+
+  /* Shown instead of the live feed when it cannot be read: Behold's free
+     plan pauses a feed for the rest of the month once it passes 1,200 views,
+     and it only refreshes once a day. These are our own photos, linking to
+     the profile, so the band never disappears. The subtitle changes so the
+     page does not call them live posts. */
+  fallbackSubtitle: "Pull up a chair.",
+  fallback: [
+    { img: "img/photos/tyler-trio-800.webp",       cap: "Blanco, Reposado and Añejo in the new glass bottles" },
+    { img: "img/photos/tyler-pour-800.webp",       cap: "Pouring De Nada Reposado" },
+    { img: "img/photos/founders-cheers-800.webp",  cap: "Danny and Adam, cheers" },
+    { img: "img/photos/tyler-blanco-800.webp",     cap: "De Nada Blanco" },
+    { img: "img/photos/paloma-pour-800.webp",      cap: "A paloma in the making" },
+    { img: "img/photos/tyler-reposado-800.webp",   cap: "De Nada Reposado" },
+    { img: "img/photos/rocks-glass-800.webp",      cap: "Añejo, neat" },
+    { img: "img/photos/tyler-anejo-800.webp",      cap: "De Nada Añejo" }
+  ]
 };

@@ -104,8 +104,10 @@ untangling for a photo carousel.
 
 ## Behavior (either option)
 
-- **Not configured / feed down / network error** → the section stays hidden.
-  The page never shows a broken or empty band.
+- **Not configured / feed down / network error** → the section shows the
+  fallback tiles from `js/ig-config.js` (our own photos, linking to the
+  profile) and the subtitle changes to "Pull up a chair." The page never shows
+  a broken or empty band.
 - Posts render newest-first as square tiles, each linking to the post on
   Instagram. Videos show their cover image.
 - `limit` in `js/ig-config.js` caps how many posts show (default 12).
@@ -119,6 +121,8 @@ untangling for a photo carousel.
 | `/api/instagram` returns `{"error":"not configured"}` | Option B: env var missing, or deploy predates it | Set `IG_ACCESS_TOKEN`, redeploy |
 | Worked, then died weeks later | Option B: token invalidated (password change or security checkpoint) | Regenerate the token, update the env var, redeploy |
 | Carousel hidden but the feed URL returns posts | Browser cached an old failure | Hard refresh; it self-heals |
+| New posts not showing | Behold's **free plan refreshes the feed once a day**; the Starter plan refreshes hourly | Wait for the daily refresh, or upgrade in the Behold dashboard. Since Oct 1 the site also asks the browser to revalidate the feed on every visit, so a stale browser copy is no longer a cause |
+| Carousel shows our own photos with the subtitle "Pull up a chair." | The feed could not be read. Most likely Behold's **free plan cap of 1,200 feed views a month** was hit (every homepage load is one view), which pauses the feed until the 1st of next month. Behold emails when this happens | Upgrade the plan in the Behold dashboard, or wait for the month to roll over. The fallback tiles are in `js/ig-config.js` under `fallback` |
 
 ## Files
 

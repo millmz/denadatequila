@@ -54,10 +54,17 @@
     return posts;
   }
 
-  function render(posts) {
+  function render(posts, isFallback) {
     var section = document.getElementById("ig");
     var track = document.getElementById("ig-track");
     if (!section || !track || !posts.length) return;
+
+    // Fallback tiles are our own photos, not live posts, so the subtitle
+    // must not claim they are.
+    if (isFallback && CFG.fallbackSubtitle) {
+      var sub = section.querySelector(".ig-head .serif-i");
+      if (sub) sub.textContent = CFG.fallbackSubtitle;
+    }
 
     var max = CFG.limit > 0 ? CFG.limit : 12;
     var frag = document.createDocumentFragment();
@@ -89,13 +96,32 @@
     section.hidden = false;
   }
 
+  /* Our own photos, shown when the feed is unavailable (not configured,
+     service paused for the month, network error). Tiles link to the profile. */
+  function fallbackPosts() {
+    var list = Array.isArray(CFG.fallback) ? CFG.fallback : [];
+    var posts = [];
+    for (var i = 0; i < list.length; i++) {
+      var p = list[i] || {};
+      if (!p.img) continue;
+      posts.push({ img: p.img, link: p.link || CFG.profileUrl || "#", cap: p.cap || "" });
+    }
+    return posts;
+  }
+
   function init() {
     var url = (CFG.feedUrl || "").trim();
-    if (!url) return; // not configured yet: section stays hidden
-    fetch(url, { mode: "cors" })
+    if (!url) { render(fallbackPosts(), true); return; }
+    // "no-cache" makes the browser revalidate with the feed's CDN on every
+    // visit instead of reusing a copy it fetched days ago.
+    fetch(url, { mode: "cors", cache: "no-cache" })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (json) { render(normalize(json)); })
-      .catch(function () { /* leave the section hidden; never show a broken band */ });
+      .then(function (json) {
+        var posts = normalize(json);
+        if (posts.length) render(posts, false);
+        else render(fallbackPosts(), true);
+      })
+      .catch(function () { render(fallbackPosts(), true); });
   }
 
   if (document.readyState === "loading") {
