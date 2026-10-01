@@ -173,3 +173,22 @@ this list on a laptop and a phone. Every line should be true.
 Once it is right, press **Publish** in the editor. The checkout branding is
 independent of which theme is live, so it stays put when the theme changes on
 launch day.
+
+## 8. If the live checkout still looks like the old one
+
+Branding edits live in a checkout *profile*, and they only reach shoppers
+once that profile is **published**. The store has one profile, "My Store
+configuration". If the checkout you reach from the cart still shows the old
+look after editing:
+
+1. Settings → Checkout → **Customize**. Look at the top right of the editor.
+   If the button says **Publish**, the edits are saved as a draft only. Press
+   it.
+2. If it already says Published, open the checkout in a private window.
+   Shopify caches checkout assets for a few minutes.
+3. Make sure you are looking at the checkout (the address bar shows
+   `/checkouts/...`), not the cart page. The cart page is drawn by the theme,
+   not by the branding editor.
+
+The branding itself cannot be read or written by API on the Basic plan, so
+this is the one piece Claude cannot verify or fix from the session.
