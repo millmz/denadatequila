@@ -59,24 +59,23 @@ nav{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:2px s
 .nav-links a:hover,.nav-links a:focus-visible{border-color:var(--green)}
 
 /* ============ HERO: the invitation ============ */
-.hero{position:relative;overflow:hidden;background:var(--cream)}
-.hero .rule-set{color:var(--green);padding-top:14px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#BDD9E4 0%,#C3DAE2 55%,#D6E3E3 100%)}
+.hero .rule-set{color:var(--deep);padding-top:14px;opacity:.55;position:relative;z-index:2}
 .hero-grid{
-  max-width:1280px;margin:0 auto;padding:30px 32px 0;
-  display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:end;min-height:min(90vh,880px);
+  max-width:1280px;margin:0 auto;padding:0 32px;position:relative;
+  display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;min-height:min(calc(100vh - 80px),880px);
 }
-.hero-copy{padding-bottom:90px}
+.hero-copy{padding:40px 0 80px;position:relative;z-index:2}
 .hero-copy .means{font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.3em;font-size:clamp(.8rem,1.4vw,1rem);color:var(--burnt);display:flex;align-items:center;gap:16px}
 .hero-copy .means::after{content:"";flex:0 0 96px;height:48px;background:url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20104%2052%22%20width%3D%22104%22%20height%3D%2252%22%20fill%3D%22none%22%20aria-hidden%3D%22true%22%3E%3Cpath%20d%3D%22M2%2046%20C16%2050%2028%2040%2042%2032%22%20stroke%3D%22%23231F20%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%220.5%206.5%22/%3E%3Cg%20transform%3D%22translate%2856%2C2%29%20rotate%289%2022%2026%29%22%3E%3Cpath%20d%3D%22M19%2022%20C11%207%20-3%205%200.5%2014%20C3%2021%2010%2026%2017%2025%20Z%22%20fill%3D%22%23D37240%22%20stroke%3D%22%23231F20%22%20stroke-width%3D%221.7%22%20stroke-linejoin%3D%22round%22/%3E%3Cpath%20d%3D%22M25%2022%20C33%207%2047%205%2043.5%2014%20C41%2021%2034%2026%2027%2025%20Z%22%20fill%3D%22%23D37240%22%20stroke%3D%22%23231F20%22%20stroke-width%3D%221.7%22%20stroke-linejoin%3D%22round%22/%3E%3Cpath%20d%3D%22M18%2027%20C10%2028%205%2037%209.5%2040.5%20C13.5%2043.5%2019%2037%2019.5%2029.5%20Z%22%20fill%3D%22%23B83F26%22%20stroke%3D%22%23231F20%22%20stroke-width%3D%221.7%22%20stroke-linejoin%3D%22round%22/%3E%3Cpath%20d%3D%22M26%2027%20C34%2028%2039%2037%2034.5%2040.5%20C30.5%2043.5%2025%2037%2024.5%2029.5%20Z%22%20fill%3D%22%23B83F26%22%20stroke%3D%22%23231F20%22%20stroke-width%3D%221.7%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%228%22%20cy%3D%2215%22%20r%3D%221.7%22%20fill%3D%22%23F3F8E4%22/%3E%3Ccircle%20cx%3D%2236%22%20cy%3D%2215%22%20r%3D%221.7%22%20fill%3D%22%23F3F8E4%22/%3E%3Ccircle%20cx%3D%2213%22%20cy%3D%2234%22%20r%3D%221.4%22%20fill%3D%22%23F3F8E4%22/%3E%3Ccircle%20cx%3D%2231%22%20cy%3D%2234%22%20r%3D%221.4%22%20fill%3D%22%23F3F8E4%22/%3E%3Cpath%20d%3D%22M22%2019%20L22%2039%22%20stroke%3D%22%23231F20%22%20stroke-width%3D%222.6%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M22%2019%20C20%2014%2017%2012%2015%2011%20M22%2019%20C24%2014%2027%2012%2029%2011%22%20stroke%3D%22%23231F20%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22/%3E%3C/g%3E%3C/svg%3E") left center/contain no-repeat}
-.hero-copy h1{font-size:clamp(4rem,10.5vw,9.2rem);color:var(--green);margin:10px 0 0}
+.hero-copy h1{font-size:clamp(3.4rem,7vw,6.8rem);color:var(--deep);margin:10px 0 0}
 .hero-copy h1 span{display:block}
 .hero-copy .sub{font-size:clamp(1.25rem,2.2vw,1.7rem);color:var(--black);margin-top:22px;max-width:520px;line-height:1.45}
 .hero-copy .lede{color:var(--gray);margin-top:16px;max-width:470px;font-size:1rem}
 .hero-ctas{margin-top:32px;display:flex;gap:16px;flex-wrap:wrap}
 /* bottle on the counter */
-.hero-bottle{position:relative;display:flex;justify-content:center;align-items:flex-end;padding-bottom:34px;transform:translateX(-26px)}
-.hero-bottle img.bottle{height:clamp(520px,75vh,820px);width:auto;position:relative;z-index:2;filter:drop-shadow(-18px 22px 20px rgba(35,31,32,.22))}
-.hero-bottle .shadow{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);width:64%;height:26px;background:radial-gradient(ellipse at center,rgba(35,31,32,.30),transparent 68%);z-index:1}
+.hero-bottle{position:absolute;top:0;bottom:0;right:0;width:58%;display:flex;justify-content:center;align-items:stretch;z-index:1}
+.hero-bottle img{height:100%;width:auto;max-width:none;object-fit:cover;object-position:50% 50%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 18%,#000 82%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 18%,#000 82%,transparent 100%)}
 /* counter edge */
 .counter{position:relative;height:74px;background:linear-gradient(180deg,#E4ECCF, #D6E0BE)}
 .counter::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--black)}
@@ -144,11 +143,8 @@ h2{font-size:clamp(2.1rem,4.4vw,3.5rem)}
 .b-card:hover{transform:rotate(0) translateY(-4px)}
 .medal{position:absolute;top:14px;right:12px;z-index:5;width:84px;transform:rotate(7deg);filter:drop-shadow(0 4px 6px rgba(35,31,32,.35))}
 .medal img{width:100%;height:auto}
-.b-swatch{padding:38px 26px 0;display:flex;justify-content:center}
-.b-swatch img{height:320px;width:auto;filter:drop-shadow(0 12px 12px rgba(35,31,32,.28))}
-.b-card.blanco .b-swatch{background:var(--turquoise)}
-.b-card.anejo .b-swatch{background:var(--black)}
-.b-card.repo .b-swatch{background:var(--orange)}
+.b-swatch{padding:0;aspect-ratio:4/5;overflow:hidden;background:#E4ECCF}
+.b-swatch img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
 .b-body{padding:26px 26px 30px;display:flex;flex-direction:column;flex:1;border-top:2px solid var(--black)}
 .b-body .eyebrow{color:var(--burnt);margin-bottom:6px}
 .b-body h3{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;font-size:1.65rem;letter-spacing:.06em}
@@ -256,8 +252,10 @@ footer a:hover{color:var(--cream)}
   .hero-copy h1{font-size:clamp(3.1rem,15vw,4.6rem)}
   .hero-copy .sub{font-size:1.2rem}
   .hero-ctas .btn{width:100%;text-align:center}
-  .hero-bottle{padding-bottom:22px;margin-top:8px}
-  .hero-bottle img.bottle{height:470px}
+  .hero-grid{padding:0 20px}
+  .hero-copy{padding:28px 0 20px}
+  .hero-bottle{position:relative;width:auto;margin:0 -20px;height:auto}
+  .hero-bottle img{width:100%;height:auto;mask-image:none;-webkit-mask-image:none}
   .hero-photo{padding:0 0 30px;margin-top:6px}
   .manif-grid{grid-template-columns:1fr;gap:34px}
   .manif-grid .ph-card{max-width:420px;margin:0 auto}
@@ -268,7 +266,6 @@ footer a:hover{color:var(--cream)}
   .sec-head{margin-bottom:40px}
   .b-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto;gap:40px}
   .b-card,.b-card:nth-child(1),.b-card:nth-child(2),.b-card:nth-child(3){transform:none}
-  .b-swatch img{height:280px}
   .stats,.craft-grid{grid-template-columns:repeat(2,1fr)}
   .foot-grid{grid-template-columns:1fr;gap:36px}
   .manif .cols{grid-template-columns:1fr;gap:28px}
@@ -345,19 +342,17 @@ footer a:hover{color:var(--cream)}
   <div class="rule-set"><div class="tri down"></div><div class="ticks"></div></div>
   <div class="hero-grid">
     <div class="hero-copy">
-      <div class="means li d1">De Nada means</div>
-      <h1 class="disp li d2"><span>You&rsquo;re</span><span>Welcome.</span></h1>
+      <div class="means li d1">Tequila for the host</div>
+      <h1 class="disp li d2"><span>Made for</span><span>the table,</span><span>not the shelf.</span></h1>
       <p class="sub serif-i li d3">The spirit of generosity. A single-estate, additive-free tequila from the highlands of Jalisco.</p>
-      <p class="lede li d4">Built for the people who bring people together. Not a velvet rope, not a trophy for the shelf. The bottle on the counter before your guests arrive.</p>
+      <p class="lede li d4">Built for the people who bring people together. Not a velvet rope, not a trophy. The bottle on the counter before your guests arrive.</p>
       <div class="hero-ctas li d5">
-        <a class="btn orange" href="shop.html">Shop the Collection</a>
+        <a class="btn" data-buy-sku="blanco" href="product-blanco.html">Shop the Blanco</a>
         <a class="btn ghost" href="#menu">See the House Menu</a>
       </div>
     </div>
-    <div class="hero-photo li d3">
-      <figure class="ph-card vid">
-        <video class="hero-video" poster="img/photos/lineup-hero-800.webp" width="864" height="1080" muted loop playsinline autoplay preload="metadata" aria-label="A dinner at ours: the three bottles on the sideboard, drinks being made, and a toast at the table" data-src="video/hero-loop-1080.mp4" data-src-small="video/hero-loop-540.mp4"></video>
-      </figure>
+    <div class="hero-bottle li d3">
+      <img width="1600" height="1387" src="img/photos/hero-blanco-800.webp" srcset="img/photos/hero-blanco-800.webp 800w, img/photos/hero-blanco-1600.webp 1600w" sizes="(max-width:960px) 100vw, 58vw" alt="De Nada Blanco, the wooden stopper and the label, shot on film against a pale blue wall" fetchpriority="high">
     </div>
   </div>
   <div class="counter"><div class="rule-set"><div class="ticks"></div></div></div>
@@ -380,7 +375,7 @@ footer a:hover{color:var(--cream)}
     <div class="b-grid">
       <article class="b-card blanco rv">
           <div class="medal"><img width="220" height="138" src="img/site/agavos-awards-2025-double-gold-winner.webp" alt="Agavos Awards 2025 Double Gold winner"></div>
-        <div class="b-swatch"><img loading="lazy" width="448" height="900" src="img/site/de-nada-blanco-bottle.webp" alt="De Nada Blanco bottle"></div>
+        <div class="b-swatch"><img width="800" height="1067" src="img/photos/tyler-blanco-800.webp" srcset="img/photos/tyler-blanco-800.webp 800w, img/photos/tyler-blanco-1600.webp 1600w" sizes="(max-width:960px) 100vw, 400px" alt="De Nada Blanco on a pale blue wall" loading="lazy"></div>
         <div class="b-body">
           <span class="eyebrow">Los Altos Grown &middot; 40% ALC</span>
           <h3>Blanco</h3>
@@ -391,7 +386,7 @@ footer a:hover{color:var(--cream)}
       </article>
       <article class="b-card repo rv">
           <div class="medal"><img loading="lazy" width="220" height="220" src="img/site/agavos-awards-2025-gold-winner.webp" alt="Agavos Awards 2025 Gold winner"></div>
-        <div class="b-swatch"><img loading="lazy" width="448" height="900" src="img/site/de-nada-reposado-bottle.webp" alt="De Nada Reposado bottle"></div>
+        <div class="b-swatch"><img width="800" height="1067" src="img/photos/tyler-reposado-800.webp" srcset="img/photos/tyler-reposado-800.webp 800w, img/photos/tyler-reposado-1600.webp 1600w" sizes="(max-width:960px) 100vw, 400px" alt="De Nada Reposado on a terracotta wall" loading="lazy"></div>
         <div class="b-body">
           <span class="eyebrow">Aged 4+ Months &middot; 40% ALC</span>
           <h3>Reposado</h3>
@@ -402,7 +397,7 @@ footer a:hover{color:var(--cream)}
       </article>
       <article class="b-card anejo rv">
           <div class="medal"><img loading="lazy" width="220" height="220" src="img/site/agavos-awards-2026-gold-winner.webp" alt="Agavos Awards 2026 Gold winner"></div>
-        <div class="b-swatch"><img loading="lazy" width="448" height="900" src="img/site/de-nada-a-ejo-bottle.webp" alt="De Nada Añejo bottle"></div>
+        <div class="b-swatch"><img width="800" height="1067" src="img/photos/tyler-anejo-800.webp" srcset="img/photos/tyler-anejo-800.webp 800w, img/photos/tyler-anejo-1600.webp 1600w" sizes="(max-width:960px) 100vw, 400px" alt="De Nada Añejo on a peach wall" loading="lazy"></div>
         <div class="b-body">
           <span class="eyebrow">Aged 12+ Months &middot; 40% ALC</span>
           <h3>A&ntilde;ejo</h3>

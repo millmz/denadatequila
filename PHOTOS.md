@@ -165,3 +165,41 @@ reduced-motion and data-saver settings. To recut: the source is the
 `recap-video` GitHub release; the cut starts at 14.77 s.
 
 Still wanted: the music version for a click-to-play on Our Story.
+
+---
+
+## Tyler Rizzuto, on film (placed October 1, launch morning)
+
+Nine frames from Tyler Rizzuto (Tage Gallery, @tylersdays). Each bottle on its
+own colour: Blanco on sky blue, Reposado on terracotta, Añejo on peach. Source
+files 1500 × 2000. Exported as `img/photos/tyler-<name>-{800,1600}.webp` and
+`img/email/tyler-<name>.jpg` (1200 px, the standing bottles cropped 4:5).
+
+| File | What it is | Where it is used |
+|---|---|---|
+| `tyler-blanco` | Blanco standing, sky blue | Homepage bottles card, shop card, Blanco page hero, QR page thumbnail, Shopify product image, cross-sell email (no-Blanco version) |
+| `tyler-reposado` | Reposado standing, terracotta | Same places for the Reposado; cross-sell (Blanco-only version) |
+| `tyler-anejo` | Añejo standing, peach | Same places for the Añejo; cross-sell (Blanco + Reposado version) |
+| `tyler-reposado-flat` | Reposado lying down, medal catching the light | Reposado page, second photo; Shopify second image |
+| `tyler-anejo-flat` | Añejo lying down in late light | Añejo page, second photo; Shopify second image |
+| `tyler-trio` | The three standing shots as one triptych (built here, 1200 × 900) | Welcome 1, Legacy hello, Gifts, cross-sell (all-three version), `og.jpg` social preview |
+| `hero-blanco` | Blanco cropped from the stopper to just under the label (1200 × 1040) | Homepage hero |
+
+**Homepage hero (Oct 1).** The video polaroid is gone. The hero is now the
+Blanco alone: the photo fills the right half, its sky blue runs across the whole
+hero as a gradient, and the headline reads "Made for the table, not the shelf."
+with the eyebrow "Tequila for the host". The green button is "Shop the Blanco".
+To go back to the video hero, revert the hero block in `index.html` to the
+commit before this one; the video files are still in `video/`.
+
+**Still to come from Tyler:** the Blanco flat lay, the two pour shots (Añejo
+into a rocks glass, soft focus) and the glass shot, plus the founder portraits.
+The four product-side files arrived in chat but did not land on disk in this
+session, so they need re-sending. Intended homes: Blanco flat lay on the
+Blanco page (second photo, replacing `blanco-table`); a pour shot on the
+homepage Quiet Craft section and in Post-purchase 1 (replacing `danny-cap`);
+the glass shot on the Añejo page; founders on Our Story (hero and "The two
+behind the bottle") and in Welcome 3 (replacing `kitchen-founders`).
+
+The old renders and the September table shots stay in the repo. Nothing was
+deleted.

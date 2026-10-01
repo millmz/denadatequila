@@ -30,7 +30,7 @@ h1{font-family:'Oswald';font-weight:600;text-transform:uppercase;font-size:clamp
 .bcard{display:flex;align-items:center;gap:14px;background:var(--paper);border:2px solid var(--black);box-shadow:3px 3px 0 var(--black);padding:10px 14px;text-align:left}
 .bcard.featured{border-width:3px;box-shadow:4px 4px 0 var(--black);position:relative}
 .bcard.featured::after{content:"the one on the truck";position:absolute;top:-12px;right:10px;font-family:'Caveat';font-weight:600;font-size:1.05rem;color:var(--burnt);background:var(--cream);padding:0 8px;transform:rotate(-2deg)}
-.bcard img{height:74px;width:auto}
+.bcard img{height:74px;width:58px;object-fit:cover;object-position:50% 40%;border:1px solid var(--black)}
 .binfo{flex:1}
 .bname{font-family:'Oswald';font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:1.05rem;color:var(--black)}
 .bprice{font-family:'Libre Franklin';font-size:.82rem;color:var(--gray);margin-top:2px}
@@ -60,17 +60,17 @@ h1{font-family:'Oswald';font-weight:600;text-transform:uppercase;font-size:clamp
 <div class="proofline">AGAVE, WATER &amp; CHAMPAGNE YEAST &#10022; ESTATE-GROWN &#10022; KOSHER CERTIFIED<br><span>DOUBLE GOLD &middot; AGAVOS AWARDS</span></div>
 <div class="bottles" id="bottles">
   <div class="bcard" data-exp="blanco-trailer">
-    <img width="110" height="220" src="img/site/de-nada-blanco.webp" alt="De Nada Blanco">
+    <img width="58" height="74" src="img/photos/tyler-blanco-800.webp" alt="De Nada Blanco">
     <div class="binfo"><div class="bname">Blanco</div><div class="bprice">$49.99 &middot; 700mL</div></div>
     <a class="buy" data-buy-sku="blanco" data-preorder-note-into=".binfo" href="product-blanco.html">Buy</a>
   </div>
   <div class="bcard" data-exp="reposado-trailer">
-    <img width="110" height="220" src="img/site/de-nada-reposado.webp" alt="De Nada Reposado">
+    <img width="58" height="74" src="img/photos/tyler-reposado-800.webp" alt="De Nada Reposado">
     <div class="binfo"><div class="bname">Reposado</div><div class="bprice">$54.99 &middot; 700mL</div></div>
     <a class="buy" data-buy-sku="reposado" data-preorder-note-into=".binfo" href="product-reposado.html">Buy</a>
   </div>
   <div class="bcard" data-exp="anejo-trailer">
-    <img width="110" height="220" src="img/site/de-nada-anejo.webp" alt="De Nada Anejo">
+    <img width="58" height="74" src="img/photos/tyler-anejo-800.webp" alt="De Nada Añejo">
     <div class="binfo"><div class="bname">A&ntilde;ejo</div><div class="bprice">$79.99 &middot; 700mL</div></div>
     <a class="buy" data-buy-sku="anejo" data-preorder-note-into=".binfo" href="product-anejo.html">Buy</a>
   </div>
