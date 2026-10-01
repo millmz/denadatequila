@@ -35,12 +35,12 @@ Pick a quiet morning. Everything below is reversible.
 |---|---|---|---|
 | 1 | **Netlify** → Site configuration → Build & deploy → Build settings → **Production branch: `teaser` → `main`** → Save → Deploys → **Trigger deploy** | you | 2 min |
 | 2 | Wait for the deploy to say *Published*. Private window → `https://www.denadatequila.com` → the full site, age gate, padlock | you | 3 min |
-| 3 | **Revert commit `b7df300`** in the theme repo — restores every store link to the website and switches menus to `website-menu`. Shopify pulls it into the live theme automatically | **[Claude]** — say "go" | 1 min |
+| 3 | ~~Revert commit `b7df300`~~ **Done Oct 1, 9:45 am ET** (theme repo commit `4a6cdf2`). Every store link points back at the website; Shopify pulls it into the live theme automatically | — | — |
 | 4 | Verify on shop.denadatequila.com: header logo → website; menu items → website pages; add to cart → *Continue shopping* → `denadatequila.com/shop.html` | you | 2 min |
-| 4a | **Shopify** → the three glass products → status **Active** | you | 1 min |
+| 4a | ~~Shopify glass products Active~~ **Done Oct 1, 9:45 am ET.** Blanco, Reposado and Añejo 700 ml are Active | — | — |
 | 5 | **Test an order end to end** — from `denadatequila.com/shop.html` → Blanco → Add to Cart → Shopify cart → checkout. Use a 100%-off discount code to complete it, then cancel/refund the order | you | 5 min |
 | 6 | Check `shop-preflight.html` on the live domain — five green pills, no *pre-order* pills | you | 1 min |
-| 7 | **Klaviyo flows**: Pre-launch confirmation → **Draft** (off). Then Welcome, Abandoned checkout, Post-purchase, Win-back, Behind the Bar → **Live**. Say "go" and Claude does all six, or do it in Flows | you / [Claude] | 1 min |
+| 7 | ~~Klaviyo flows~~ **Done Oct 1, 9:46 am ET.** Pre-launch confirmation is off (Draft). Welcome, Abandoned checkout, Post-purchase, Win-back and Behind the Bar are Live | — | — |
 | 7a | **Klaviyo → Flows → Behind the Bar → ⋯ → Back-populate** → segment *Email subscribers (all)*. Puts everyone already on the list into the recipe series; the API can't do this part | you | 1 min |
 | 8 | **Launch campaign** → open "Launch — It's here. (Oct 1)" → Review → **Schedule** (time is pre-set; if 9 am has passed, send now). Then "Legacy hello — We moved" → **Schedule** (pre-set for Oct 2, 10 am ET) | you | 2 min |
 | 8a | **Oct 2 or 3:** "Launch resend — In case you missed it" → Review → **Schedule** (pre-set Oct 4, 10 am ET). It excludes everyone who has opened the launch email, so wait until the opens have come in | you | 1 min |
