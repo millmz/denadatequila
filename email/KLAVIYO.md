@@ -712,7 +712,12 @@ different tag these people get Welcome 1 today rather than a hello tomorrow
 about a move they never saw. Once the Oct 2 send is out, change the *Legacy
 subscribers* segment to `signup_source` **is any of** `legacy`,
 `legacy-wordpress` so both imports report together. Any future import after
-that can use either value.
+that can use either value. **Scheduled:** this runs automatically on Oct 2 at
+11:15 am ET (after the hello has gone out) as a one-shot Claude routine; it
+checks the campaign is Sent first. Side effect worth knowing: the Oct 4
+resend excludes the legacy segment, so once widened, the WordPress import
+sits out the resend too. That is fine: they never got the launch email, they
+got Welcome 1 on Oct 1.
 
 ### 5. Launch day
 - Pre-launch confirmation flow → **Draft** (off)
