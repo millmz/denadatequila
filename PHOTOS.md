@@ -204,8 +204,21 @@ same Drive folder and the hero, product heroes and Shopify images get rebuilt
 from them. Drive is the right pipe: files there arrive uncompressed, while
 images pasted into chat are downsized and, if sent mid-task, not saved at all.
 
-**Still to come:** the founder portraits, for Our Story (hero and "The two
-behind the bottle") and Welcome 3 (replacing `kitchen-founders`).
+**Founders, Oct 1 (second Drive drop).** One frame came through: Danny and Adam
+on a brown sofa against a wood-panelled wall (`000945730016.jpg`, 2395 × 3193,
+full resolution). It now leads Chapter Three on Our Story as a wide 3:2 polaroid
+above the two gold-curtain cards (`tyler-founders-wide-800/1600.webp`), and it
+is the Welcome 3 hero (`img/email/tyler-founders.jpg`, 1200 × 1500). A 3:4 cut
+(`tyler-founders-800/1600.webp`) is exported and unused for now.
+
+**Still in Drive, too big for the connector (10 MB limit):** the two other
+founder frames, `DE_NADA_LAUNCH_264037.jpg` (35 MB) and
+`DE_NADA_LAUNCH_264064.jpg` (50 MB), and the full-resolution versions of the
+bottle shots (17 to 23 MB each). Ask for exports under 10 MB (3000 px on the
+long side, JPEG quality 85 is about 3 to 5 MB). The two founder frames are
+meant for the individual cards on Our Story and the Legacy/Win-back heroes; the
+full-size bottle scans let the homepage hero and the social covers be recut
+without upscaling.
 
 The old renders and the September table shots stay in the repo. Nothing was
 deleted.

@@ -50,7 +50,7 @@ again), or edit the flow's own copy directly.
 | Welcome flow | `UQqXn7` | Draft until Oct 1 | Added to list `WXrq3N`; every email skips anyone who has *Placed Order* |
 | Welcome 1 "The best things are meant to be shared." | action `117746850` | | immediately. Two paragraphs, the bottles, and the five easiest recipes with links |
 | Welcome 2 "The house margarita" | action `117746852` | | +3 days. Tommy's Margarita |
-| Welcome 3 "Nothing added." | action `117746854` | | +4 days. How it's made, then the shop |
+| Welcome 3 "Nothing added." | action `117746854` → clone `UQU3zp` (Oct 1, founders on film replaced the kitchen photo) | | +4 days. How it's made, then the shop |
 | Abandoned checkout | `TDe5uV` | Draft until Oct 1 | *Checkout Started* → 1 h "Your cart is still here." → 23 h later "Still thinking?" (shipping, the signature, breakage, answered). Both skipped if they ordered since. Re-entry after 7 days |
 | Post-purchase | `Ycdays` | Draft until Oct 1 | *Delivered Shipment* → next day 10 am "The first drink" → +28 d "How was it?" → +30 d "The other one" → +16 d "Running low?" (last two skipped if they re-ordered). Re-entry after 90 days. Copy keys off every bottle in the order, so two- and three-bottle orders read right |
 | Win-back | `SwCgXT` | Draft until Oct 1 | joins segment *Unengaged 90* → "It's been a while." |
