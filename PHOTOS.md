@@ -211,14 +211,20 @@ above the two gold-curtain cards (`tyler-founders-wide-800/1600.webp`), and it
 is the Welcome 3 hero (`img/email/tyler-founders.jpg`, 1200 × 1500). A 3:4 cut
 (`tyler-founders-800/1600.webp`) is exported and unused for now.
 
-**Still in Drive, too big for the connector (10 MB limit):** the two other
-founder frames, `DE_NADA_LAUNCH_264037.jpg` (35 MB) and
-`DE_NADA_LAUNCH_264064.jpg` (50 MB), and the full-resolution versions of the
-bottle shots (17 to 23 MB each). Ask for exports under 10 MB (3000 px on the
-long side, JPEG quality 85 is about 3 to 5 MB). The two founder frames are
-meant for the individual cards on Our Story and the Legacy/Win-back heroes; the
-full-size bottle scans let the homepage hero and the social covers be recut
-without upscaling.
+**The two single portraits** (Adam in the brown overshirt, Danny in black,
+same sofa and wall) arrived through chat at about 1070 px wide and now sit on
+the Our Story founder cards (`tyler-adam-800.webp`, `tyler-danny-800.webp`,
+4:5), replacing the gold-curtain shots there. Email cuts exist
+(`img/email/tyler-adam.jpg`, `tyler-danny.jpg`, 1000 × 1250) and are unused so
+far; the Win-back hero is the natural home if a founder face is wanted. The
+gold-curtain portraits stay on the Añejo product page.
+
+**Still in Drive, too big for the connector (10 MB limit):** the full-resolution
+versions of these two portraits (`DE_NADA_LAUNCH_264037.jpg`, 35 MB, and
+`DE_NADA_LAUNCH_264064.jpg`, 50 MB) and of the bottle shots (17 to 23 MB each).
+Exports under 10 MB (3000 px on the long side, JPEG quality 85 is about 3 to
+5 MB) would let the homepage hero, the Shopify banner and the social covers be
+recut without upscaling, and the portraits be swapped for full-size versions.
 
 The old renders and the September table shots stay in the repo. Nothing was
 deleted.
