@@ -120,26 +120,11 @@ window.DENADA_SHOP = {
       variantId: "52046488600864",   // Shopify SKU 24629, confirmed $79.99
       productUrl: "https://shop.denadatequila.com/products/de-nada-tequila-anejo-700ml",
       preorder: ""
-    },
-
-    /* The Travel Bottle line (aluminum). These two already exist on Shopify, so
-       their product pages are pre-filled and the buttons work today. Add the
-       variant IDs when you want them going straight to checkout instead. */
-    "aluminum-blanco": {
-      name: "Travel Bottle Blanco",
-      price: "41.99",
-      variantId: "49037824852256",   // Shopify SKU 16154, confirmed $41.99
-      productUrl: "https://shop.denadatequila.com/products/denada-tequila-blanco",
-      preorder: ""
-    },
-
-    "aluminum-reposado": {
-      name: "Travel Bottle Reposado",
-      price: "45.99",
-      variantId: "49037825376544",   // Shopify SKU 16153, confirmed $45.99
-      productUrl: "https://shop.denadatequila.com/products/denada-tequila-reposado",
-      preorder: ""
     }
+
+    /* The aluminum Travel Bottles (Shopify SKUs 16154 and 16153) were retired
+       from the site on launch day, Oct 1, 2026, and set to Draft in Shopify.
+       Their old pages redirect to the shop. */
 
   }
 };

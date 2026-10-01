@@ -9,6 +9,10 @@
 /w/a   /welcome?src=anejo-trailer&utm_source=fleet&utm_medium=qr&utm_campaign=anejo-trailer        301
 /w     /welcome                                                                                    301
 
+# Travel Bottle (aluminum) pages, retired Oct 1, 2026. The products are Draft in Shopify.
+/product-aluminum-blanco.html    /shop.html   301
+/product-aluminum-reposado.html  /shop.html   301
+
 # ---------------------------------------------------------------------------
 # Old Squarespace site (2021 to September 2026). These are the URLs Google
 # still has indexed for www.denadatequila.com. All permanent (301) so search

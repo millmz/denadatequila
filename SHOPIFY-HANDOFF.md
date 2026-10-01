@@ -65,8 +65,8 @@ No payment or customer data ever touches this site.
 | `blanco` | Blanco | 700mL | $49.99 | `product-blanco.html` |
 | `reposado` | Reposado | 700mL | $54.99 | `product-reposado.html` |
 | `anejo` | Añejo | 700mL | $79.99 | `product-anejo.html` |
-| `aluminum-blanco` | Travel Bottle Blanco (aluminum) | 700mL | $41.99 | `product-aluminum-blanco.html` |
-| `aluminum-reposado` | Travel Bottle Reposado (aluminum) | 700mL | $45.99 | `product-aluminum-reposado.html` |
+| ~~`aluminum-blanco`~~ | Travel Bottle Blanco (aluminum). Retired from the site Oct 1, 2026; Draft in Shopify | 700mL | $41.99 | redirects to `shop.html` |
+| ~~`aluminum-reposado`~~ | Travel Bottle Reposado (aluminum). Retired from the site Oct 1, 2026; Draft in Shopify | 700mL | $45.99 | redirects to `shop.html` |
 
 Prices displayed on the site come from `js/shop-config.js`. Keep them in sync
 with Shopify so the product page matches what the customer pays.
