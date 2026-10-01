@@ -57,6 +57,14 @@
 /recipes                /cocktails.html                         301
 /recipes/*              /cocktails.html                         301
 
+# Store-style paths typed on the main domain by mistake (the store lives on
+# shop.denadatequila.com). Everything lands somewhere useful.
+/products/*      /shop.html          301
+/collections/*   /shop.html          301
+/pages/contact   /faq.html           301
+/pages/*         /                   301
+/policies/*      /terms.html         301
+
 # Squarespace housekeeping paths
 /home            /                   301
 /cart            /shop.html          301

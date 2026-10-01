@@ -58,7 +58,7 @@ Nothing else needs undoing; DNS never changes.
 
 | # | Item | Owner |
 |---|---|---|
-| 1 | Google Search Console → check for 404s on old URLs; send Claude any that matter | you → Claude |
+| 1 | Google Search Console → check for 404s on old URLs; send Claude any that matter. **Oct 1 sweep done:** every old URL search engines still list for `www.denadatequila.com` is covered by `_redirects` (Squarespace pages, recipe pages, housekeeping paths, plus `/products/*`, `/collections/*`, `/pages/*` and `/policies/*` as safety nets). On the store, nine URL redirects were added in Shopify so the retired Travel Bottle links (`/products/denada-tequila-blanco`, `/products/denada-tequila-reposado`, `/products/de-nada-tequila-bundle`, and the likely older handles) land on the glass products or the collection page; the storefront homepage forwards to the website. Wayback Machine could not be reached from the session, so anything it alone remembers is unchecked | you → Claude |
 | 2 | Klaviyo → Welcome 1 open rate; launch campaign delivered count | you |
 | 3 | Shopify → any orders? Klaviyo → Abandoned checkout flow has entries? | you |
 | 4 | Delete the `teaser` branch deploy setting in Netlify (optional tidy-up) | you |
