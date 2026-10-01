@@ -67,6 +67,7 @@ again), or edit the flow's own copy directly.
 | Campaign: Thanksgiving "What to bring on Thursday." | `01M35J54SJA1MTPZBQX80PRNSK` | Draft, pre-set Thu Nov 12, 4:00 pm ET | Whole list. Says "order by Monday, November 16": confirm that date with the retailer first |
 | Campaign: Holidays "Order by December 15." | `01M35J57KR82T7H99SQ72G3YMH` | Draft, pre-set Thu Dec 10, 4:00 pm ET | Whole list. Confirm the Dec 15 cut-off with the retailer first |
 | New photography (Oct 1) | Welcome 1 `WczNp9`, Post-purchase 3 `XJSEPZ`, Gifts `SkdJ3T`, Legacy hello `WEJNbp` | Done | Tyler Rizzuto's film shots replaced the September table photos: the three-bottle triptych `tyler-trio.jpg` in Welcome 1, Legacy hello, Gifts and the all-three cross-sell version; `tyler-blanco/-reposado/-anejo.jpg` in the other three cross-sell versions. Launch `TXzT3x` hero is now `tyler-trio.jpg` (the toast photo showed the aluminum Reposado; the launch email is about glass). The Oct 4 resend keeps the toast. Post-purchase 1 `RkRs58` hero is now `tyler-glass.jpg` (the rocks glass, soft focus) in place of `danny-cap`. Flow clones re-cut (Welcome 1 action `117746850` → `WzMmxc`, Post-purchase 3 action `118027437` → `WQgnBJ`, Post-purchase 1 action `118027430` re-cut too); campaign messages re-assigned (Gifts → `S6QgLH`, Legacy → `UrDWyr`). Images live at `www.denadatequila.com/img/email/tyler-*.jpg` on both `main` and `teaser` | | |
+| Legacy WordPress import (Oct 1, 4:15 pm ET) | list `WXrq3N`; import job `VXZCdEtnX21haW50ZW5hbmNlLloyUU9Sei4xNzkwODg1NDc2LjlvV2lYZA` | Done | Adam's export of the old WordPress newsletter list (219 rows) was cleaned to **194** profiles: 25 dropped (bot patterns such as mail.ru / .cn / .fun / gibberish names and mismatched name-and-email pairs, plus Adam's own address). Imported with `signup_source` = `legacy-wordpress`, `legacy_source` = `wordpress`, `imported` = `2026-10-01`, then subscribed to email marketing (single opt-in, source "Legacy WordPress newsletter list, imported Oct 1 2026") and added to the list. The list went 484 → 658, so about 20 were already on it. **Tagged `legacy-wordpress`, not `legacy`, on purpose:** they are outside the *Legacy subscribers* segment, so the Oct 2 "We moved." hello skips them and they get the **Welcome series** instead (list-triggered, Welcome 1 within the hour). They enter Behind the Bar through *Email subscribers (all)*, get every list-wide campaign, and fall into the Oct 4 resend if they do not open. After Oct 2, widen the *Legacy subscribers* definition to `signup_source` is any of `legacy`, `legacy-wordpress` so reporting groups them | | |
 | Master templates | Welcome 1 `WczNp9`, 2 `T44PbR` (the margarita, formerly Welcome 3), 3 `WLcyAA`, Pre-launch `VBYdMs`, Launch `TXzT3x`, Legacy hello `WEJNbp`, Abandoned 1 `UBcbGw`, Abandoned 2 `W7avPs`, Post-purchase `RkRs58` / `Redbzd` / `XJSEPZ` / `RYwczB`, Win-back `UK2Wh9`, Gifts `SkdJ3T`, Thanksgiving `SFjZtP`, Holidays `S6FX2C`, Behind the Bar 01–26 (IDs in Flow 5 below). The old "Three bottles. One rule." template `X44RVM` is unused | | Reuse for new campaigns: Content → Templates → clone |
 
 **Hero images.** Served from `denadatequila.com/img/email/` (the files are on
@@ -702,6 +703,16 @@ definitions evaluated to zero), so on Sept 23 all 452 of them were tagged
 `signup_source` = `legacy` in one bulk job and the *Legacy subscribers*
 segment keys off that tag. If another old list ever needs importing, add a
 `signup_source` column with the value `legacy` and the segment picks it up.
+
+**Oct 1 addition.** A second old list, the WordPress newsletter export, came
+in on launch afternoon (194 kept of 219; details in the table above). It was
+tagged `signup_source` = `legacy-wordpress` instead, because by then the
+Welcome series was live and the legacy hello was already scheduled: with the
+different tag these people get Welcome 1 today rather than a hello tomorrow
+about a move they never saw. Once the Oct 2 send is out, change the *Legacy
+subscribers* segment to `signup_source` **is any of** `legacy`,
+`legacy-wordpress` so both imports report together. Any future import after
+that can use either value.
 
 ### 5. Launch day
 - Pre-launch confirmation flow → **Draft** (off)
