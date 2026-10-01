@@ -63,16 +63,15 @@ nav{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:2px s
 .hero .rule-set{color:var(--deep);padding-top:14px;opacity:.55;position:relative;z-index:2}
 .hero-grid{
   max-width:1280px;margin:0 auto;padding:0 32px;position:relative;
-  display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;min-height:min(calc(100vh - 80px),880px);
+  display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;min-height:min(calc(100vh - 80px),760px);
 }
-.hero-copy{padding:40px 0 80px;position:relative;z-index:2}
+.hero-copy{padding:32px 0 56px;position:relative;z-index:2}
 .hero-copy .means{font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.3em;font-size:clamp(.8rem,1.4vw,1rem);color:var(--burnt);display:flex;align-items:center;gap:16px}
 .hero-copy .means::after{content:"";flex:0 0 96px;height:48px;background:url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20104%2052%22%20width%3D%22104%22%20height%3D%2252%22%20fill%3D%22none%22%20aria-hidden%3D%22true%22%3E%3Cpath%20d%3D%22M2%2046%20C16%2050%2028%2040%2042%2032%22%20stroke%3D%22%23231F20%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%220.5%206.5%22/%3E%3Cg%20transform%3D%22translate%2856%2C2%29%20rotate%289%2022%2026%29%22%3E%3Cpath%20d%3D%22M19%2022%20C11%207%20-3%205%200.5%2014%20C3%2021%2010%2026%2017%2025%20Z%22%20fill%3D%22%23D37240%22%20stroke%3D%22%23231F20%22%20stroke-width%3D%221.7%22%20stroke-linejoin%3D%22round%22/%3E%3Cpath%20d%3D%22M25%2022%20C33%207%2047%205%2043.5%2014%20C41%2021%2034%2026%2027%2025%20Z%22%20fill%3D%22%23D37240%22%20stroke%3D%22%23231F20%22%20stroke-width%3D%221.7%22%20stroke-linejoin%3D%22round%22/%3E%3Cpath%20d%3D%22M18%2027%20C10%2028%205%2037%209.5%2040.5%20C13.5%2043.5%2019%2037%2019.5%2029.5%20Z%22%20fill%3D%22%23B83F26%22%20stroke%3D%22%23231F20%22%20stroke-width%3D%221.7%22%20stroke-linejoin%3D%22round%22/%3E%3Cpath%20d%3D%22M26%2027%20C34%2028%2039%2037%2034.5%2040.5%20C30.5%2043.5%2025%2037%2024.5%2029.5%20Z%22%20fill%3D%22%23B83F26%22%20stroke%3D%22%23231F20%22%20stroke-width%3D%221.7%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%228%22%20cy%3D%2215%22%20r%3D%221.7%22%20fill%3D%22%23F3F8E4%22/%3E%3Ccircle%20cx%3D%2236%22%20cy%3D%2215%22%20r%3D%221.7%22%20fill%3D%22%23F3F8E4%22/%3E%3Ccircle%20cx%3D%2213%22%20cy%3D%2234%22%20r%3D%221.4%22%20fill%3D%22%23F3F8E4%22/%3E%3Ccircle%20cx%3D%2231%22%20cy%3D%2234%22%20r%3D%221.4%22%20fill%3D%22%23F3F8E4%22/%3E%3Cpath%20d%3D%22M22%2019%20L22%2039%22%20stroke%3D%22%23231F20%22%20stroke-width%3D%222.6%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M22%2019%20C20%2014%2017%2012%2015%2011%20M22%2019%20C24%2014%2027%2012%2029%2011%22%20stroke%3D%22%23231F20%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22/%3E%3C/g%3E%3C/svg%3E") left center/contain no-repeat}
-.hero-copy h1{font-size:clamp(3.4rem,7vw,6.8rem);color:var(--deep);margin:10px 0 0}
+.hero-copy h1{font-size:clamp(3.2rem,6.4vw,6rem);color:var(--deep);margin:10px 0 0}
 .hero-copy h1 span{display:block}
-.hero-copy .sub{font-size:clamp(1.25rem,2.2vw,1.7rem);color:var(--black);margin-top:22px;max-width:520px;line-height:1.45}
-.hero-copy .lede{color:var(--gray);margin-top:16px;max-width:470px;font-size:1rem}
-.hero-ctas{margin-top:32px;display:flex;gap:16px;flex-wrap:wrap}
+.hero-copy .sub{font-size:clamp(1.25rem,2.2vw,1.7rem);color:var(--black);margin-top:18px;max-width:500px;line-height:1.45}
+.hero-ctas{margin-top:28px;display:flex;gap:16px;flex-wrap:wrap}
 /* bottle on the counter */
 .hero-bottle{position:absolute;top:0;bottom:0;right:0;width:58%;display:flex;justify-content:center;align-items:stretch;z-index:1}
 .hero-bottle img{height:100%;width:auto;max-width:none;object-fit:cover;object-position:50% 45%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 18%,#000 82%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 18%,#000 82%,transparent 100%)}
@@ -250,15 +249,15 @@ footer a:hover{color:var(--cream)}
   .nav-links a{padding:14px 32px;font-size:.9rem;border-bottom:1px dotted rgba(35,31,32,.25);width:100%}
   .nav-links a.btn{margin:12px 32px 10px;width:auto;text-align:center;box-shadow:3px 3px 0 var(--black)}
   .wordmark img{height:42px}
-  .hero-grid{grid-template-columns:1fr;min-height:0;padding:44px 22px 0;gap:8px}
-  .hero-copy{padding-bottom:10px}
-  .hero-copy h1{font-size:clamp(3.1rem,15vw,4.6rem)}
-  .hero-copy .sub{font-size:1.2rem}
+  /* phone: the bottle first, then the words, then the green button, all on the first screen */
+  .hero-grid{display:flex;flex-direction:column;min-height:0;padding:0 20px;gap:0}
+  .hero-bottle{order:-1;position:relative;width:auto;height:40vh;min-height:280px;max-height:380px;margin:0 -20px;overflow:hidden}
+  .hero-bottle img{width:100%;height:100%;object-fit:cover;object-position:50% 38%;mask-image:none;-webkit-mask-image:none}
+  .hero-copy{padding:22px 0 26px}
+  .hero-copy h1{font-size:clamp(2.6rem,12.5vw,4rem)}
+  .hero-copy .sub{font-size:1.1rem;margin-top:14px}
+  .hero-ctas{margin-top:20px;gap:10px}
   .hero-ctas .btn{width:100%;text-align:center}
-  .hero-grid{padding:0 20px}
-  .hero-copy{padding:28px 0 20px}
-  .hero-bottle{position:relative;width:auto;margin:0 -20px;height:auto}
-  .hero-bottle img{width:100%;height:auto;mask-image:none;-webkit-mask-image:none}
   .hero-photo{padding:0 0 30px;margin-top:6px}
   .manif-grid{grid-template-columns:1fr;gap:34px}
   .manif-grid .ph-card{max-width:420px;margin:0 auto}
@@ -348,8 +347,7 @@ footer a:hover{color:var(--cream)}
       <div class="means li d1">Tequila for the host</div>
       <h1 class="disp li d2"><span>Made for</span><span>the table,</span><span>not the shelf.</span></h1>
       <p class="sub serif-i li d3">The spirit of generosity. A single-estate, additive-free tequila from the highlands of Jalisco.</p>
-      <p class="lede li d4">Built for the people who bring people together. Not a velvet rope, not a trophy. The bottle on the counter before your guests arrive.</p>
-      <div class="hero-ctas li d5">
+      <div class="hero-ctas li d4">
         <a class="btn" data-buy-sku="blanco" href="product-blanco.html">Shop the Blanco</a>
         <a class="btn ghost" href="#menu">See the House Menu</a>
       </div>
