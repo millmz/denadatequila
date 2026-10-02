@@ -56,7 +56,7 @@ again), or edit the flow's own copy directly.
 | Win-back | `SwCgXT` | Draft until Oct 1 | joins segment *Unengaged 90* → "It's been a while." |
 | Behind the Bar (recipe series) | `WWi5g9` | Draft until Oct 1 | joins segment *Email subscribers (all)* → 14 days → one recipe every 14 days, **26 emails**, about a year. 10 am local. Each profile goes through once |
 | Segment: Email subscribers (all) | `S2hYpZ` | active | anyone subscribed to email marketing. Trigger for the recipe series |
-| Segment: Legacy subscribers (old list import + old store) | `SwxJSs` | active | Has `signup_source` = `legacy`, which was set on Sept 23 on the 452 profiles that came from the Squarespace list import and the old store sync. Teaser-form signups stay out. Excluded from the launch email and the pre-launch confirmation; gets its own hello |
+| Segment: Legacy subscribers (old list, old store, WordPress) | `SwxJSs` | active | `signup_source` is any of `legacy`, `legacy-wordpress`. The first value was set on Sept 23 on the 452 profiles from the Squarespace list import and the old store sync; the second on the 194 WordPress newsletter subscribers imported Oct 1. **Widened Oct 2, 11:18 am ET**, after the legacy hello had sent to the original 430 only. Teaser-form signups stay out. Excluded from the launch email, the pre-launch confirmation and the Oct 4 resend |
 | Segment: Opened an email since Oct 1 | `VeuGeB` | active | *Opened Email* at least once after Oct 1. The launch resend excludes it, so only non-openers get the second send |
 | Segment: Unengaged 90 (win-back) | `TXVT4s` | active | on list ≥ 90 days, no email open in 90 days, still subscribed |
 | Segment: Unengaged 180 (sunset) | `QVtUiH` | active | on list ≥ 180 days, no open and no order in 180 days → **suppress these monthly** (Audience → segment → ⋯ → Suppress) |
@@ -712,12 +712,12 @@ different tag these people get Welcome 1 today rather than a hello tomorrow
 about a move they never saw. Once the Oct 2 send is out, change the *Legacy
 subscribers* segment to `signup_source` **is any of** `legacy`,
 `legacy-wordpress` so both imports report together. Any future import after
-that can use either value. **Scheduled:** this runs automatically on Oct 2 at
-11:15 am ET (after the hello has gone out) as a one-shot Claude routine; it
-checks the campaign is Sent first. Side effect worth knowing: the Oct 4
-resend excludes the legacy segment, so once widened, the WordPress import
-sits out the resend too. That is fine: they never got the launch email, they
-got Welcome 1 on Oct 1.
+that can use either value. **Done Oct 2, 11:18 am ET** by the scheduled
+routine, after confirming the hello campaign showed *Sent* (it went to the
+430 original legacy profiles; the segment had shrunk from 449 as a few
+unsubscribed or bounced). Side effect: the Oct 4 resend excludes the legacy
+segment, so the WordPress import sits out the resend too. That is fine: they
+never got the launch email, they got Welcome 1 on Oct 1.
 
 ### 5. Launch day
 - Pre-launch confirmation flow → **Draft** (off)
