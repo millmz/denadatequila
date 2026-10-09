@@ -34,6 +34,11 @@ Watch items: Welcome-series spam rate 0.58% (cohort effect from the WordPress
 import; should dilute). Store quiet since Oct 2. Nothing list-wide scheduled
 between Oct 4 and Nov 5.
 
-Open recommendations: exclude WordPress-import non-openers from the Nov 5
-Gifts send; get order-by dates from the retailer; consider an Añejo-led
-send around Oct 22.
+Actions taken Oct 9, after Adam approved the recommendations:
+- New segment *WordPress import, no opens since Oct 1* (`VDMmfw`, 85 people).
+- Gifts (Nov 5) reverted to Draft, that segment excluded, rescheduled for the
+  same time. Status back to Scheduled.
+- Añejo campaign "The slow one." built as Draft (`01M4GQ8K40JDMXTR82XJDXEX8B`),
+  pre-set Oct 22, 10 am ET, list minus `VDMmfw`. Waiting on Adam's copy
+  approval before it is scheduled.
+- Still open: order-by dates from the retailer for Thanksgiving and Holidays.
