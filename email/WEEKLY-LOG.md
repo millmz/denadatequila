@@ -39,6 +39,6 @@ Actions taken Oct 9, after Adam approved the recommendations:
 - Gifts (Nov 5) reverted to Draft, that segment excluded, rescheduled for the
   same time. Status back to Scheduled.
 - Añejo campaign "The slow one." built as Draft (`01M4GQ8K40JDMXTR82XJDXEX8B`),
-  pre-set Oct 22, 10 am ET, list minus `VDMmfw`. Waiting on Adam's copy
-  approval before it is scheduled.
+  list minus `VDMmfw`. Adam approved the copy and it is Scheduled for
+  Oct 22, 10 am ET.
 - Still open: order-by dates from the retailer for Thanksgiving and Holidays.
