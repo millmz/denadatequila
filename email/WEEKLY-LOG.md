@@ -82,3 +82,23 @@ Shopify for a common blocker (ship-to state, age check, payment); confirm
 the Oct 11 and 12 signup gap is real and the homepage form is working; keep
 the Oct 22 Añejo send as the next revenue moment. No new flow built; no
 trigger condition met (first Behind the Bar send not until Oct 15).
+
+## Sun Oct 18, 2026 (Adam asked why he had not received Behind the Bar)
+
+Finding: recipe 01 went out Oct 15 as planned, but only to the 164 people who
+joined *Email subscribers (all)* after the flow went live on Oct 1 (160 from
+the WordPress import, 4 site signups). Opens 62 unique (38%), clicks 7 (4%).
+The Oct 1 segment-definition trick recorded in `KLAVIYO.md` as a successful
+API back-populate did not trigger the flow; the ~465 pre-launch subscribers,
+Adam and Danny included, never entered it. Checked by matching the Oct 15
+recipient list against the WordPress import file: 160 of 162 matched.
+
+Everything else is set up and sending: Welcome 1/2/3 to new signups this week
+(13/10/9), Abandoned checkout 1 and 1, Post-purchase 3 to 2. Añejo campaign
+still Scheduled Oct 22, 10 am ET; Gifts Nov 5. No skipped sends.
+
+Fix: Klaviyo has no back-populate endpoint, so Adam clicks Flows → Behind the
+Bar → ⋯ → Back-populate flow recipients. Already-entered profiles are skipped.
+Options offered: (A) click as is, recipe 01 lands about Nov 1 at 10 am local;
+(B) shorten the first delay for the day of the click so recipe 01 lands two
+days later, then restore 14 days. `KLAVIYO.md` corrected.

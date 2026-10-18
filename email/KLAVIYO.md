@@ -54,7 +54,7 @@ again), or edit the flow's own copy directly.
 | Abandoned checkout | `TDe5uV` | Draft until Oct 1 | *Checkout Started* → 1 h "Your cart is still here." → 23 h later "Still thinking?" (shipping, the signature, breakage, answered). Both skipped if they ordered since. Re-entry after 7 days |
 | Post-purchase | `Ycdays` | Draft until Oct 1 | *Delivered Shipment* → next day 10 am "The first drink" → +28 d "How was it?" → +30 d "The other one" → +16 d "Running low?" (last two skipped if they re-ordered). Re-entry after 90 days. Copy keys off every bottle in the order, so two- and three-bottle orders read right |
 | Win-back | `SwCgXT` | Draft until Oct 1 | joins segment *Unengaged 90* → "It's been a while." |
-| Behind the Bar (recipe series) | `WWi5g9` | Draft until Oct 1 | joins segment *Email subscribers (all)* → 14 days → one recipe every 14 days, **26 emails**, about a year. 10 am local. Each profile goes through once |
+| Behind the Bar (recipe series) | `WWi5g9` | Live since Oct 1 | joins segment *Email subscribers (all)* → 14 days → one recipe every 14 days, **26 emails**, about a year. 10 am local. Each profile goes through once. Recipe 01 sent Oct 15 to 164 (38% open, 4% click). **Pre-launch subscribers (~465) still need the UI back-populate**, see Flow 5 |
 | Segment: Email subscribers (all) | `S2hYpZ` | active | anyone subscribed to email marketing. Trigger for the recipe series |
 | Segment: Legacy subscribers (old list, old store, WordPress) | `SwxJSs` | active | `signup_source` is any of `legacy`, `legacy-wordpress`. The first value was set on Sept 23 on the 452 profiles from the Squarespace list import and the old store sync; the second on the 194 WordPress newsletter subscribers imported Oct 1. **Widened Oct 2, 11:18 am ET**, after the legacy hello had sent to the original 430 only. Teaser-form signups stay out. Excluded from the launch email, the pre-launch confirmation and the Oct 4 resend |
 | Segment: Opened an email since Oct 1 | `VeuGeB` | active | *Opened Email* at least once after Oct 1. The launch resend excludes it, so only non-openers get the second send |
@@ -97,7 +97,7 @@ Full photo index in `PHOTOS.md`.
 1. Flows → **Pre-launch confirmation → Draft** (off). Welcome 1 takes over.
 2. Flows → set Welcome, Abandoned checkout, Post-purchase, Win-back and Behind the Bar to **Live**.
 3. Campaigns → "Launch: It's here." → Review → **Schedule**. Then "Legacy hello" → **Schedule** (it is pre-set for the next morning).
-4. ~~Flows → Behind the Bar → ⋯ → **Back-populate**~~ **Done Oct 1 by API** (see "Back-populating by API" below). All 480 subscribers are in the flow's first delay.
+4. Flows → Behind the Bar → ⋯ → **Back-populate** with *Email subscribers (all)*. **Still to do (found Oct 18).** The Oct 1 API attempt did not trigger anyone; recipe 01 on Oct 15 went only to the 164 who joined the segment after the flow went live (the WordPress import and Oct 1 signups). The ~465 pre-launch subscribers, Adam and Danny included, are not in the flow.
 5. Oct 2 or 3: Campaigns → "Launch resend" → **Schedule**. It only goes to people who have not opened the launch email.
 
 **Still needed from you (Settings → Organization):** street address (footer is
@@ -568,19 +568,24 @@ can rebuild it in a minute, or add the step in the flow editor by hand).
 The UI way is Flows → Behind the Bar → ⋯ → Back-populate → the *Email
 subscribers (all)* segment. They all start at recipe 01, fourteen days later.
 
-**Back-populating by API (done Oct 1, 2026, 10:22 am ET).** Klaviyo has no
+**Back-populating by API (tried Oct 1, 2026, 10:22 am ET; it did not work).** Klaviyo has no
 back-populate endpoint, but a segment-triggered flow fires for every profile
 that newly qualifies for its segment, including after a definition change. So:
 the *Email subscribers (all)* segment (`S2hYpZ`, which feeds only this flow)
 was given a placeholder definition that matches nobody (email equals an
 `.invalid` address), its count was confirmed at 0 with processing finished, and
 the original definition (email marketing consent: subscribed) was put back.
-The count returned to 480 within fifteen seconds and all 480 were triggered
-into the flow. Nothing sent that day; the first step is a 14-day delay, so
-recipe 01 lands around Oct 15. Anyone who subscribes later enters the usual
-way. If this ever has to be repeated, the same two `update_segment` calls do
-it, but note that profiles already in the flow would re-enter it, so only do it
-on a flow nobody has entered yet.
+The count returned to 480 within fifteen seconds, and it looked as if all 480
+had been triggered. **They were not.** On Oct 15 recipe 01 went to 164 people:
+160 from the WordPress import (added to the list Oct 1, 4:15 pm ET, after the
+flow was live) and 2 Oct 1 signups, plus 2 more the next days. Re-matching a
+segment after a definition change does not count as "added to segment" for
+flow triggers. Do not use this trick again. The only way to enroll existing
+members is the UI: Flows → Behind the Bar → ⋯ → Back-populate flow
+recipients → confirm. Profiles already in the flow are skipped; the rest
+start at the 14-day delay, so recipe 01 lands two weeks after the click at
+10 am local, unless the first delay is shortened for the day (see
+`WEEKLY-LOG.md`, Oct 18).
 
 ---
 
@@ -725,7 +730,7 @@ never got the launch email, they got Welcome 1 on Oct 1.
 - Pre-launch confirmation flow → **Draft** (off)
 - The five other flows → **Live**
 - Launch campaign → **Schedule**; Legacy hello → **Schedule**
-- ~~Behind the Bar flow → **Back-populate** with *Email subscribers (all)*~~ done Oct 1 by API
+- Behind the Bar flow → **Back-populate** with *Email subscribers (all)* (UI only; the Oct 1 API attempt did not work, found Oct 18)
 - Two days later: Launch resend → **Schedule**
 
 ### 6. Onsite tracking on the Shopify theme (optional)
