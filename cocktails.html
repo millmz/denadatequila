@@ -1037,7 +1037,7 @@ main .serve .s-photo img{aspect-ratio:auto;object-fit:unset;height:auto;max-heig
     <form name="rsvp" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" onsubmit="dnRsvp(event, this)">
       <input type="hidden" name="form-name" value="rsvp">
       <input type="hidden" name="source" value="cocktails">
-      <p style="display:none"><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
+      <p style="display:none"><label>Don&rsquo;t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
       <input type="email" name="email" placeholder="Your email address" aria-label="Email address" required>
       <button class="btn orange" type="submit">RSVP</button>
     </form>

@@ -161,3 +161,18 @@ re-engagement send; let me add bot protection to the site signup form
 (honeypot field plus a minimum time-to-submit, no third-party keys);
 approve suppressing the 9 bot-pattern signups so they stop skewing numbers;
 retailer order-by dates for Thanksgiving and Holidays.
+
+Oct 19, follow-up after Adam said yes to all three:
+- Re-engagement campaign `01M5A3F98DN7KE81Z2B8SA80NM` sent to Klaviyo's
+  scheduler for Thu Oct 29, 10 am ET.
+- 13 bot-pattern signups suppressed (job `01M5A624VKZBF5JEF223MZB5P0`, 12
+  done, 1 skipped as already out): six dotted-Gmail and random-suffix
+  addresses from this week, seven from Oct 2 to 11. Two more from the same
+  pattern had already unsubscribed or complained and were left alone.
+- Site: `js/signup.js` now drops a signup quietly when the honeypot is
+  filled, the form is submitted under 3 seconds after the script loads, or
+  a Gmail address has three or more dots in the local part. The homepage and
+  cocktails honeypot inputs got `tabindex="-1" autocomplete="off"` so a
+  browser never autofills them. The modal already had that.
+- Still open: Adam's UI back-populate click for Behind the Bar; the first
+  delay stays at 2 days until he confirms.

@@ -51,11 +51,34 @@
     return utm ? s + ":" + utm : s;
   }
 
+  /* ---- Bot filter -------------------------------------------------------
+     Signup bots were hitting the forms (Oct 2026): dotted-Gmail addresses
+     such as f.rankli.n.91.6@gmail.com, random-suffix Hotmail addresses, and
+     submits a second or two after the page loaded. Three cheap checks, no
+     third-party service. A bot still sees the normal thank-you, it just
+     never reaches the list.
+       1. Honeypot: the hidden "bot-field" input is filled in.
+       2. Speed: the form was submitted under MIN_MS after the script loaded.
+       3. Gmail dot stuffing: three or more dots in the local part. Gmail
+          ignores dots, so real people almost never type an address that way.
+     ---------------------------------------------------------------------- */
+  var LOADED_AT = Date.now(), MIN_MS = 3000;
+
+  function looksLikeBot(form, email) {
+    var trap = form.querySelector("[name=bot-field]");
+    if (trap && trap.value) return "honeypot";
+    if (Date.now() - LOADED_AT < MIN_MS) return "too-fast";
+    var m = /^([^@]+)@gmail\.com$/i.exec(email.trim());
+    if (m && (m[1].match(/\./g) || []).length >= 3) return "gmail-dots";
+    return "";
+  }
+
   /* Resolves when the signup is safely recorded somewhere. */
   window.DenadaList = {
     subscribe: function (form) {
       var email = (form.querySelector("[name=email]") || {}).value || "";
       var source = sourceFor(form);
+      if (looksLikeBot(form, email)) return Promise.resolve();     // quiet success, nothing recorded
       return klaviyo(email, source).then(
         function () { netlify(form).catch(function () {}); },   // backup copy; best effort
         function () { return netlify(form); }                    // Klaviyo unavailable: Netlify must succeed
