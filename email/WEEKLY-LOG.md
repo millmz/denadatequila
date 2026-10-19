@@ -102,3 +102,9 @@ Bar → ⋯ → Back-populate flow recipients. Already-entered profiles are skip
 Options offered: (A) click as is, recipe 01 lands about Nov 1 at 10 am local;
 (B) shorten the first delay for the day of the click so recipe 01 lands two
 days later, then restore 14 days. `KLAVIYO.md` corrected.
+
+Oct 18, 11:36 am ET: Adam chose option B. The first delay in Behind the Bar
+(action `118028371`) was set to **2 days** by API, pending his UI back-populate
+click. Reminder sent 2:39 pm ET. Oct 19, 2:41 am ET: no confirmation yet; the
+delay is still 2 days. It goes back to 14 days as soon as he confirms the
+click. Until then a new signup gets recipe 01 two days after joining.
