@@ -108,3 +108,56 @@ Oct 18, 11:36 am ET: Adam chose option B. The first delay in Behind the Bar
 click. Reminder sent 2:39 pm ET. Oct 19, 2:41 am ET: no confirmation yet; the
 delay is still 2 days. It goes back to 14 days as soon as he confirms the
 click. Until then a new signup gets recipe 01 two days after joining.
+
+## Mon Oct 19, 2026 (routine run 2, window Oct 12 to Oct 19)
+
+| Figure | This week | Oct 12 |
+|---|---|---|
+| Email List | 658 | 645 |
+| Email subscribers (all) segment | 639 | 631 |
+| Opened an email since Oct 1 | 390 | 379 |
+| WordPress import, no opens (excluded) | 80 | 84 |
+| Unengaged 90 / 180 | 0 / 0 | 0 / 0 |
+| Sending domain | active | active |
+| Orders this week | 3, $469 (Oct 12 $71, Oct 14 $197, Oct 16 $201) | 0 |
+| Checkouts started this week | 4, 3 completed | 5, 0 completed |
+| New list signups | 15 (about 7 look like bots) | 9 |
+| Unsubscribes since Oct 12 | 3 (Welcome 1 link, Welcome 1 spam report, Behind the Bar 01 one-click) | 2 |
+| Spam complaints since Oct 12 | 1 (Welcome 1, an Oct 17 homepage signup that looks automated) | 0 |
+| Bounces | 0 | 0 |
+
+Campaigns: nothing sent in the window. Añejo Scheduled Oct 22, 10 am ET.
+Gifts Scheduled Nov 5. Thanksgiving (Nov 12) and Holidays (Dec 10) Draft;
+Thanksgiving enters the 14-day window on Oct 29. Last 30 days: Launch 33
+sent 58% open 18% click; Legacy hello 447 sent 96% delivered 60% open 10%
+click 3 orders $591; Resend 34 sent 62% open 12% click.
+
+Flows, last 7 days (flow report): Behind the Bar 01 165 sent, 38% open,
+1.2% click, 1 unsubscribe. Welcome 1 14 sent, 21% open, 1 spam, 1 unsub.
+Welcome 2 10 sent, 20% open. Welcome 3 9 sent, 44% open. Post-purchase 1 to
+5, 20% open. Abandoned checkout 1 and 2 to 1 each. Win-back idle. All live.
+
+Problems: (1) Behind the Bar first delay still 2 days, waiting for Adam's
+UI back-populate click since Oct 18; ~465 pre-launch subscribers still not
+in the flow. (2) Homepage signup form is getting bot signups: dotted-Gmail
+and random-suffix addresses (about 7 of 15 this week, plus earlier ones),
+one of which filed the spam complaint on Welcome 1. They inflate the list
+and drag Welcome open rates (21% this week vs 50% at launch). (3) Welcome 1
+spam rate 7% on 14 sends trips the 0.3% threshold, but it is one complaint
+from a bot-like signup. Zero-orders alert from Oct 12 is cleared.
+
+Trigger check: Viewed Product events 0 since Oct 1, so no browse
+abandonment yet. Post-purchase recipients 7 lifetime (needs 25). Delivered
+orders 7 (needs 20 for review request). Customers 7 (needs 30 for win-back).
+Unengaged 180 empty. Re-engagement send to WordPress non-openers: due before
+Nov 5, so built this week.
+
+Built as Draft: campaign `01M5A3F98DN7KE81Z2B8SA80NM` "Should we keep
+writing?" to `VDMmfw` (80), master template `VGRdC7`, send time pre-set
+Thu Oct 29, 10 am ET, not scheduled. Logged in `KLAVIYO.md`.
+
+Recommendations to Adam: click the back-populate; approve the Oct 29
+re-engagement send; let me add bot protection to the site signup form
+(honeypot field plus a minimum time-to-submit, no third-party keys);
+approve suppressing the 9 bot-pattern signups so they stop skewing numbers;
+retailer order-by dates for Thanksgiving and Holidays.
