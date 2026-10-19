@@ -176,3 +176,8 @@ Oct 19, follow-up after Adam said yes to all three:
   browser never autofills them. The modal already had that.
 - Still open: Adam's UI back-populate click for Behind the Bar; the first
   delay stays at 2 days until he confirms.
+
+Oct 19, 9:40 am ET: Adam clicked "Add past profiles" (At the beginning) on
+Behind the Bar. First delay restored to 14 days at 9:41 am ET. The ~465
+pre-launch subscribers should receive recipe 01 on Wed Oct 21 at 10 am
+local; a check is scheduled for Oct 21, 4:30 pm ET to confirm the count.
