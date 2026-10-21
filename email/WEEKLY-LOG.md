@@ -181,3 +181,7 @@ Oct 19, 9:40 am ET: Adam clicked "Add past profiles" (At the beginning) on
 Behind the Bar. First delay restored to 14 days at 9:41 am ET. The ~465
 pre-launch subscribers should receive recipe 01 on Wed Oct 21 at 10 am
 local; a check is scheduled for Oct 21, 4:30 pm ET to confirm the count.
+
+Oct 21, 4:30 pm ET: the scheduled check of the Oct 21 recipe 01 send could
+not run; the Klaviyo connector in this session needs re-authorization.
+Retry set for Oct 22, 1 pm ET, which also covers the Añejo campaign send.
