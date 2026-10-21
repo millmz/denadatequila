@@ -185,3 +185,14 @@ local; a check is scheduled for Oct 21, 4:30 pm ET to confirm the count.
 Oct 21, 4:30 pm ET: the scheduled check of the Oct 21 recipe 01 send could
 not run; the Klaviyo connector in this session needs re-authorization.
 Retry set for Oct 22, 1 pm ET, which also covers the Añejo campaign send.
+
+Oct 21, 4:35 pm ET (Klaviyo reconnected): recipe 01 went to only 1 person
+today, not the ~465 expected. No skipped sends. Klaviyo's help says
+profiles already Waiting in a delay keep their original schedule, so the
+likely cause is that the "Add past profiles" job finished after the delay
+was put back to 14 days (restored one minute after Adam said done, too
+soon). If so the group is Waiting until Mon Nov 2, 10 am local. The other
+possibility is that the click did not take. Adam asked to read the Waiting
+count on the recipe 01 card. Lesson for next time: leave a shortened delay
+in place for a few hours after a past-profiles job, then restore. Añejo
+still Scheduled Oct 22, 10 am ET.
