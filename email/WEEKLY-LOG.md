@@ -196,3 +196,11 @@ possibility is that the click did not take. Adam asked to read the Waiting
 count on the recipe 01 card. Lesson for next time: leave a shortened delay
 in place for a few hours after a past-profiles job, then restore. Añejo
 still Scheduled Oct 22, 10 am ET.
+
+Oct 22, 1 pm ET: Añejo "The slow one." sent 10 am ET to 542 (list minus
+VDMmfw). Three hours in: 533 delivered (98.3%), 156 unique opens (29%),
+14 clicks (2.6%), 1 order $186.72, 4 unsubscribes (0.7%), 9 bounces
+(1.7%), 0 spam. All inside thresholds. Behind the Bar recipe 01: still no
+back-populated sends on Oct 21 or 22; waiting on Adam's read of the
+Waiting count on the recipe 01 card (either ~465 waiting until Nov 2, or
+the click did not take).
