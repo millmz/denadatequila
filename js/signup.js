@@ -73,6 +73,13 @@
     return "";
   }
 
+  /* After a signup, tell Klaviyo's onsite script who this visitor is so the
+     product pages they look at from now on count as theirs (js/klaviyo-track.js). */
+  function remember(email) {
+    try { localStorage.setItem("dn_email", email); } catch (e) {}
+    try { (window.klaviyo = window.klaviyo || []).push(["identify", { email: email }]); } catch (e) {}
+  }
+
   /* Resolves when the signup is safely recorded somewhere. */
   window.DenadaList = {
     subscribe: function (form) {
@@ -80,8 +87,11 @@
       var source = sourceFor(form);
       if (looksLikeBot(form, email)) return Promise.resolve();     // quiet success, nothing recorded
       return klaviyo(email, source).then(
-        function () { netlify(form).catch(function () {}); },   // backup copy; best effort
-        function () { return netlify(form); }                    // Klaviyo unavailable: Netlify must succeed
+        function () {
+          netlify(form).catch(function () {});                     // backup copy; best effort
+          remember(email);
+        },
+        function () { return netlify(form).then(function () { remember(email); }); } // Klaviyo unavailable: Netlify must succeed
       );
     }
   };
