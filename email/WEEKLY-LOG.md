@@ -204,3 +204,12 @@ VDMmfw). Three hours in: 533 delivered (98.3%), 156 unique opens (29%),
 back-populated sends on Oct 21 or 22; waiting on Adam's read of the
 Waiting count on the recipe 01 card (either ~465 waiting until Nov 2, or
 the click did not take).
+
+Oct 23 (Adam asked for a status): Añejo after a full day: 542 sent, 98%
+delivered, 53% open, 3.8% click, 3 orders $529.50, 6 unsubscribes (1.1%),
+0 spam. Orders Mon to Fri so far: 6, $870. Signups since the bot filter
+went live Oct 19: 1 in four days (was 1 to 2 a day with bots mixed in);
+watch that real signups are not being blocked. Behind the Bar recipe 01:
+only normal new-signup sends, no back-populated batch yet; Adam has not yet
+read the Waiting count. List 653. Re-engage Scheduled Oct 29, Gifts Nov 5,
+Thanksgiving and Holidays still Draft.
