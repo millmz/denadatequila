@@ -21,5 +21,5 @@ window.DENADA_LIST = {
   /* Meta (Facebook/Instagram) pixel ID for the recipes landing page ads.
      Meta Events Manager > Data sources > the pixel > the 15-16 digit ID.
      Leave "" until the ad account exists; nothing loads while it is empty. */
-  metaPixelId: ""
+  metaPixelId: "3958712751050131"   // "De Nada Tequila Pixel", added Oct 23 2026
 };

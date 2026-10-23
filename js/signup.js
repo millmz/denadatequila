@@ -75,9 +75,10 @@
 
   /* After a signup, tell Klaviyo's onsite script who this visitor is so the
      product pages they look at from now on count as theirs (js/klaviyo-track.js). */
-  function remember(email) {
+  function remember(email, source) {
     try { localStorage.setItem("dn_email", email); } catch (e) {}
     try { (window.klaviyo = window.klaviyo || []).push(["identify", { email: email }]); } catch (e) {}
+    try { if (window.dnMetaLead) window.dnMetaLead(source); } catch (e) {}   // Meta pixel Lead (js/meta-pixel.js)
   }
 
   /* Resolves when the signup is safely recorded somewhere. */
@@ -89,9 +90,9 @@
       return klaviyo(email, source).then(
         function () {
           netlify(form).catch(function () {});                     // backup copy; best effort
-          remember(email);
+          remember(email, source);
         },
-        function () { return netlify(form).then(function () { remember(email); }); } // Klaviyo unavailable: Netlify must succeed
+        function () { return netlify(form).then(function () { remember(email, source); }); } // Klaviyo unavailable: Netlify must succeed
       );
     }
   };

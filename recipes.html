@@ -154,7 +154,6 @@ function dnRsvp(e, form){
       try { localStorage.setItem('dn_subscribed','1'); } catch(e) {}
       form.querySelector('input[name=email]').value = '';
       if (typeof gtag === 'function') gtag('event', 'generate_lead', { source: 'recipes' });
-      if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: 'recipes' });
     })
     .catch(function(){ btn.disabled = false; btn.textContent = 'Send me the recipes'; alert('Something hiccuped. Try again?'); });
 }
@@ -162,14 +161,6 @@ function dnRsvp(e, form){
 <script src="js/shop-config.js"></script>
 <script src="js/list-config.js"></script>
 <script src="js/klaviyo-track.js"></script>
+<script src="js/meta-pixel.js"></script>
 <script src="js/signup.js"></script>
-<script>
-/* Meta pixel, only when an ID is set in js/list-config.js (metaPixelId). */
-(function(){
-  var id = (window.DENADA_LIST || {}).metaPixelId;
-  if (!id) return;
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', id); fbq('track', 'PageView');
-})();
-</script>
 </body></html>

@@ -13,8 +13,9 @@ on all of it.
 | Visitor identification after signup | `js/signup.js` stores the email and calls `klaviyo.identify` | Live on main |
 | Browse abandonment flow | Klaviyo flow `USbWpx`, trigger Viewed Product (`Wv5C5B`), 4-hour delay, one email (master `WqXiTh`); skips anyone who ordered or started checkout since; one send per week per person | Live since Oct 23 |
 | Cross-sell flow | Klaviyo flow `TPrmZA`, trigger Placed Order, 30-day delay, skips anyone who ordered again, one email (master `S8teUi`) that recommends the bottle they do not have; re-entry after 60 days | Live since Oct 23 |
-| Recipe-series signup page | `recipes.html`, `signup_source` = `recipes` plus the ad's `utm_campaign`; GA4 `generate_lead`; Meta `Lead` event once `metaPixelId` is set in `js/list-config.js` | Live on main |
-| Meta ad creatives and copy | Scratchpad `ads/` (six JPGs, `ADS.md` with copy, targeting, budget) sent to Adam | Needs ad account, pixel ID, budget |
+| Recipe-series signup page | `recipes.html`, `signup_source` = `recipes` plus the ad's `utm_campaign`; GA4 `generate_lead`; Meta `Lead` on signup | Live on main |
+| Meta pixel | `js/meta-pixel.js` on every main page, ID `3958712751050131` in `js/list-config.js` (added Oct 23): PageView everywhere, ViewContent on product pages, Lead from every signup form. Purchases come from Shopify's Meta channel, which Adam connects in Shopify admin | Live on main |
+| Meta ad creatives and copy | Scratchpad `ads/` (six JPGs, `ADS.md` with copy, targeting, budget) sent to Adam | Adam builds the campaign in Ads Manager; pixel is live |
 | Corporate gifting page | `gifting.html`, Netlify form `gifting`, tiers (one bottle, The Trio $199, by the case), footer link on every page | Live on main |
 | The Trio bundle | Shopify product `gid://shopify/Product/15500768837920`, SKU `DN-TRIO-700`, $199 | **Draft** in Shopify; photo to add in admin; retailer must confirm fulfilment |
 | Outreach email | Scratchpad `gifting/outreach-email.md` | For Adam to send |
