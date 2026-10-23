@@ -40,6 +40,16 @@ signups per effort without GA.
 Cost per subscriber = ad spend for the week divided by signups whose
 `signup_source` starts with `recipes:recipes-leadgen`.
 
+## Ship-to states (from Shopify, Oct 23)
+
+The three bottles sit on the retailer's shipping profile ("alch bevstack"),
+which covers 34 states and DC: AZ, CA, CO, CT, DE, DC, FL, GA, ID, IL, IN,
+IA, KS, KY, LA, MA, MN, MO, NV, NJ, NM, NY, NC, OH, OK, OR, PA, RI, TX, VT,
+WA, WV, WI, WY. Use exactly this list for ad targeting. The store's
+"General profile" lists every state and 25 countries, so any new product
+(the Trio included) must be moved onto the retailer profile before it goes
+Active, or checkout will accept addresses that cannot be shipped.
+
 ## Lift the basket
 
 - **The Trio at $199.** Draft in Shopify. Once the retailer confirms, set it
