@@ -213,3 +213,15 @@ watch that real signups are not being blocked. Behind the Bar recipe 01:
 only normal new-signup sends, no back-populated batch yet; Adam has not yet
 read the Waiting count. List 653. Re-engage Scheduled Oct 29, Gifts Nov 5,
 Thanksgiving and Holidays still Draft.
+
+## Thu Oct 23, 2026 (growth build, after Adam asked how to 10x online)
+
+Built and pushed, details in `GROWTH.md`: Klaviyo onsite tracking with
+Viewed Product on the product pages; Browse abandonment (`USbWpx`) and
+Cross-sell 30 days (`TPrmZA`) as Draft flows; `recipes.html` lead-gen page
+plus three Meta creatives in two sizes and the copy; `gifting.html` with a
+quote form and The Trio as a Draft Shopify product at $199; a referral line
+in all 26 Behind the Bar recipes. Routine prompt updated to track signups
+by source, Viewed Product volume, and to nudge the two draft flows.
+Waiting on Adam: set the two flows live, Meta pixel ID and budget, retailer
+confirmation for the Trio, retailer order-by dates, marketplace decision.

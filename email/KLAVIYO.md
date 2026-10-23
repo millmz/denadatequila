@@ -561,6 +561,14 @@ Añejo product page):
 > peel. Warm the mug, add syrup and Añejo, pour in the coffee, stir with the
 > cinnamon stick, twist the peel over the top.
 
+**Referral line (added Oct 23):** every recipe ends with "Know someone who
+would like these? Send them the book." linking to `recipes.html` with
+`utm_campaign=btb-referral`. All 26 masters were edited and the flow's email
+actions re-pointed at them by API (new clones XUEr4e, YnqWY5, TsTQnt, Xbm7WB,
+QZMU7K, WQQ6z3, TduPkE, Xg78ht, XbtRW5, YnrcVy, Wfui3v, XaZmTb, UPHc4z,
+U3rCKa, S5KexT, UJ2bBV, VDxftB, W7hMps, We4MSP, X4WBp7, TLARBc, V5Bd4e,
+RjuVku, Tv46rq, Rc2aLL, RDLGGB). The flow stayed live throughout.
+
 **To change one email:** edit its master template above, then open the flow
 email in Klaviyo and re-select that template (Klaviyo clones it again). To add
 a 27th recipe: clone a master, swap the copy, then rebuild the flow with the
