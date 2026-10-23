@@ -11,8 +11,8 @@ on all of it.
 |---|---|---|
 | Klaviyo onsite tracking and Viewed Product events | `js/klaviyo-track.js`, loaded on the eight main pages; product pages send Viewed Product to the API metric `Wv5C5B` | Live on main |
 | Visitor identification after signup | `js/signup.js` stores the email and calls `klaviyo.identify` | Live on main |
-| Browse abandonment flow | Klaviyo flow `USbWpx`, trigger Viewed Product (`Wv5C5B`), 4-hour delay, one email (master `WqXiTh`); skips anyone who ordered or started checkout since; one send per week per person | **Draft**, needs Adam to set live |
-| Cross-sell flow | Klaviyo flow `TPrmZA`, trigger Placed Order, 30-day delay, skips anyone who ordered again, one email (master `S8teUi`) that recommends the bottle they do not have; re-entry after 60 days | **Draft**, needs Adam to set live |
+| Browse abandonment flow | Klaviyo flow `USbWpx`, trigger Viewed Product (`Wv5C5B`), 4-hour delay, one email (master `WqXiTh`); skips anyone who ordered or started checkout since; one send per week per person | Live since Oct 23 |
+| Cross-sell flow | Klaviyo flow `TPrmZA`, trigger Placed Order, 30-day delay, skips anyone who ordered again, one email (master `S8teUi`) that recommends the bottle they do not have; re-entry after 60 days | Live since Oct 23 |
 | Recipe-series signup page | `recipes.html`, `signup_source` = `recipes` plus the ad's `utm_campaign`; GA4 `generate_lead`; Meta `Lead` event once `metaPixelId` is set in `js/list-config.js` | Live on main |
 | Meta ad creatives and copy | Scratchpad `ads/` (six JPGs, `ADS.md` with copy, targeting, budget) sent to Adam | Needs ad account, pixel ID, budget |
 | Corporate gifting page | `gifting.html`, Netlify form `gifting`, tiers (one bottle, The Trio $199, by the case), footer link on every page | Live on main |
