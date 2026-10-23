@@ -16,5 +16,10 @@
    ============================================================================ */
 window.DENADA_LIST = {
   klaviyoCompanyId: "UvBtKg",   // PUBLIC API key
-  klaviyoListId: "WXrq3N"  // List ID
+  klaviyoListId: "WXrq3N",  // List ID
+
+  /* Meta (Facebook/Instagram) pixel ID for the recipes landing page ads.
+     Meta Events Manager > Data sources > the pixel > the 15-16 digit ID.
+     Leave "" until the ad account exists; nothing loads while it is empty. */
+  metaPixelId: ""
 };
