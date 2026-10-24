@@ -21,6 +21,16 @@ on all of it.
 | Outreach email | Scratchpad `gifting/outreach-email.md` | For Adam to send |
 | Referral line in Behind the Bar | Each recipe email ends with a line linking to `recipes.html?utm_source=klaviyo&utm_medium=email&utm_campaign=btb-referral` | See `KLAVIYO.md`, Flow 5 |
 
+## Meta reporting
+
+`scripts/meta-insights.py` prints the last 7 days of spend, clicks, leads and
+cost per lead per ad for the account. It needs two Network secrets in the
+cloud environment, `META_ACCESS_TOKEN` (a long-lived System User token with
+`ads_read`) and `META_AD_ACCOUNT_ID`, plus `graph.facebook.com` on the
+environment's allowed domains. Until those are set it exits with a one-line
+notice and the Monday routine reports the Klaviyo-side signups only
+(`signup_source` starting `recipes:recipes-leadgen`).
+
 ## UTM plan
 
 One rule: `utm_source` is the channel, `utm_medium` is how, `utm_campaign`
