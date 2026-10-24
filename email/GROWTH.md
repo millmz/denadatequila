@@ -24,12 +24,13 @@ on all of it.
 ## Meta reporting
 
 `scripts/meta-insights.py` prints the last 7 days of spend, clicks, leads and
-cost per lead per ad for the account. It needs two Network secrets in the
-cloud environment, `META_ACCESS_TOKEN` (a long-lived System User token with
-`ads_read`) and `META_AD_ACCOUNT_ID`, plus `graph.facebook.com` on the
-environment's allowed domains. Until those are set it exits with a one-line
-notice and the Monday routine reports the Klaviyo-side signups only
-(`signup_source` starting `recipes:recipes-leadgen`).
+cost per lead per ad for the account. The token never lives in the repo or
+the environment: a Network secret in the cloud environment (type Bearer, host
+`graph.facebook.com`, header `Authorization`, prefix `Bearer `) adds it to
+each request on the way out. The ad account id is `META_AD_ACCOUNT_ID` or
+the `DEFAULT_ACCOUNT` constant in the script. Until both are set it exits
+with a one-line notice and the Monday routine reports the Klaviyo-side
+signups only (`signup_source` starting `recipes:recipes-leadgen`).
 
 ## UTM plan
 

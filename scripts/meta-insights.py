@@ -1,19 +1,22 @@
 #!/usr/bin/env python3
 """Print last-N-days Meta Ads results for the De Nada account, per campaign and per ad.
 
-Reads two environment variables (set as Network secrets in the cloud environment):
-  META_ACCESS_TOKEN   a long-lived System User token with ads_read
-  META_AD_ACCOUNT_ID  the ad account id, with or without the "act_" prefix
+The access token is never in this script or the environment. The cloud
+environment's Network secret for graph.facebook.com adds
+"Authorization: Bearer <token>" to every request on the way out.
+
+The ad account id comes from META_AD_ACCOUNT_ID if set, else DEFAULT_ACCOUNT
+below (with or without the "act_" prefix).
 
 Usage: python3 scripts/meta-insights.py [days]   (default 7)
 Needs graph.facebook.com allowed in the environment's network settings.
 """
-import json, os, sys, urllib.parse, urllib.request
+import json, os, sys, urllib.error, urllib.parse, urllib.request
 
-TOKEN = os.environ.get("META_ACCESS_TOKEN")
-ACCT = os.environ.get("META_AD_ACCOUNT_ID", "")
-if not TOKEN or not ACCT:
-    sys.exit("META_ACCESS_TOKEN and META_AD_ACCOUNT_ID are not both set; skipping Meta.")
+DEFAULT_ACCOUNT = ""  # Adam's ad account id, e.g. 1234567890
+ACCT = os.environ.get("META_AD_ACCOUNT_ID") or DEFAULT_ACCOUNT
+if not ACCT:
+    sys.exit("No Meta ad account id (META_AD_ACCOUNT_ID or DEFAULT_ACCOUNT); skipping Meta.")
 if not ACCT.startswith("act_"):
     ACCT = "act_" + ACCT
 DAYS = int(sys.argv[1]) if len(sys.argv) > 1 else 7
@@ -21,7 +24,6 @@ API = "https://graph.facebook.com/v21.0"
 
 
 def get(path, **params):
-    params["access_token"] = TOKEN
     url = f"{API}/{path}?{urllib.parse.urlencode(params)}"
     with urllib.request.urlopen(url, timeout=60) as r:
         return json.load(r)
@@ -70,4 +72,11 @@ try:
     show("By campaign", report("campaign"))
     show("By ad", report("ad"))
 except urllib.error.HTTPError as e:
-    sys.exit(f"Meta API error {e.code}: {e.read().decode()[:400]}")
+    body = e.read().decode()[:400]
+    if e.code in (401, 400) and "access token" in body.lower():
+        sys.exit("Meta refused the token: the graph.facebook.com Network secret is missing, expired or lacks ads_read. " + body)
+    if e.code in (403, 407):
+        sys.exit("graph.facebook.com is blocked by the environment's network policy; add it under Allowed domains.")
+    sys.exit(f"Meta API error {e.code}: {body}")
+except urllib.error.URLError as e:
+    sys.exit(f"Could not reach graph.facebook.com ({e.reason}); check the environment's network settings.")
