@@ -225,3 +225,65 @@ in all 26 Behind the Bar recipes. Routine prompt updated to track signups
 by source, Viewed Product volume, and to nudge the two draft flows.
 Waiting on Adam: set the two flows live, Meta pixel ID and budget, retailer
 confirmation for the Trio, retailer order-by dates, marketplace decision.
+
+## Mon Oct 26, 2026 (routine run 3)
+
+**Headline:** the Meta recipe ads went live Oct 24 and brought 59 new
+subscribers in two and a half days (9 on Oct 24, 26 on Oct 25, 24 on Oct 26
+by 8:30 am ET), all tagged `recipes:recipes-leadgen`, all with consent, a
+normal US consumer domain mix (Gmail 39, Yahoo 5, AOL 5, Hotmail 4, Comcast,
+Verizon, iCloud). No bot pattern. List 653 to 710.
+
+| | This week (Oct 20 to 26) | Last week (Oct 13 to 19) |
+|---|---|---|
+| Orders / revenue (Placed Order) | 7 / $998.78 | 3 / $476.41 |
+| List signups | 59 (ads) + 4 other | 6 |
+| List size | 710 | 653 |
+| Email subscribers (all) S2hYpZ | 679 | ~640 |
+| Opened since Oct 1 VeuGeB | 443 | |
+| Unengaged 90 / 180 | 0 / 0 | 0 / 0 |
+| Sending domain | active | active |
+
+Campaigns: Añejo (Oct 22) final: 543 sent, 98.2% delivered, 55% open,
+3.8% click, 3 orders $529.50, 6 unsubscribes (1.1%, just over threshold),
+0 spam. Re-engage Scheduled Oct 29 10 am ET. Gifts Scheduled Nov 5.
+Thanksgiving (Nov 12) and Holidays (Dec 10) still Draft, no order-by dates.
+
+Flows, last 7 days: Welcome 1 59 recipients (the ad cohort), 98.3%
+delivered, 27.6% open, 5.2% click, 0 orders. Welcome 2: 2. Welcome 3: 4,
+with 1 spam complaint. Behind the Bar 01: 4 (normal new-signup sends; the
+back-populated group still has not sent, Adam has not read the Waiting
+count). Abandoned checkout: 3. Browse abandonment and Cross-sell (live Oct
+23): no sends yet. Flows last 30 days: Welcome 629 recipients, 46% open,
+2.6% click, 5 spam complaints (0.8%), 8 unsubscribes; Behind the Bar 01 169
+recipients, 41% open, 1.2% click.
+
+Unsubscribes since Oct 19: 7, none attributed to a message by the metric
+(the Añejo report accounts for 6). Spam since Oct 19: 1, on Welcome 3.
+
+**Problems flagged:**
+- Welcome flow spam complaints over threshold on a 30-day view: Welcome 1
+  3 of 257 (1.2%), Welcome 3 2 of 179 (1.1%). Small numbers, and the Oct 19
+  bots account for some, but the new ad cohort is cold traffic and Welcome 1
+  open rate on it is 28% against 43% before. Watch next week; if the ad
+  cohort complains, Welcome 1 needs to say "the recipes you asked for" up top.
+- Viewed Product (Wv5C5B): zero events all week. Klaviyo only records
+  onsite events for identified visitors, and until the ads there were few
+  of those. With 59 identified people now, product views should start
+  appearing; if still zero next week, the tracking script needs a look.
+  Browse abandonment cannot fire until it does.
+- Añejo unsubscribe rate 1.1% (6 of 543), marginally over 1%.
+- Meta reporting still blocked: no Network secret for graph.facebook.com,
+  host not allowed, no ad account id. Cost per subscriber cannot be computed.
+  If the full $40 a day was spent, 59 subscribers on roughly $100 of spend
+  is about $1.70 each, far under the $4 target.
+
+**Recommendations put to Adam:** (1) shorten the Behind the Bar first delay
+so ad subscribers get the Paloma the day after they sign up (the ads
+promise it; today they wait 14 days); (2) add the Meta secret, allowed
+domain and ad account id; (3) get Bevstack's order-by dates and Trio answer
+on today's 11 am call, so Thanksgiving can be scheduled; (4) rename the two
+live flows to drop "(DRAFT)" from their names in the Klaviyo UI.
+
+Nothing new built as draft this week. Review-request flow still waits for
+20+ delivered orders (about 17 orders since launch).
