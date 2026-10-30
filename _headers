@@ -8,6 +8,19 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
+# HTML is never cached by the browser: every visit revalidates with Netlify,
+# so a deploy (or the move off the old Squarespace site) shows up at once.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+  Clear-Site-Data: "cache"
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+  Clear-Site-Data: "cache"
+
 /img/*
   Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
 
