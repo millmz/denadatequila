@@ -287,3 +287,73 @@ live flows to drop "(DRAFT)" from their names in the Klaviyo UI.
 
 Nothing new built as draft this week. Review-request flow still waits for
 20+ delivered orders (about 17 orders since launch).
+
+## Mon Nov 2, 2026 (routine run 4)
+
+**Headline:** the Meta recipe ads are the whole story. Meta is now readable
+through the Windsor.ai connector Adam attached (account "De Nada",
+1452124953539041). Since Oct 24: $347.33 spent, 430 Meta-attributed leads,
+402 Klaviyo signups tagged `recipes:recipes-leadgen`, so about $0.86 per
+subscriber. Last 7 days: $226.04, 330 leads, 304 signups, $0.74 each.
+List 710 to 1,046 in a week. Orders went the other way: 1 this week.
+
+| | This week (Oct 27 to Nov 2) | Last week |
+|---|---|---|
+| Orders / revenue | 1 / $103.70 | 7 / $998.78 |
+| New subscribers | 304, all from the ads | 63 |
+| List size | 1,046 | 710 |
+| Email subscribers (all) S2hYpZ | 1,012 | 679 |
+| Opened since Oct 1 VeuGeB | 625 | 443 |
+| Meta spend / leads / cost per lead | $226 / 330 / $0.68 | not readable |
+| Unengaged 90 / 180 | 0 / 0 | 0 / 0 |
+| Sending domain | active | active |
+
+Meta by ad, since Oct 24: Paloma $299.65, 13,127 impressions, 690 link
+clicks, 399 leads, $0.75 per lead, 11% CTR. Margarita $16.66, 27 clicks, 17
+leads, $0.98. Founders $31.02, 92 clicks, 14 leads, $2.22. Meta has put
+86% of the money on the Paloma. Daily spend runs $27 to $53 against the $40
+budget (average about $35), so the campaign is budget-limited.
+
+Orders per day Oct 19 to Nov 2: 1,1,0,3,1,2,0,0,0,0,0,0,0,1,0,0. Six days at
+zero Oct 25 to 30, one order Oct 31, zero since. The 400 ad subscribers are
+cold and have not bought yet. Welcome flow conversions in 30 days: 0 on
+1,114 recipients.
+
+Campaigns: Re-engage (Oct 29, WordPress non-openers) 72 sent, 9.7% open,
+4.2% click, 1 unsubscribe, 0 orders. Añejo final 7 unsubscribes (1.3%).
+Gifts Scheduled Nov 5, 4 pm ET, to the list (now 1,046). Thanksgiving (Nov
+12) Draft with no order-by date, ten days out. Holidays (Dec 10) Draft.
+Adam added a Draft campaign "ON HOLD until bundle is live: One of each,
+non-buyers" and a live flow "Welcome Series: Email 4, One of each (day 10)"
+(TA8N6Z) on Oct 26, plus a draft duplicate of that flow (Y9m9bX).
+
+Flows, last 7 days: Welcome 1 354 recipients, 98.3% delivered, 44.5% open,
+13.5% click (the ad cohort clicks hard); Welcome 2 267, 40.8% open, 3.0%
+click; Welcome 3 59, 29.3% open, 1 unsubscribe; Behind the Bar 02 (Old
+Fashioned) 94, 63% open; Behind the Bar 01 3 (new signups reach it from
+Nov 7; the back-populated group was due today at 10 am local, check next
+week); Post-purchase 3; Abandoned checkout 3; Browse abandonment 0;
+Cross-sell 0 (first eligible orders are 30 days after Oct 23). Spam
+complaints this week: 0. Welcome 30-day spam rate 0.27%, back under
+threshold. Unsubscribes since Oct 26: 7, none attributed to a message.
+
+Onsite tracking: Active on Site (X86EGe) 74 events since Oct 24, so
+klaviyo.js loads and recognises email clickers. Viewed Product (Wv5C5B)
+still 0, and the Shopify one (SYR7q3) 0, so no recognised visitor has
+opened a product page, or the track call is not landing. Needs a one-minute
+test: open a product page from a Klaviyo email link and check the profile.
+
+**Problems flagged:** orders at 1 for the week (six-day zero run); Thanksgiving
+Draft inside 14 days with no order-by date; Viewed Product at zero for a
+third week while Active on Site flows; Añejo unsubscribe 1.3%.
+
+**Recommendations put to Adam:** (1) raise the Meta daily budget to $60
+(brief rule is day 14, Nov 7, but the campaign is under $1 per lead and
+budget-limited); (2) Behind the Bar first delay 14 days to 1 day for new
+signups, still unanswered from Oct 26; (3) Thanksgiving order-by date so
+the Nov 12 send can be scheduled; (4) the product-page tracking test; (5)
+delete the duplicate draft flow Y9m9bX.
+
+Routine prompt updated: Meta now read through Windsor, Active on Site
+added to the tracking check, Welcome 4 flow added to the flow list.
+Nothing new built as draft this week.

@@ -23,6 +23,10 @@ on all of it.
 
 ## Meta reporting
 
+Since Nov 2 the Monday routine reads Meta through the Windsor.ai connector
+(Meta Ads account "De Nada", 1452124953539041), which Adam attached. The
+script below is the fallback.
+
 `scripts/meta-insights.py` prints the last 7 days of spend, clicks, leads and
 cost per lead per ad for the account. The token never lives in the repo or
 the environment: a Network secret in the cloud environment (type Bearer, host
