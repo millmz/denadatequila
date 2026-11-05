@@ -57,10 +57,6 @@ window.DENADA_SHOP = {
   /* Where Buy buttons point until a product has been set up. */
   storeUrl: "https://shop.denadatequila.com/",
 
-  /* Appended to checkout links so Shopify analytics attributes these orders
-     to the website. Set to "" to turn off. */
-  utm: "utm_source=website&utm_medium=shop&utm_campaign=dtc",
-
   /* --------------------------------------------------------------------------
      DRAFT THEME PREVIEW — the staging switch
      --------------------------------------------------------------------------

@@ -217,14 +217,10 @@ the store's navigation points back to the website.
 
 ## Attribution
 
-Handoff links carry UTM parameters so Shopify analytics can attribute these
-orders to the website:
-
-```
-utm_source=website&utm_medium=shop&utm_campaign=dtc
-```
-
-Change or clear this in the `utm` field of `js/shop-config.js`.
+Handoff links carry the UTM parameters the visitor arrived with (a Meta ad, an
+email, a truck QR code), so orders are credited to the real source. Visitors who
+arrived without any get none. `js/attribution.js` remembers them for the tab
+session; every page loads it right after the Google tag.
 
 ---
 
@@ -232,8 +228,9 @@ Change or clear this in the `utm` field of `js/shop-config.js`.
 
 | File | What it is |
 |---|---|
-| `js/shop-config.js` | **The only file you edit.** Variant IDs, prices, store domain, UTM, draft theme ID. |
+| `js/shop-config.js` | **The only file you edit.** Variant IDs, prices, store domain, draft theme ID. |
 | `js/checkout.js` | Builds the Shopify handoff URLs. No need to touch. |
+| `js/attribution.js` | Remembers the visitor's UTM tags for the handoff. No need to touch. |
 | `shop-preflight.html` | Test page: shows every SKU's config state and its live handoff URLs. Not indexed, not linked. |
 | `product-*.html` | The five product pages. |
 | `shop.html` | Shop grid; Buy buttons link to the product pages. |

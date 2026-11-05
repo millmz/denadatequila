@@ -42,7 +42,8 @@
   }
 
   function decorate(url) {
-    return withPreview(CFG.utm ? join(url, CFG.utm) : url);
+    var utm = window.DenadaAttribution ? window.DenadaAttribution.query() : "";
+    return withPreview(utm ? join(url, utm) : url);
   }
 
   /* Shopify: add to cart, then land on Shopify's cart page. */
