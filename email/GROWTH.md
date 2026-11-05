@@ -87,8 +87,13 @@ Active, or checkout will accept addresses that cannot be shipped.
   Print a short stack of cards; I can make the QR and the card.
 - **Wholesale.** Bars and shops drive brand search. Recipe cards with a QR
   at every account.
-- **Press.** The Agavos Gold and the all-natural story; the press kit from
-  launch is ready to re-send.
+- **Press.** `press.html` (built Nov 5, 2026) lists the coverage, awards,
+  podcasts and milestones, with a downloadable kit in `press/` (one-page
+  fact sheet PDF from `press/fact-sheet.html`, nine photos, three logos, and
+  `de-nada-press-kit.zip` with all of it). Press contact is
+  press@denadatequila.com. Add new coverage as a card in the Coverage grid;
+  keep the grid full (the CNN and Robb Report cards are double width). Rebuild
+  the zip after changing anything in `press/`.
 
 ## Targets to hold ourselves to
 
