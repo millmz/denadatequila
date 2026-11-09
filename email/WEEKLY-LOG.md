@@ -357,3 +357,68 @@ delete the duplicate draft flow Y9m9bX.
 Routine prompt updated: Meta now read through Windsor, Active on Site
 added to the tracking check, Welcome 4 flow added to the flow list.
 Nothing new built as draft this week.
+
+## Mon Nov 9, 2026 (routine run 5)
+
+**Headline:** the ads keep filling the list (399 signups this week, 1,428 on
+the list) but nobody is buying. Zero orders since Oct 31, nine days running.
+Zero conversions from every flow in 30 days.
+
+| | This week (Nov 2 to 8) | Last week |
+|---|---|---|
+| Orders / revenue | 0 / $0 | 1 / $103.70 |
+| New subscribers | 399 | 304 |
+| List size | 1,428 | 1,046 |
+| Email subscribers (all) S2hYpZ | 1,387 | 1,012 |
+| Opened since Oct 1 VeuGeB | 869 | 625 |
+| Meta spend / leads / per lead | $384.46 / 451 / $0.85 | $226 / 330 / $0.68 |
+| Cost per Klaviyo subscriber | $0.96 | $0.74 |
+| Unengaged 90 / 180 | 0 / 0 | 0 / 0 |
+| Sending domain | active | active |
+
+Signup sources, first 100 of the week: recipes:recipes-leadgen 89,
+recipes:recipes-test-2554 9, modal 1, none 1. All ad signups checked are
+SUBSCRIBED and can receive campaigns.
+
+Meta: Adam added a second campaign, "Recipes lead gen | 25–54 test", on Nov
+4 (Paloma and Margarita, ages 25 to 54). Week: main campaign $280.02, 371
+leads (Paloma $267.80, 358 leads, $0.75; Margarita $10.88, 9, $1.21;
+Founders $1.34, 4). Test campaign $104.44, 80 leads, $1.31 per lead (Paloma
+$84.26, 60, $1.40; Margarita $20.18, 20, $1.01). Since Oct 24: $739.79,
+893 Meta leads. Daily spend across both is now $48 to $76.
+
+Gifts (Nov 5): 531 sent, 98.9% delivered, 50.1% open, 1.9% click, 0 orders,
+8 unsubscribes (1.5%, over threshold), 0 spam, 25 skipped by Smart Sending.
+531 is about the list size when it was scheduled on Oct 9, so the ~800
+people who joined since did not get it. Scheduled campaigns here appear to
+keep the audience from scheduling time; schedule holiday sends close to the
+send date, or re-save the audience first.
+
+Flows, last 7 days: Welcome 1 408 recipients, 44.5% open, 10.4% click;
+Welcome 2 334, 36% open, 0 clicks; Welcome 3 343, 37% open, 1.8% click, 5
+unsubscribes; Welcome 4 (TA8N6Z) 200, 32% open, 0 clicks, 1 spam (0.5%);
+Behind the Bar 01 498 recipients (the back-populated group finally sent Nov
+2), 51% open, 1.4% click, 1 spam; Abandoned checkout 4; Post-purchase 6;
+Browse abandonment 0; Cross-sell 0. Spam since Nov 2: 3 (Welcome 4, Behind
+the Bar 01, Welcome 2). Unsubscribes since Nov 2: 26.
+
+Onsite: Active on Site 100 events from 72 people; Viewed Product 0 for a
+third week, on both the API and Shopify metrics. The site's tracking setup
+checks out (script order, product markers, config). Most likely the email
+buttons land on shop.denadatequila.com, where Klaviyo onsite tracking is not
+switched on, so product views there are never recorded.
+
+**Problems flagged:** zero orders for 9 days; Thanksgiving (Nov 12) Draft
+three days out with no order-by date; Welcome 2 and Welcome 4 at zero clicks
+on 534 sends (a broken or missing button is likely); Welcome 4 spam 0.5%;
+Gifts unsubscribes 1.5%; Viewed Product still zero.
+
+**Recommendations put to Adam:** (1) Thanksgiving: confirm an order-by date
+today so it can be scheduled for Nov 12 to the whole list, including the
+~800 ad subscribers who have never had a sales email; (2) check the buttons in
+Welcome 2 and Welcome 4; (3) switch on Klaviyo onsite tracking in the
+Shopify theme (App embeds); (4) hold Meta spend where it is until the list
+converts, and keep the 25–54 test only if it beats $1 per lead this week;
+(5) delete the duplicate draft flow Y9m9bX.
+
+Nothing built as draft this week.
