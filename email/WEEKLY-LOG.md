@@ -422,3 +422,64 @@ converts, and keep the 25–54 test only if it beats $1 per lead this week;
 (5) delete the duplicate draft flow Y9m9bX.
 
 Nothing built as draft this week.
+
+## Mon Nov 16, 2026 (routine run 6)
+
+**Headline:** no orders since Oct 31, sixteen days. The cheaper Meta campaign
+stopped spending after Nov 10, so signups fell from about 60 a day to about
+13. Thanksgiving (planned for Nov 12) was never sent and is still Draft.
+
+| | This week (Nov 9 to 15) | Last week |
+|---|---|---|
+| Orders / revenue | 0 / $0 | 0 / $0 |
+| New subscribers | 164 | 399 |
+| List size | 1,564 | 1,428 |
+| Email subscribers (all) S2hYpZ | 1,519 | 1,387 |
+| Opened since Oct 1 VeuGeB | 1,015 | 869 |
+| Meta spend / leads / per lead | $194.36 / 181 / $1.07 | $384.46 / 451 / $0.85 |
+| Cost per Klaviyo subscriber | $1.19 | $0.96 |
+| Unengaged 90 / 180 | 0 / 0 | 0 / 0 |
+| Sending domain | active | active |
+
+Signups per day Nov 9 to 15: 69, 30, 10, 15, 13, 12, 15.
+
+Meta: "Recipes lead gen" spent $40.68 on Nov 9 and $19.85 on Nov 10, then
+nothing; it looks paused. Week: $60.53, 80 leads, $0.76 per lead (Paloma
+$57.93, 78 leads, $0.74). "Recipes lead gen | 25–54 test" ran all week at
+$18 to $21 a day: $133.83, 101 leads, $1.33 per lead (Paloma $91.19, 78,
+$1.17; Margarita $42.64, 23, $1.85). No ad near the $8 line.
+
+Campaigns: nothing sent this week. Thanksgiving (Nov 12) and Holidays
+(Dec 10) are both still Draft with no send date. No sales campaign has gone
+to anyone who joined after Oct 9, about 1,000 people.
+
+Flows, last 7 days: Welcome 1 165 recipients, 55.6% open, 9.9% click;
+Welcome 2 315, 45.7% open, 0 clicks (zero since its Nov 2 rewrite, about
+650 sends); Welcome 3 397, 0.8% click; Welcome 4 324, 33.9% open, 1 click,
+5 unsubscribes (1.5%, over threshold); Behind the Bar 01 323, 32.1% open,
+0.3% click; Behind the Bar 03 Garden Party 154, 42.5% open; Abandoned
+checkout 2; Post-purchase 5. Browse abandonment 0; Cross-sell 0. Flow
+conversions in 30 days: 0 across all flows. Spam since Nov 9: 0.
+Unsubscribes since Nov 9: 18.
+
+Welcome 2 (template QTjXdu) and Welcome 4 (SSuv8Y) links checked: both
+buttons are well-formed and point at denadatequila.com product and shop
+pages with UTM tags. So the zero clicks are not a bad URL. Next check is a
+preview send to confirm the buttons are clickable and click tracking is on
+for those messages.
+
+Onsite: Active on Site 42 events from 31 people; Viewed Product 0 on both
+metrics, fourth week. Shopify app embed for Klaviyo still the likely fix.
+
+**Problems flagged:** zero orders 16 days; Thanksgiving Draft and past its
+planned date; main Meta campaign stopped while the costlier test runs;
+Welcome 2 zero clicks; Welcome 4 unsubscribes 1.5%; Viewed Product zero.
+
+**Recommendations put to Adam:** (1) send Thanksgiving this week, Wed Nov
+18 or Thu Nov 19, to the whole list, scheduled the day before so new
+subscribers are included; (2) turn the main campaign back on and pause the
+25–54 test; (3) preview-send Welcome 2 and click the buttons; (4) Klaviyo
+app embed in the Shopify theme; (5) delete duplicate draft flow Y9m9bX.
+Holidays (Dec 10) is not yet inside 14 days; remind next week.
+
+Nothing built as draft this week.
