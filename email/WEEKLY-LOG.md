@@ -483,3 +483,44 @@ app embed in the Shopify theme; (5) delete duplicate draft flow Y9m9bX.
 Holidays (Dec 10) is not yet inside 14 days; remind next week.
 
 Nothing built as draft this week.
+
+## Nov 23, 2026 (week Nov 16 to 22)
+
+Klaviyo sign-in was refused this week, so no campaign, flow, signup,
+list, segment or tracking figures. Shopify and Meta only. Re-run the
+Klaviyo half once the connector is signed in again.
+
+| | This week | Last week |
+|---|---|---|
+| Orders / revenue (Shopify) | 6 / $816.66 | 0 / $0 |
+| Meta spend / leads / cost per lead | $39.51 / 38 / $1.04 | $194.36 / 181 / $1.07 |
+| Klaviyo signups, list, segments | not available | 164 / 1,564 |
+
+Orders: #1334 Nov 17 $196.07 (one of each; last visit tagged
+shopify_email), #1335 Nov 18 $116.98 (2 Blanco), #1336 Nov 19 $132.32
+(Reposado + Blanco), #1337 Nov 20 $135.04 (2 Reposado; klaviyo,
+btb-mexican-style-old-fashioned, the first order traced to the Behind the
+Bar flow), #1338 Nov 20 $132.55 (Reposado + Blanco), #1339 Nov 20 $103.70
+(Añejo; klaviyo, thanksgiving-blanco). The thanksgiving-blanco tag means a
+Thanksgiving email went out from Klaviyo this week; not confirmed in
+Klaviyo itself. The other three came through denadatequila.com with no tag.
+
+Meta: Windsor has rows only up to Nov 17. "Recipes lead gen | 25–54 test"
+spent $21.75 (17 leads) Nov 16 and $17.76 (21 leads) Nov 17, then nothing.
+Paloma 25–54 $32.73, 33 leads, $0.99; Margarita 25–54 $6.78, 5 leads,
+$1.36. The original "Recipes lead gen" has had no spend since Nov 10.
+Either both campaigns are paused or the Windsor trial stopped refreshing
+(it refused a forced refresh on the trial plan). Since Oct 24: $963.50,
+1,098 leads, $0.88 per lead (Paloma $623.46, 833, $0.75; Margarita $29.51,
+28, $1.05; Founders $32.68, 18, $1.82; Paloma 25–54 $208.23, 171, $1.22;
+Margarita 25–54 $69.62, 48, $1.45). No ad near the $8 line.
+
+**Problems flagged:** Klaviyo connector signed out; Meta shows no delivery
+after Nov 17; Holidays (Dec 10) still Draft and 17 days out; Welcome 2
+clicks and Viewed Product could not be rechecked.
+
+**Recommendations put to Adam:** sign Klaviyo back in; confirm whether the
+ads are paused on purpose and, if not, turn the original campaign back on
+(the cheaper one); give the order-by date for Holidays.
+
+Nothing built as draft this week.
