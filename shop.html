@@ -89,14 +89,35 @@ nav::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:200px
 .anejo-row .p-swatch{min-height:0;padding:34px 26px;align-items:center}
 .anejo-row .p-swatch img{max-height:280px}
 .anejo-row .p-body{border-top:none;border-left:2px solid var(--black);justify-content:center}
-.trio-row{margin-top:46px}
-.trio-row .p-card{display:grid;grid-template-columns:.56fr .44fr;transform:rotate(-.4deg)}
-.trio-row .p-card:hover{transform:rotate(0) translateY(-4px)}
-.p-card.trio .p-swatch{padding:0;min-height:0;aspect-ratio:4/3;overflow:hidden;background:#E4ECCF}
-.p-card.trio .p-swatch img{width:100%;height:100%;max-height:none;object-fit:cover;filter:none}
-.trio-row .p-body{border-top:none;border-left:2px solid var(--black);justify-content:center}
-.trio-row .p-body p{flex:0 0 auto}
-.p-price s{font-family:'Libre Franklin',sans-serif;font-weight:400;font-size:1rem;color:var(--gray);margin-left:10px}
+/* The Trio: a dark feature band under the three bottles */
+.trio{margin-top:56px;background:var(--black);color:var(--cream);border:2px solid var(--black);box-shadow:7px 7px 0 var(--green);display:grid;grid-template-columns:.9fr 1.1fr;position:relative}
+.trio-photo{position:relative;overflow:hidden;min-height:100%;background:#1a1617}
+.trio-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:45% 34%}
+.trio-photo .stamp{position:absolute;right:18px;bottom:18px;width:104px;height:104px;border-radius:50%;background:var(--orange);color:var(--black);border:2px solid var(--black);box-shadow:3px 3px 0 var(--black);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(-8deg);font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;line-height:1}
+.trio-photo .stamp b{font-size:2rem;letter-spacing:.01em;margin:2px 0}
+.trio-photo .stamp span{font-size:.58rem;letter-spacing:.2em}
+.trio-body{padding:46px 48px 44px;display:flex;flex-direction:column;justify-content:center}
+.trio-body .rule-set{color:var(--gold);max-width:160px;margin-bottom:22px}
+.trio-body .eyebrow{color:var(--gold)}
+.trio-body h2{font-size:clamp(2.4rem,4.4vw,3.6rem);color:var(--cream);margin:8px 0 6px}
+.trio-body .serif-i{font-size:1.12rem;color:#D9D6CF;display:block}
+.flight{list-style:none;margin:26px 0 26px;border-top:1px solid rgba(243,248,228,.22)}
+.flight li{display:grid;grid-template-columns:14px 1fr auto;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid rgba(243,248,228,.22)}
+.flight .dot{width:14px;height:14px;border-radius:50%;border:1.5px solid var(--cream)}
+.flight .b .dot{background:var(--turquoise)}
+.flight .r .dot{background:var(--orange)}
+.flight .a .dot{background:#3A3436;box-shadow:inset 0 0 0 2px var(--gold)}
+.flight .nm{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.95rem}
+.flight .nm em{display:block;font-family:'EB Garamond',serif;font-style:italic;font-weight:400;text-transform:none;letter-spacing:0;font-size:1rem;color:#C9C6C2;margin-top:1px}
+.flight .aw{font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.16em;font-size:.62rem;color:var(--gold);text-align:right}
+.trio-buy{display:flex;align-items:center;gap:22px 28px;flex-wrap:wrap}
+.trio-price{font-family:'Oswald',sans-serif;font-weight:600;font-size:2.3rem;line-height:1;color:var(--cream)}
+.trio-price s{font-family:'Libre Franklin',sans-serif;font-weight:400;font-size:1rem;color:#9E9A95;margin-left:8px}
+.trio-price small{display:block;font-family:'EB Garamond',serif;font-style:italic;font-weight:400;font-size:1rem;color:#C9C6C2;margin-top:6px}
+.trio .btn{border-color:var(--cream);box-shadow:3px 3px 0 var(--gold);padding:14px 30px}
+.trio .btn:hover,.trio .btn:focus-visible{box-shadow:4px 4px 0 var(--gold)}
+.trio-fine{margin-top:20px;font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.18em;font-size:.62rem;color:#9E9A95}
+.trio .hand-note{color:var(--orange);top:-34px;left:22px;font-size:1.4rem}
 .checkout-note{max-width:760px;margin:64px auto 0;text-align:center;color:var(--gray);font-size:.92rem}
 .checkout-note .rule-set{color:var(--green);max-width:220px;margin:0 auto 24px}
 .checkout-note a{color:var(--green);border-bottom:2px solid var(--green);font-weight:500}
@@ -137,8 +158,11 @@ footer a:hover{color:var(--cream)}
   .p-card:nth-child(1),.p-card:nth-child(2),.p-card:nth-child(3){transform:none}
   .anejo-row .p-card{grid-template-columns:1fr;transform:none}
   .anejo-row .p-body{border-left:none;border-top:2px solid var(--black)}
-  .trio-row .p-card{grid-template-columns:1fr;transform:none;max-width:420px;margin:0 auto}
-  .trio-row .p-body{border-left:none;border-top:2px solid var(--black)}
+  .trio{grid-template-columns:1fr;max-width:420px;margin:56px auto 0}
+  .trio-photo{aspect-ratio:4/5;min-height:0}
+  .trio-body{padding:32px 24px 30px}
+  .trio-photo .stamp{width:88px;height:88px;right:14px;bottom:14px}
+  .trio-photo .stamp b{font-size:1.7rem}
   .foot-grid{grid-template-columns:1fr;gap:36px}
   .foot-base{flex-direction:column;text-align:center;align-items:center}
 }
@@ -235,19 +259,29 @@ footer a:hover{color:var(--cream)}
       </div>
     </article>
   </div>
-  <div class="trio-row">
-    <article class="p-card trio rv">
-      <div class="hand-note" aria-hidden="true">one of each</div>
-      <div class="p-swatch"><img width="800" height="600" src="img/photos/tyler-trio-800.webp" srcset="img/photos/tyler-trio-800.webp 800w, img/photos/tyler-trio-1600.webp 1600w" sizes="(max-width:960px) 100vw, 700px" alt="De Nada Blanco, Reposado and A&ntilde;ejo, the three glass bottles side by side" loading="lazy"></div>
-      <div class="p-body">
-        <span class="eyebrow">3 &times; 700mL &middot; Blanco, Reposado, A&ntilde;ejo</span>
-        <h2>The Trio</h2>
-        <p>All three bottles in one order. The Blanco makes the drinks, the Reposado is for the long dinner, the A&ntilde;ejo is for the end of the night. The one to bring to a dinner party, or to keep for your own.</p>
-        <div class="p-price">$169.99 <s>$184.97</s> <small>for all three</small></div>
-        <a class="btn" data-cart-sku="trio" data-buy-sku="trio" href="https://shop.denadatequila.com/cart/add?id=67943623655712&amp;quantity=1&amp;return_to=/cart">Buy the Trio</a>
+  <section class="trio rv" aria-labelledby="trio-h">
+    <div class="hand-note" aria-hidden="true">the gift we send ourselves</div>
+    <div class="trio-photo">
+      <img width="600" height="800" src="img/photos/lineup-800.webp" srcset="img/photos/lineup-800.webp 600w, img/photos/lineup-1600.webp 1200w" sizes="(max-width:960px) 420px, 560px" alt="De Nada Blanco, Reposado and A&ntilde;ejo side by side on a sideboard in evening light, with limes and a margarita" loading="lazy">
+      <div class="stamp" aria-hidden="true"><span>Save</span><b>$15</b><span>on the set</span></div>
+    </div>
+    <div class="trio-body">
+      <div class="rule-set" aria-hidden="true"><div class="tri"></div><div class="ticks"></div></div>
+      <span class="eyebrow">One of each &middot; 3 &times; 700mL</span>
+      <h2 class="disp" id="trio-h">The Trio</h2>
+      <span class="serif-i">Everything a host needs for the whole evening, start to finish.</span>
+      <ul class="flight">
+        <li class="b"><span class="dot"></span><span class="nm">Blanco<em>Makes the drinks</em></span><span class="aw">Double Gold<br>Agavos 2025</span></li>
+        <li class="r"><span class="dot"></span><span class="nm">Reposado<em>For the long dinner</em></span><span class="aw">Gold<br>Agavos 2025</span></li>
+        <li class="a"><span class="dot"></span><span class="nm">A&ntilde;ejo<em>For the end of the night</em></span><span class="aw">Gold<br>Agavos 2026</span></li>
+      </ul>
+      <div class="trio-buy">
+        <div class="trio-price">$169.99<s>$184.97</s><small>for all three bottles</small></div>
+        <a class="btn" data-cart-sku="trio" data-buy-sku="trio" data-preorder-note-into=".trio-buy" href="https://shop.denadatequila.com/cart/add?id=67943623655712&amp;quantity=1&amp;return_to=/cart">Buy the Trio</a>
       </div>
-    </article>
-  </div>
+      <p class="trio-fine">Additive-free &middot; Estate-grown agave &middot; Glass bottles, wood stoppers</p>
+    </div>
+  </section>
   <p class="fulfill-note">All orders ship via licensed retailers &middot; Adult signature (21+) required on delivery</p>
   <div class="checkout-note rv">
     <div class="rule-set"><div class="tri"></div><div class="ticks"></div></div>
