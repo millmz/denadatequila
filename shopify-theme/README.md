@@ -132,3 +132,25 @@ cart, press Continue shopping, land somewhere that is not your site.
 
   Type: **Oswald** headings and buttons, **Libre Franklin** body,
   **EB Garamond** italic accents, **Caveat** handwritten notes.
+
+---
+
+## Footer refresh (Nov 23, 2026)
+
+The store footer (cart, product and policy pages) still carried pieces of the
+2024 site, set in the theme editor rather than in code: the old black logo
+`cropped-DeNada-Tequila-Header-Logo-Blk.png`, the background image
+`Footer5.png`, and a "Say Hello" block without the phone or address. These
+live in `sections/footer-group.json`, which the theme editor owns.
+
+Ready in Shopify for the swap:
+
+- Files: `denada-footer-wordmark-cream.webp`, the website's footer wordmark.
+- Navigation: menu `website-footer`, the website footer's Explore links
+  (Shop, Gifting, Behind the Bar, Our Story, House Menu, FAQ, Press).
+
+In Customize > Footer: Image block > image = `denada-footer-wordmark-cream`;
+section setting "Select Backround Image" cleared; Explore block > menu =
+"Website footer"; Say Hello text = orders@denadatequila.com, 305-962-2509,
+148 South Liberty Drive, Stony Point, NY 10980, Instagram, and the trade
+email.
