@@ -79,7 +79,7 @@ window.DENADA_SHOP = {
      Keys (blanco, reposado, ...) are used by the site. Do not rename them.
      Prices here are what the website displays. Keep them in sync with Shopify.
 
-     STATUS: all five SKUs are wired and verified against
+     STATUS: the three bottles are wired and verified against
      shop.denadatequila.com/products.json (19 Aug 2026). Every variant ID
      resolves to a live Shopify product and every price below matches the
      price Shopify charges. productUrl is also filled in as a safety net: if a
@@ -115,6 +115,18 @@ window.DENADA_SHOP = {
       price: "79.99",
       variantId: "52046488600864",   // Shopify SKU 24629, confirmed $79.99
       productUrl: "https://shop.denadatequila.com/products/de-nada-tequila-anejo-700ml",
+      preorder: ""
+    },
+
+    /* The Trio: one each of Blanco, Reposado and Añejo. Built by the retailer
+       (Bevstack) on Nov 23, 2026, Shopify SKU 25546, on the "alch bevstack"
+       shipping profile like the bottles. $169.99 against $184.97 separately.
+       No page on this site; the shop card adds it straight to the cart. */
+    "trio": {
+      name: "The Trio",
+      price: "169.99",
+      variantId: "67943623655712",
+      productUrl: "https://shop.denadatequila.com/products/de-nada-tequila-the-trio-blanco-reposado-and-anejo-700-ml",
       preorder: ""
     }
 

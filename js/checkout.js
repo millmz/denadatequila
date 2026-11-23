@@ -155,8 +155,20 @@
     });
   }
 
+  /* ------------------------------------------------ direct add-to-cart links */
+  // A link marked data-cart-sku="<sku>" goes straight to the Shopify cart with
+  // one of that SKU, carrying the visit's UTM tags. Used for products with no
+  // page on this site, like the Trio. The static href is the fallback.
+  function wireCartLinks() {
+    document.querySelectorAll("[data-cart-sku]").forEach(function (el) {
+      var t = buyTarget(el.getAttribute("data-cart-sku"));
+      el.href = t.mode === "variant" ? addToCartUrl(t.variantId, 1) : t.url;
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     wireProductPage();
     wireGridLabels();
+    wireCartLinks();
   });
 })();

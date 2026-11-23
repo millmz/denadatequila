@@ -17,7 +17,7 @@ on all of it.
 | Meta pixel | `js/meta-pixel.js` on every main page, ID `3958712751050131` in `js/list-config.js` (added Oct 23): PageView everywhere, ViewContent on product pages, Lead from every signup form. Purchases come from Shopify's Meta channel, which Adam connects in Shopify admin | Live on main |
 | Meta ad creatives and copy | Scratchpad `ads/` (six JPGs: Paloma, Margarita, Founders; `ADS.md`); build brief in `META-CAMPAIGN-BRIEF.md` | Revised Oct 24 around the Crown playbook (hosting frame, tagline); Adam publishes in Ads Manager; pixel is live |
 | Corporate gifting page | `gifting.html`, Netlify form `gifting`, tiers (one bottle, The Trio $199, by the case), footer link on every page | Live on main |
-| The Trio bundle | Shopify product `gid://shopify/Product/15500768837920`, SKU `DN-TRIO-700`, $199 | **Draft** in Shopify; photo to add in admin; retailer must confirm fulfilment |
+| The Trio bundle | Shopify product `gid://shopify/Product/15500768837920`, SKU `25546`, $169.99 (compare at $184.97), on the "alch bevstack" profile | Bevstack set it up Nov 23. Card on `shop.html` (adds straight to the Shopify cart), `trio` in `js/shop-config.js`, gifting tier now $169.99. Product must be Active and on the Online Store channel for the button to work |
 | Outreach email | Scratchpad `gifting/outreach-email.md` | For Adam to send |
 | Referral line in Behind the Bar | Each recipe email ends with a line linking to `recipes.html?utm_source=klaviyo&utm_medium=email&utm_campaign=btb-referral` | See `KLAVIYO.md`, Flow 5 |
 
@@ -67,9 +67,8 @@ Active, or checkout will accept addresses that cannot be shipped.
 
 ## Lift the basket
 
-- **The Trio at $199.** Draft in Shopify. Once the retailer confirms, set it
-  Active, add it to `js/shop-config.js` as a fourth product (`trio`), and a
-  "Shop the Trio" card can go on `shop.html` and `gifting.html`.
+- **The Trio at $169.99.** Set up by Bevstack Nov 23; on `shop.html` and
+  `gifting.html`, wired as `trio` in `js/shop-config.js`.
 - **Free shipping threshold.** Needs the retailer's shipping rates. The
   usual setting is free shipping just above the two-bottle mark (around
   $110), so a single bottle pays shipping and a second bottle does not. Set
