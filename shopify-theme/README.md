@@ -143,14 +143,14 @@ The store footer (cart, product and policy pages) still carried pieces of the
 `Footer5.png`, and a "Say Hello" block without the phone or address. These
 live in `sections/footer-group.json`, which the theme editor owns.
 
-Ready in Shopify for the swap:
+Done Nov 23 on the live theme (denadatequila-shopify-theme/main):
 
-- Files: `denada-footer-wordmark-cream.webp`, the website's footer wordmark.
-- Navigation: menu `website-footer`, the website footer's Explore links
-  (Shop, Gifting, Behind the Bar, Our Story, House Menu, FAQ, Press).
-
-In Customize > Footer: Image block > image = `denada-footer-wordmark-cream`;
-section setting "Select Backround Image" cleared; Explore block > menu =
-"Website footer"; Say Hello text = orders@denadatequila.com, 305-962-2509,
-148 South Liberty Drive, Stony Point, NY 10980, Instagram, and the trade
-email.
+- `sections/footer-group.json`: image block uses `denada-footer-wordmark-cream`
+  (in Files), the background image `Footer5.png` is unset, Explore uses the
+  new `website-footer` menu (Shop, Gifting, Behind the Bar, Our Story, House
+  Menu, FAQ, Press), Say Hello adds 305-962-2509 and the Stony Point address,
+  and the columns run brand, Explore, Say Hello like the website.
+- `assets/denada-brand.css`: a footer block at the end. `mar-css.css` hard
+  codes the old teal `#ceeae2` footer and the chevron overlay `#find-img`;
+  the new rules turn the footer black, hide the overlay, and set the
+  website's type and colors.
