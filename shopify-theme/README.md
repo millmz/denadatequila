@@ -154,3 +154,8 @@ Done Nov 23 on the live theme (denadatequila-shopify-theme/main):
   codes the old teal `#ceeae2` footer and the chevron overlay `#find-img`;
   the new rules turn the footer black, hide the overlay, and set the
   website's type and colors.
+
+Also Nov 23: `assets/denada-brand.css` ends with a product-description fix.
+`custom.css` (2024) painted every description paragraph teal `#ceeae2` and
+asked for Trade Gothic, which is not loaded, so browsers showed Times. The
+new rule gives every product page plain paper and the website's body font.
