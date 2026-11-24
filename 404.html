@@ -3,7 +3,7 @@
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8HXY32F1B"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(navigator.globalPrivacyControl===true){gtag('set','allow_google_signals',false);gtag('set','allow_ad_personalization_signals',false);}gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
 
 <meta charset="UTF-8">
 <meta name="robots" content="noindex">
@@ -101,6 +101,7 @@ footer a:hover{color:var(--cream)}
   .foot-base{flex-direction:column;text-align:center;align-items:center}
 }
 .bfly-foot{display:block;margin-top:14px;opacity:.75}
+.skip-link{position:absolute;left:12px;top:-60px;z-index:2000;background:#231F20;color:#F3F8E4;padding:10px 16px;font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;text-decoration:none;border:2px solid #F3F8E4}.skip-link:focus{top:12px}
 </style>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -121,6 +122,7 @@ footer a:hover{color:var(--cream)}
 <style>.btn.ghost{background:transparent;color:var(--black)}</style>
 </head>
 <body>
+<a class="skip-link" href="#content">Skip to content</a>
 
 <nav aria-label="Main">
   <div class="nav-inner">
@@ -137,7 +139,7 @@ footer a:hover{color:var(--cream)}
   </div>
 </nav>
 
-<header class="faq-hero">
+<header id="content" tabindex="-1" class="faq-hero">
   <span class="eyebrow">404</span>
   <h1 class="disp">That bottle isn&rsquo;t on the shelf.</h1>
   <p class="serif-i">The page moved, or never existed. The bar is still open.</p>
@@ -177,7 +179,7 @@ footer a:hover{color:var(--cream)}
   </div>
   <div class="foot-sign"><span class="hand">You&rsquo;re welcome, anytime.</span></div>
   <div class="foot-base">
-    <span>&copy; 2026 De Nada Tequila &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms of Use</a> &middot; <a href="shipping.html">Shipping &amp; Returns</a></span>
+    <span>&copy; 2026 De Nada Tequila, a brand of DNA Spirits, LLC, Stony Point, NY &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms of Use</a> &middot; <a href="shipping.html">Shipping &amp; Returns</a> &middot; <a href="accessibility.html">Accessibility</a></span>
     <span style="color:var(--gold)">Please drink responsibly.</span>
   </div>
 </footer>
@@ -220,6 +222,7 @@ function dnAgeYes(){
   document.documentElement.style.overflow = '';
 }
 </script>
+<script src="js/agegate-a11y.js"></script>
 
 </body>
 </html>

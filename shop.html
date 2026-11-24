@@ -3,7 +3,7 @@
 <head><script>document.documentElement.className+=' js'</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8HXY32F1B"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(navigator.globalPrivacyControl===true){gtag('set','allow_google_signals',false);gtag('set','allow_ad_personalization_signals',false);}gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
 <script src="js/attribution.js"></script>
 
 <meta charset="UTF-8">
@@ -150,6 +150,7 @@ footer a:hover{color:var(--cream)}
 .bfly-foot{display:block;margin-top:14px;opacity:.75}
 .fulfill-note{font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.18em;font-size:.68rem;color:var(--gray);text-align:center;margin:26px auto 6px}
 .preorder-note{display:block;font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.18em;font-size:.64rem;color:var(--burnt,#B83F26);margin-top:10px}
+.skip-link{position:absolute;left:12px;top:-60px;z-index:2000;background:#231F20;color:#F3F8E4;padding:10px 16px;font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;text-decoration:none;border:2px solid #F3F8E4}.skip-link:focus{top:12px}
 </style>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -168,6 +169,7 @@ footer a:hover{color:var(--cream)}
 <meta name="twitter:image" content="https://www.denadatequila.com/og.jpg">
 </head>
 <body>
+<a class="skip-link" href="#content">Skip to content</a>
 <nav aria-label="Main">
   <div class="nav-inner">
     <a class="wordmark" href="index.html"><img width="259" height="140" src="img/site/tequila-de-nada.webp" alt="Tequila De Nada"></a>
@@ -182,6 +184,7 @@ footer a:hover{color:var(--cream)}
     </div>
   </div>
 </nav>
+<main id="content" tabindex="-1">
 <header class="shop-hero">
   <div>
     <span class="eyebrow">The Shop</span>
@@ -263,6 +266,7 @@ footer a:hover{color:var(--cream)}
   <p class="rv">Bars, restaurants, and retailers: we show up for our accounts with staff training, back bar cards, and activations that actually move bottles. For wholesale pricing and orders, reach our trade desk.</p>
   <a class="mail rv" href="mailto:smooth@denadatequila.com">smooth@denadatequila.com</a>
 </section>
+</main>
 <footer>
   <div class="foot-grid">
     <div>
@@ -296,7 +300,7 @@ footer a:hover{color:var(--cream)}
   </div>
   <div class="foot-sign"><span class="hand">You&rsquo;re welcome, anytime.</span></div>
   <div class="foot-base">
-    <span>&copy; 2026 De Nada Tequila &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms of Use</a> &middot; <a href="shipping.html">Shipping &amp; Returns</a></span>
+    <span>&copy; 2026 De Nada Tequila, a brand of DNA Spirits, LLC, Stony Point, NY &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms of Use</a> &middot; <a href="shipping.html">Shipping &amp; Returns</a> &middot; <a href="accessibility.html">Accessibility</a></span>
     <span style="color:var(--gold)">Please drink responsibly.</span>
   </div>
 </footer>
@@ -340,6 +344,7 @@ function dnAgeYes(){
   document.documentElement.style.overflow = '';
 }
 </script>
+<script src="js/agegate-a11y.js"></script>
 <script src="js/shop-config.js"></script>
 <script src="js/checkout.js"></script>
 <script src="js/list-config.js"></script>

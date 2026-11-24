@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8HXY32F1B"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(navigator.globalPrivacyControl===true){gtag('set','allow_google_signals',false);gtag('set','allow_ad_personalization_signals',false);}gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
 <script src="js/attribution.js"></script>
 
 <meta charset="utf-8"><link rel="canonical" href="https://www.denadatequila.com/welcome.html">
@@ -27,7 +27,7 @@ h1{font-family:'Oswald';font-weight:600;text-transform:uppercase;font-size:clamp
 
 
 .proofline{font-family:'Oswald';font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:.6rem;color:var(--gray);margin-top:22px;line-height:1.9}
-.proofline span{color:var(--gold);letter-spacing:.22em}
+.proofline span{color:#7A6128;letter-spacing:.22em}
 .bottles{display:flex;flex-direction:column;gap:12px;margin-top:20px;width:100%;max-width:380px}
 .bcard{display:flex;align-items:center;gap:14px;background:var(--paper);border:2px solid var(--black);box-shadow:3px 3px 0 var(--black);padding:10px 14px;text-align:left}
 .bcard.featured{border-width:3px;box-shadow:4px 4px 0 var(--black);position:relative}
@@ -41,17 +41,19 @@ h1{font-family:'Oswald';font-weight:600;text-transform:uppercase;font-size:clamp
 .binfo .preorder-note{margin-top:4px}
 </style>
 </head><body>
-<div id="agegate" style="position:fixed;inset:0;background:#0B4A39;z-index:50;display:flex;align-items:center;justify-content:center;padding:24px">
+<div id="agegate" role="dialog" aria-modal="true" aria-labelledby="agegate-title" style="position:fixed;inset:0;background:#0B4A39;z-index:50;display:flex;align-items:center;justify-content:center;padding:24px">
   <div style="background:#FDFBF2;border:2px solid #231F20;box-shadow:6px 6px 0 rgba(35,31,32,.8);padding:34px 28px;max-width:340px;text-align:center">
     <div style="font-family:'Oswald';font-weight:500;letter-spacing:.3em;text-transform:uppercase;font-size:.7rem;color:#B83F26">Before You Come In</div>
-    <div style="font-family:'Oswald';font-weight:600;text-transform:uppercase;font-size:1.6rem;color:#231F20;margin:10px 0 4px">Are you 21 or older?</div>
+    <div id="agegate-title" style="font-family:'Oswald';font-weight:600;text-transform:uppercase;font-size:1.6rem;color:#231F20;margin:10px 0 4px">Are you 21 or older?</div>
     <div style="display:flex;gap:12px;justify-content:center;margin-top:18px">
-      <button onclick="try{localStorage.setItem('dn_age','1')}catch(e){};document.getElementById('agegate').remove()" style="font-family:'Oswald';font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;padding:12px 28px;background:#017A5F;color:#F3F8E4;border:2px solid #231F20;box-shadow:3px 3px 0 #231F20;cursor:pointer">Yes</button>
+      <button onclick="dnAgeYes()" style="font-family:'Oswald';font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;padding:12px 28px;background:#017A5F;color:#F3F8E4;border:2px solid #231F20;box-shadow:3px 3px 0 #231F20;cursor:pointer">Yes</button>
       <a href="https://www.responsibility.org" style="font-family:'Oswald';font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;padding:12px 28px;background:#FDFBF2;color:#231F20;border:2px solid #231F20;box-shadow:3px 3px 0 #231F20;text-decoration:none">No</a>
     </div>
   </div>
 </div>
-<script>try{if(localStorage.getItem('dn_age')==='1'){document.getElementById('agegate').remove()}}catch(e){}</script>
+<script>function dnAgeYes(){try{localStorage.setItem('dn_age','1')}catch(e){};var g=document.getElementById('agegate');if(g)g.style.display='none';}
+try{if(localStorage.getItem('dn_age')==='1'){document.getElementById('agegate').remove()}}catch(e){}</script>
+<script src="js/agegate-a11y.js"></script>
 
 <img width="240" height="130" src="img/site/tequila-de-nada-5a136d.webp" alt="Tequila De Nada" style="height:46px;width:auto;margin-bottom:18px">
 <div><svg viewBox="0 0 104 52" width="150" height="75" fill="none" aria-hidden="true"><path d="M2 46 C16 50 28 40 42 32" stroke="#231F20" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="0.5 6.5"/><g transform="translate(56,2) rotate(9 22 26)"><path d="M19 22 C11 7 -3 5 0.5 14 C3 21 10 26 17 25 Z" fill="#D37240" stroke="#231F20" stroke-width="1.7"/><path d="M25 22 C33 7 47 5 43.5 14 C41 21 34 26 27 25 Z" fill="#D37240" stroke="#231F20" stroke-width="1.7"/><path d="M18 27 C10 28 5 37 9.5 40.5 C13.5 43.5 19 37 19.5 29.5 Z" fill="#B83F26" stroke="#231F20" stroke-width="1.7"/><path d="M26 27 C34 28 39 37 34.5 40.5 C30.5 43.5 25 37 24.5 29.5 Z" fill="#B83F26" stroke="#231F20" stroke-width="1.7"/><circle cx="8" cy="15" r="1.7" fill="#F3F8E4"/><circle cx="36" cy="15" r="1.7" fill="#F3F8E4"/><path d="M22 19 L22 39" stroke="#231F20" stroke-width="2.6" stroke-linecap="round"/><path d="M22 19 C20 14 17 12 15 11 M22 19 C24 14 27 12 29 11" stroke="#231F20" stroke-width="1.6" stroke-linecap="round" fill="none"/></g></svg></div>
@@ -82,7 +84,7 @@ h1{font-family:'Oswald';font-weight:600;text-transform:uppercase;font-size:clamp
   <a class="btn ghost" href="our-story.html">The Story</a>
 </nav>
 <div class="hand">pour something good tonight</div>
-<div class="foot">Please Enjoy Responsibly &middot; 21+</div>
+<div class="foot">Please Enjoy Responsibly &middot; 21+ &middot; DNA Spirits, LLC, Stony Point, NY<br><a href="accessibility.html">Accessibility</a></div>
 <script>
 // fleet attribution: capture ?src, feature the scanned colorway, forward attribution everywhere
 (function(){

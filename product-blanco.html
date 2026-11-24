@@ -3,7 +3,7 @@
 <head><script>document.documentElement.className+=' js'</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8HXY32F1B"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(navigator.globalPrivacyControl===true){gtag('set','allow_google_signals',false);gtag('set','allow_ad_personalization_signals',false);}gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
 <script src="js/attribution.js"></script>
 
 <meta charset="UTF-8">
@@ -144,7 +144,7 @@ footer a:hover{color:var(--cream)}
 .pdp-info .eyebrow{color:var(--burnt);display:block;margin-bottom:10px}
 .pdp-info h1{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.03em;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.05}
 .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-.award{display:inline-block;border:2px solid var(--gold);color:#8a6f2e;font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;padding:7px 14px}
+.award{display:inline-block;border:2px solid var(--gold);color:#7A6128;font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;padding:7px 14px}
 .award.af{border-color:var(--green);color:var(--green)}
 .pdp-lede{font-family:'EB Garamond',serif;font-style:italic;font-size:1.28rem;color:var(--gray);margin:20px 0 0}
 .pdp-price{font-family:'Oswald',sans-serif;font-weight:600;font-size:2rem;margin:22px 0 4px}
@@ -212,6 +212,7 @@ footer a:hover{color:var(--cream)}
 .pdp-shots img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;display:block;border:1px solid rgba(35,31,32,.25)}
 .pdp-shots figcaption{font-family:'Caveat',cursive;font-weight:600;font-size:1.25rem;color:var(--burnt);text-align:right;margin-top:7px;transform:rotate(-1deg)}
 @media(max-width:760px){.pdp-shots{margin-top:0;gap:18px}}
+.skip-link{position:absolute;left:12px;top:-60px;z-index:2000;background:#231F20;color:#F3F8E4;padding:10px 16px;font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;text-decoration:none;border:2px solid #F3F8E4}.skip-link:focus{top:12px}
 </style>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -229,6 +230,7 @@ footer a:hover{color:var(--cream)}
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "De Nada Tequila Blanco", "image": "https://www.denadatequila.com/img/photos/tyler-blanco-1600.webp", "description": "Bright, clean and agave-forward tequila from the highlands of Jalisco. Additive-free, single-estate, NOM 1414. 700 mL, 40% ALC.", "brand": {"@type": "Brand", "name": "De Nada Tequila"}, "offers": {"@type": "Offer", "url": "https://www.denadatequila.com/product-blanco.html", "priceCurrency": "USD", "price": "49.99", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition"}}</script>
 </head>
 <body>
+<a class="skip-link" href="#content">Skip to content</a>
 <nav aria-label="Main">
   <div class="nav-inner">
     <a class="wordmark" href="index.html"><img width="259" height="140" src="img/site/tequila-de-nada.webp" alt="Tequila De Nada"></a>
@@ -244,7 +246,7 @@ footer a:hover{color:var(--cream)}
   </div>
 </nav>
 
-<div class="crumb"><a href="shop.html">Shop</a> &nbsp;/&nbsp; <span>Blanco</span></div>
+<div id="content" tabindex="-1" class="crumb"><a href="shop.html">Shop</a> &nbsp;/&nbsp; <span>Blanco</span></div>
 
 <main>
 <section class="pdp">
@@ -384,7 +386,7 @@ footer a:hover{color:var(--cream)}
   </div>
   <div class="foot-sign"><span class="hand">You&rsquo;re welcome, anytime.</span></div>
   <div class="foot-base">
-    <span>&copy; 2026 De Nada Tequila &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms of Use</a> &middot; <a href="shipping.html">Shipping &amp; Returns</a></span>
+    <span>&copy; 2026 De Nada Tequila, a brand of DNA Spirits, LLC, Stony Point, NY &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms of Use</a> &middot; <a href="shipping.html">Shipping &amp; Returns</a> &middot; <a href="accessibility.html">Accessibility</a></span>
     <span style="color:var(--gold)">Please drink responsibly.</span>
   </div>
 </footer>
@@ -428,6 +430,7 @@ function dnAgeYes(){
   document.documentElement.style.overflow = '';
 }
 </script>
+<script src="js/agegate-a11y.js"></script>
 <script src="js/shop-config.js"></script>
 <script src="js/checkout.js"></script>
 <script src="js/list-config.js"></script>

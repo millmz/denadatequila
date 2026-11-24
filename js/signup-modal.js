@@ -64,7 +64,21 @@
     return !!g && g.style.display === "flex";
   }
 
-  function onKey(e) { if (e.key === "Escape") close(); }
+  function onKey(e) {
+    if (e.key === "Escape") { close(); return; }
+    if (e.key !== "Tab") return;
+    // Keep keyboard focus inside the pop-up while it is open.
+    var wrap = document.getElementById("dn-modal");
+    if (!wrap) return;
+    var f = Array.prototype.filter.call(
+      wrap.querySelectorAll('button, a[href], input:not([type="hidden"]):not([tabindex="-1"])'),
+      function (el) { return el.offsetParent !== null; });
+    if (!f.length) return;
+    var a = f[0], z = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); }
+    else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
+    else if (!wrap.contains(document.activeElement)) { e.preventDefault(); a.focus(); }
+  }
 
   function close() {
     var wrap = document.getElementById("dn-modal");

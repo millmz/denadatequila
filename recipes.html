@@ -2,7 +2,7 @@
 <html lang="en"><head><script>document.documentElement.className+=' js'</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8HXY32F1B"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(navigator.globalPrivacyControl===true){gtag('set','allow_google_signals',false);gtag('set','allow_ad_personalization_signals',false);}gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
 <script src="js/attribution.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,14 +54,14 @@ header img{height:46px;width:auto}
 .gets li strong{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.92rem;display:block;margin-bottom:6px}
 .gets li p{font-size:.95rem;color:var(--gray)}
 .proof{margin:50px auto 0;text-align:center;font-family:'Oswald',sans-serif;font-weight:500;letter-spacing:.2em;text-transform:uppercase;font-size:.66rem;color:var(--gray);line-height:2;padding:0 22px}
-.proof span{color:var(--gold)}
+.proof span{color:#7A6128}
 .founders{max-width:760px;margin:46px auto 0;padding:0 22px;display:grid;grid-template-columns:200px 1fr;gap:26px;align-items:center}
 .founders img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border:2px solid var(--black);box-shadow:4px 4px 0 var(--black)}
 .founders p{font-size:1rem}
 .founders .sig{margin-top:12px;font-family:'Caveat',cursive;font-weight:600;font-size:1.5rem;color:var(--burnt)}
 .bottom{text-align:center;padding:60px 22px 40px}
 .foot{margin-top:40px;padding:0 22px 30px;text-align:center;font-family:'Oswald',sans-serif;font-weight:500;letter-spacing:.2em;text-transform:uppercase;font-size:.62rem;color:var(--gray)}
-.foot a{color:var(--gray);text-decoration:none;margin:0 8px}
+.foot a{color:var(--gray);text-decoration:none;margin:0 8px;display:inline-block;padding:6px 0}
 @media (max-width:640px){.strip{grid-template-columns:repeat(3,1fr);gap:8px;padding:0 14px}.card{padding:5px}.card .name{font-size:.68rem;letter-spacing:.06em}.card .bottle{font-size:.8rem}.gets ul{grid-template-columns:1fr;gap:16px}.founders{grid-template-columns:120px 1fr;gap:16px}}
 </style>
 </head>
@@ -102,7 +102,7 @@ header img{height:46px;width:auto}
   </ul>
 </section>
 
-<div class="proof">Agave, water and champagne yeast &#10022; All natural &#10022; Single estate, Los Altos<br><span>Double Gold &middot; Agavos Awards</span></div>
+<div class="proof">Agave, water and champagne yeast &#10022; Single estate, Los Altos<br><span>Double Gold &middot; Agavos Awards</span></div>
 
 <section class="founders">
   <img src="img/photos/founders-cheers-800.webp" alt="Danny and Adam, the founders, raising a glass">
@@ -118,7 +118,7 @@ header img{height:46px;width:auto}
 </section>
 </main>
 
-<div class="foot">Please enjoy responsibly &middot; 21+<br><a href="shop.html">The Tequila</a> <a href="our-story.html">Our Story</a> <a href="privacy.html">Privacy</a></div>
+<div class="foot">Please enjoy responsibly &middot; 21+ &middot; DNA Spirits, LLC, Stony Point, NY<br><a href="shop.html">The Tequila</a> <a href="our-story.html">Our Story</a> <a href="privacy.html">Privacy</a> <a href="accessibility.html">Accessibility</a></div>
 
 <div id="agegate" role="dialog" aria-modal="true" aria-label="Age verification" style="display:none;position:fixed;inset:0;z-index:1000;background:#017A5F;align-items:center;justify-content:center;padding:24px;">
   <div style="max-width:460px;width:100%;background:#F3F8E4;border:2px solid #231F20;box-shadow:8px 8px 0 #231F20;padding:12px;">
@@ -159,6 +159,7 @@ function dnRsvp(e, form){
     .catch(function(){ btn.disabled = false; btn.textContent = 'Send me the recipes'; alert('Something hiccuped. Try again?'); });
 }
 </script>
+<script src="js/agegate-a11y.js"></script>
 <script src="js/shop-config.js"></script>
 <script src="js/list-config.js"></script>
 <script src="js/klaviyo-track.js"></script>

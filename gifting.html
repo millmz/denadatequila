@@ -2,7 +2,7 @@
 <html lang="en"><head><script>document.documentElement.className+=' js'</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8HXY32F1B"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(navigator.globalPrivacyControl===true){gtag('set','allow_google_signals',false);gtag('set','allow_ad_personalization_signals',false);}gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
 <script src="js/attribution.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,7 +55,7 @@ a{color:var(--green)}
 .how li{counter-increment:s;border-top:2px solid var(--black);padding-top:14px;font-size:.95rem;color:var(--gray)}
 .how li::before{content:counter(s,decimal-leading-zero);display:block;font-family:'Oswald',sans-serif;font-weight:600;color:var(--burnt);letter-spacing:.1em;margin-bottom:6px}
 .proof{margin:46px auto 0;text-align:center;font-family:'Oswald',sans-serif;font-weight:500;letter-spacing:.2em;text-transform:uppercase;font-size:.66rem;color:var(--gray);line-height:2;padding:0 22px}
-.proof span{color:var(--gold)}
+.proof span{color:#7A6128}
 .ask{max-width:640px;margin:56px auto 0;padding:0 22px}
 .ask .box{background:var(--paper);border:2px solid var(--black);box-shadow:5px 5px 0 var(--black);padding:26px 24px}
 .ask h2{font-size:1.8rem;margin-bottom:6px}
@@ -70,18 +70,20 @@ a{color:var(--green)}
 .thanks{display:none;text-align:center;padding:10px 0 6px}
 .thanks.show{display:block}
 .foot{margin:60px 0 0;padding:0 22px 30px;text-align:center;font-family:'Oswald',sans-serif;font-weight:500;letter-spacing:.2em;text-transform:uppercase;font-size:.62rem;color:var(--gray)}
-.foot a{color:var(--gray);text-decoration:none;margin:0 8px}
+.foot a{color:var(--gray);text-decoration:none;margin:0 8px;display:inline-block;padding:6px 0}
 @media (max-width:760px){.hero{grid-template-columns:1fr;gap:26px}.hero .photo{order:-1}.tiers{grid-template-columns:1fr}.how ol{grid-template-columns:1fr;gap:16px}.ask form{grid-template-columns:1fr}.topbar nav a{margin-left:12px;font-size:.66rem}}
+.skip-link{position:absolute;left:12px;top:-60px;z-index:2000;background:#231F20;color:#F3F8E4;padding:10px 16px;font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;text-decoration:none;border:2px solid #F3F8E4}.skip-link:focus{top:12px}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#content">Skip to content</a>
 
 <div class="topbar">
   <a href="index.html"><img width="259" height="140" src="img/site/tequila-de-nada.webp" alt="Tequila De Nada"></a>
   <nav aria-label="Main"><a href="shop.html">The Tequila</a><a href="cocktails.html">Behind the Bar</a><a href="our-story.html">Our Story</a></nav>
 </div>
 
-<main>
+<main id="content" tabindex="-1">
 <section class="hero">
   <div>
     <span class="eyebrow">Corporate and client gifting</span>
@@ -123,7 +125,7 @@ a{color:var(--green)}
   </ol>
 </section>
 
-<div class="proof">Agave, water and champagne yeast &#10022; All natural &#10022; Single estate, Los Altos<br><span>Double Gold &middot; Agavos Awards</span></div>
+<div class="proof">Agave, water and champagne yeast &#10022; Single estate, Los Altos<br><span>Double Gold &middot; Agavos Awards</span></div>
 
 <section class="ask" id="ask">
   <div class="box">
@@ -145,7 +147,7 @@ a{color:var(--green)}
 </section>
 </main>
 
-<div class="foot">Please enjoy responsibly &middot; 21+<br><a href="shop.html">The Tequila</a> <a href="shipping.html">Shipping</a> <a href="privacy.html">Privacy</a></div>
+<div class="foot">Please enjoy responsibly &middot; 21+ &middot; DNA Spirits, LLC, Stony Point, NY<br><a href="shop.html">The Tequila</a> <a href="shipping.html">Shipping</a> <a href="privacy.html">Privacy</a> <a href="accessibility.html">Accessibility</a></div>
 
 <div id="agegate" role="dialog" aria-modal="true" aria-label="Age verification" style="display:none;position:fixed;inset:0;z-index:1000;background:#017A5F;align-items:center;justify-content:center;padding:24px;">
   <div style="max-width:460px;width:100%;background:#F3F8E4;border:2px solid #231F20;box-shadow:8px 8px 0 #231F20;padding:12px;">
@@ -178,6 +180,7 @@ function dnAgeYes(){
   document.documentElement.style.overflow = '';
 }
 </script>
+<script src="js/agegate-a11y.js"></script>
 <script src="js/list-config.js"></script>
 <script src="js/klaviyo-track.js"></script>
 <script src="js/meta-pixel.js"></script>

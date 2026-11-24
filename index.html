@@ -3,7 +3,7 @@
 <head><script>document.documentElement.className+=' js'</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8HXY32F1B"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(navigator.globalPrivacyControl===true){gtag('set','allow_google_signals',false);gtag('set','allow_ad_personalization_signals',false);}gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
 <script src="js/attribution.js"></script>
 
 <meta charset="UTF-8">
@@ -103,6 +103,10 @@ nav::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:200px
 /* occasions marquee */
 .strip{background:var(--green);color:var(--cream);overflow:hidden;border-bottom:2px solid var(--black)}
 .strip-track{display:flex;width:max-content;animation:scroll 34s linear infinite;padding:13px 0}
+.strip-wrap{position:relative}
+.strip-pause{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:30px;height:30px;display:flex;align-items:center;justify-content:center;background:var(--green);color:var(--cream);border:1.5px solid var(--cream);font-size:.6rem;letter-spacing:-1px;cursor:pointer;z-index:2}
+.strip-pause:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.strip-wrap.paused .strip-track{animation-play-state:paused}
 .strip span{font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.22em;font-size:.8rem;padding:0 30px;white-space:nowrap}
 .strip span i{font-style:normal;color:var(--gold);padding-right:30px}
 @keyframes scroll{to{transform:translateX(-50%)}}
@@ -204,7 +208,7 @@ h2{font-size:clamp(2.1rem,4.4vw,3.5rem)}
 .story .bfly{margin:0 auto 20px;display:block}
 .story .eyebrow{color:var(--black)}
 .story h2{margin:14px 0 26px}
-.story p{font-size:1.07rem;color:#FDF3E8;margin-bottom:18px}
+.story p{font-size:1.07rem;color:var(--black);margin-bottom:18px}
 .story .pull{font-family:'EB Garamond',serif;font-style:italic;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.35;margin:36px 0;color:var(--cream)}
 .story .rule-set{color:var(--cream);max-width:250px;margin:0 auto 32px}
 .story .sig{font-family:'Caveat',cursive;font-weight:600;font-size:1.7rem;color:var(--cream);margin-top:8px}
@@ -238,6 +242,7 @@ footer a:hover{color:var(--cream)}
 @media (prefers-reduced-motion:reduce){
   .rv,.li{opacity:1;transform:none;transition:none;animation:none}
   .strip-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}
+  .strip-pause{display:none}
   .b-card:hover{transform:none}
 }
 /* burger */
@@ -310,6 +315,7 @@ footer a:hover{color:var(--cream)}
 .ig-cta{max-width:1280px;margin:30px auto 0;padding:0 32px}
 @media (max-width:700px){.ig{padding:64px 0}.ig-nav{display:none}}
 .preorder-note{display:block;font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.18em;font-size:.64rem;color:var(--burnt,#B83F26);margin-top:10px}
+.skip-link{position:absolute;left:12px;top:-60px;z-index:2000;background:#231F20;color:#F3F8E4;padding:10px 16px;font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;text-decoration:none;border:2px solid #F3F8E4}.skip-link:focus{top:12px}
 </style>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -330,6 +336,7 @@ footer a:hover{color:var(--cream)}
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "De Nada Tequila", "url": "https://www.denadatequila.com/", "logo": "https://www.denadatequila.com/img/site/tequila-de-nada.webp", "email": "orders@denadatequila.com", "sameAs": ["https://www.instagram.com/denadatequila/", "https://www.facebook.com/denadatequila", "https://x.com/denadatequila"]}</script>
 </head>
 <body>
+<a class="skip-link" href="#content">Skip to content</a>
 
 <nav aria-label="Main">
   <div class="nav-inner">
@@ -346,6 +353,7 @@ footer a:hover{color:var(--cream)}
   </div>
 </nav>
 
+<main id="content" tabindex="-1">
 <header class="hero">
   <div class="rule-set"><div class="tri down"></div><div class="ticks"></div></div>
   <div class="hero-grid">
@@ -365,11 +373,14 @@ footer a:hover{color:var(--cream)}
   <div class="counter"><div class="rule-set"><div class="ticks"></div></div></div>
 </header>
 
+<div class="strip-wrap">
 <div class="strip" aria-hidden="true">
   <div class="strip-track">
     <span>Additive-Free <i>&#10022;</i></span><span>Estate-Grown Agave <i>&#10022;</i></span><span>Carbon Neutral <i>&#10022;</i></span><span>Kosher Certified <i>&#10022;</i></span><span>Additive-Free <i>&#10022;</i></span><span>Estate-Grown Agave <i>&#10022;</i></span><span>Carbon Neutral <i>&#10022;</i></span><span>Kosher Certified <i>&#10022;</i></span>
     <span>Additive-Free <i>&#10022;</i></span><span>Estate-Grown Agave <i>&#10022;</i></span><span>Carbon Neutral <i>&#10022;</i></span><span>Kosher Certified <i>&#10022;</i></span><span>Additive-Free <i>&#10022;</i></span><span>Estate-Grown Agave <i>&#10022;</i></span><span>Carbon Neutral <i>&#10022;</i></span><span>Kosher Certified <i>&#10022;</i></span>
   </div>
+</div>
+<button class="strip-pause" type="button" aria-pressed="false" aria-label="Pause the scrolling banner"><span aria-hidden="true">&#10074;&#10074;</span></button>
 </div>
 
 <a class="press-line" href="press.html" style="display:block;text-align:center;padding:16px 22px;font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;line-height:1.9;color:#231F20;text-decoration:none;"><span style="color:#B83F26;letter-spacing:.3em;margin-right:10px;">As seen on</span>CNN &middot; The Tonight Show &middot; Forbes &middot; Robb Report &middot; VinePair</a>
@@ -557,7 +568,7 @@ footer a:hover{color:var(--cream)}
 
 <section class="rsvp">
   <div class="wrap rv" style="max-width:720px">
-    <span class="eyebrow" style="color:var(--gold)">The Guest List</span>
+    <span class="eyebrow" style="color:var(--cream)">The Guest List</span>
     <h2 class="disp" style="margin-top:12px">Save yourself a seat.</h2>
     <span class="serif-i">Recipes, hosting rituals, and first pours on new releases.</span>
     <p>No spam, no noise. That wouldn&rsquo;t be very hospitable.</p>
@@ -571,6 +582,7 @@ footer a:hover{color:var(--cream)}
   </div>
 </section>
 
+</main>
 <footer>
   <div class="foot-grid">
     <div>
@@ -604,7 +616,7 @@ footer a:hover{color:var(--cream)}
   </div>
   <div class="foot-sign"><span class="hand">You&rsquo;re welcome, anytime.</span></div>
   <div class="foot-base">
-    <span>&copy; 2026 De Nada Tequila &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms of Use</a> &middot; <a href="shipping.html">Shipping &amp; Returns</a></span>
+    <span>&copy; 2026 De Nada Tequila, a brand of DNA Spirits, LLC, Stony Point, NY &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms of Use</a> &middot; <a href="shipping.html">Shipping &amp; Returns</a> &middot; <a href="accessibility.html">Accessibility</a></span>
     <span style="color:var(--gold)">Please drink responsibly.</span>
   </div>
 </footer>
@@ -657,6 +669,7 @@ function dnAgeYes(){
   document.documentElement.style.overflow = '';
 }
 </script>
+<script src="js/agegate-a11y.js"></script>
 <script src="js/list-config.js"></script>
 <script src="js/klaviyo-track.js"></script>
 <script src="js/meta-pixel.js"></script>
@@ -667,5 +680,6 @@ function dnAgeYes(){
 <script src="js/checkout.js"></script>
 <script>(function(){var v=document.querySelector('.hero-video');if(!v)return;if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;var c=navigator.connection;if(c&&c.saveData)return;v.src=matchMedia('(max-width:960px)').matches?v.dataset.srcSmall:v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){});})();</script>
 <script src="js/signup-modal.js"></script>
+<script>(function(){var w=document.querySelector('.strip-wrap'),b=w&&w.querySelector('.strip-pause');if(!b)return;b.addEventListener('click',function(){var on=w.classList.toggle('paused');b.setAttribute('aria-pressed',on?'true':'false');b.setAttribute('aria-label',on?'Play the scrolling banner':'Pause the scrolling banner');b.firstChild.innerHTML=on?'&#9654;':'&#10074;&#10074;';});})();</script>
 </body>
 </html>

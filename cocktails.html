@@ -3,7 +3,7 @@
 <head><script>document.documentElement.className+=' js'</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8HXY32F1B"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(navigator.globalPrivacyControl===true){gtag('set','allow_google_signals',false);gtag('set','allow_ad_personalization_signals',false);}gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
 <script src="js/attribution.js"></script>
 
 <meta charset="UTF-8">
@@ -205,7 +205,9 @@ main .serve .s-cols li:last-child{border-bottom:none}
 main .serve .s-cols p{color:var(--gray)}
 .stock{background:var(--green);color:var(--cream)}
 .stock .disp{color:var(--cream)}
-.stock .serif-i{color:rgba(243,248,228,.9)}
+.stock .serif-i{color:var(--cream)}
+main #de-nada-paloma .s-copy .eyebrow,main #tequila-sunrise .s-copy .eyebrow{color:var(--black)}
+main #garden-party .s-copy .eyebrow{background:#2C765C}
 .stock .rule-set .tri{border-top-color:var(--cream)}
 .stock .rule-set .tri.down{border-bottom-color:var(--cream);border-top-color:transparent}
 .stock .ticks{background:linear-gradient(90deg,var(--cream) 2px,transparent 2px) 0 0/9px 100%}
@@ -253,6 +255,7 @@ main .serve .s-photo img{aspect-ratio:auto;object-fit:unset;height:auto;max-heig
 .rsvp input{font-family:'Libre Franklin',sans-serif;font-size:.95rem;padding:14px 18px;min-width:290px;border:2px solid var(--black);background:var(--cream);color:var(--black)}
 .rsvp input:focus{outline:3px solid var(--gold);outline-offset:2px}
 .rsvp{padding:90px 24px}.rsvp .wrap{margin:0 auto}
+.skip-link{position:absolute;left:12px;top:-60px;z-index:2000;background:#231F20;color:#F3F8E4;padding:10px 16px;font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;text-decoration:none;border:2px solid #F3F8E4}.skip-link:focus{top:12px}
 </style>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -271,6 +274,7 @@ main .serve .s-photo img{aspect-ratio:auto;object-fit:unset;height:auto;max-heig
 <meta name="twitter:image" content="https://www.denadatequila.com/og.jpg">
 </head>
 <body>
+<a class="skip-link" href="#content">Skip to content</a>
 
 <nav aria-label="Main">
   <div class="nav-inner">
@@ -287,7 +291,7 @@ main .serve .s-photo img{aspect-ratio:auto;object-fit:unset;height:auto;max-heig
   </div>
 </nav>
 
-<header class="bar-hero">
+<header id="content" tabindex="-1" class="bar-hero">
   <div>
     <span class="eyebrow">Behind the Bar</span>
     <h1 class="disp">Signature Serves</h1>
@@ -1031,7 +1035,7 @@ main .serve .s-photo img{aspect-ratio:auto;object-fit:unset;height:auto;max-heig
 
 <section class="rsvp">
   <div class="wrap rv" style="max-width:720px">
-    <span class="eyebrow" style="color:var(--gold)">The Guest List</span>
+    <span class="eyebrow" style="color:var(--cream)">The Guest List</span>
     <h2 class="disp" style="margin-top:12px">Get the next recipe first.</h2>
     <span class="serif-i">A new drink every two weeks, and first pours on new releases.</span>
     <p>No spam, no noise. That wouldn&rsquo;t be very hospitable.</p>
@@ -1078,7 +1082,7 @@ main .serve .s-photo img{aspect-ratio:auto;object-fit:unset;height:auto;max-heig
   </div>
   <div class="foot-sign"><span class="hand">You&rsquo;re welcome, anytime.</span></div>
   <div class="foot-base">
-    <span>&copy; 2026 De Nada Tequila &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms of Use</a> &middot; <a href="shipping.html">Shipping &amp; Returns</a></span>
+    <span>&copy; 2026 De Nada Tequila, a brand of DNA Spirits, LLC, Stony Point, NY &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms of Use</a> &middot; <a href="shipping.html">Shipping &amp; Returns</a> &middot; <a href="accessibility.html">Accessibility</a></span>
     <span style="color:var(--gold)">Please drink responsibly.</span>
   </div>
 </footer>
@@ -1123,6 +1127,7 @@ function dnAgeYes(){
   document.documentElement.style.overflow = '';
 }
 </script>
+<script src="js/agegate-a11y.js"></script>
 
 <script src="js/list-config.js"></script>
 <script src="js/klaviyo-track.js"></script>

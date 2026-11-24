@@ -3,7 +3,7 @@
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8HXY32F1B"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());if(navigator.globalPrivacyControl===true){gtag('set','allow_google_signals',false);gtag('set','allow_ad_personalization_signals',false);}gtag('config','G-K8HXY32F1B',{linker:{domains:['denadatequila.com','shop.denadatequila.com']}});</script>
 <script src="js/attribution.js"></script>
 
 <meta charset="UTF-8">
@@ -52,6 +52,7 @@ footer .links a{margin:0 10px}
   .wordmark img{height:42px}
   .legal{padding:50px 22px 70px}
 }
+.skip-link{position:absolute;left:12px;top:-60px;z-index:2000;background:#231F20;color:#F3F8E4;padding:10px 16px;font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;text-decoration:none;border:2px solid #F3F8E4}.skip-link:focus{top:12px}
 </style>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -70,6 +71,7 @@ footer .links a{margin:0 10px}
 <meta name="twitter:image" content="https://www.denadatequila.com/og.jpg">
 </head>
 <body>
+<a class="skip-link" href="#content">Skip to content</a>
 <nav aria-label="Main">
   <div class="nav-inner">
     <a class="wordmark" href="index.html"><img width="259" height="140" src="img/site/tequila-de-nada.webp" alt="Tequila De Nada"></a>
@@ -84,7 +86,7 @@ footer .links a{margin:0 10px}
     </div>
   </div>
 </nav>
-<main class="legal">
+<main id="content" tabindex="-1" class="legal">
   <span class="eyebrow">The Fine Print</span>
   <h1 class="disp">Privacy Policy</h1>
   <span class="updated">Last updated: July 2026</span>
@@ -152,7 +154,7 @@ footer .links a{margin:0 10px}
 
 </main>
 <footer>
-  <div class="links"><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms of Use</a> &middot; <a href="shipping.html">Shipping &amp; Returns</a><a href="faq.html">FAQ</a></div>
+  <div class="links"><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms of Use</a> &middot; <a href="accessibility.html">Accessibility</a> &middot; <a href="shipping.html">Shipping &amp; Returns</a><a href="faq.html">FAQ</a></div>
   <div>&copy; 2026 DNA Spirits, LLC. De Nada&reg; and De-Nada&reg; are registered trademarks of DNA Spirits, LLC. All rights reserved. Please drink responsibly.</div>
 </footer>
 <script>
@@ -189,6 +191,7 @@ function dnAgeYes(){
   document.documentElement.style.overflow = '';
 }
 </script>
+<script src="js/agegate-a11y.js"></script>
 
 </body>
 </html>
