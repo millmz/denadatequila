@@ -97,9 +97,24 @@ any video with speech.
 - **What the policy commits us to:** acknowledge privacy requests within 10
   business days, answer within 45; honour "Do Not Sell or Share" emails;
   record any "Arbitration Opt-Out" emails.
-- Email (CAN-SPAM): every marketing email needs the postal address and a
-  working unsubscribe. Klaviyo's footer handles both; recheck once the
-  Klaviyo connector is signed in again.
+- Email (CAN-SPAM), checked Nov 24: all 39 live flow emails and the 5
+  current campaign templates have a working Klaviyo unsubscribe tag, the
+  postal address from Klaviyo's organization settings (148 South Liberty
+  Drive, Stony Point, NY 10980), "Must be 21+" and "Please drink
+  responsibly". All send from orders@denadatequila.com as "De Nada Tequila";
+  subject lines are accurate; no campaign ignores unsubscribes. Sending
+  domain hello.denadatequila.com is active and DKIM-signed (s1, s2).
+- Email copy fixed Nov 24 (Adam approved): Rosita "It opens the appetite"
+  became "as an aperitivo" (TTB: no physiological-effect claims); Southside
+  "very easy to drink two of" became "very easy to like"; Cafe de Olla "Cold
+  morning" became "Cold night" (responsible-marketing codes).
+- Open, Adam's choice: emails name "De Nada Tequila" but not DNA Spirits,
+  LLC (change the organization name in Klaviyo Settings, Organization, to
+  add it everywhere); root-domain DMARC is p=none with no report address,
+  and Google Workspace mail from orders@ is not DKIM-signed (both are DNS
+  settings at Squarespace and Google Admin). The Holidays draft ends "We'll
+  see you in the new year", which is not true while recipe emails keep
+  sending; Welcome 1 and the win-back mention email timing (house rule).
 
 ## Copyright and trademarks
 
