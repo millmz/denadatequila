@@ -11,7 +11,7 @@ spirits brand. Not legal advice; items marked **Counsel** need a lawyer's eye.
 | Website | Oswald, EB Garamond, Libre Franklin, Caveat (self-hosted in `fonts/`) | SIL Open Font License 1.1: free for commercial web use. Licence text and copyright lines in `fonts/OFL.txt`. **OK** |
 | Store theme | Dawn's Shopify-hosted fonts, set to match the website | Licensed through Shopify. **OK** |
 | Store, legacy | `custom-fonts` snippet loaded Alata from another store's CDN | Alata is OFL, so not a licence problem, but it was hotlinked and unused. No longer rendered (theme commit Nov 24). |
-| Store Files, legacy | 10 font files from the 2024 site: Trade Gothic LT Std (x2, Linotype/Monotype, commercial), Broth/BrothReg/BrothRegAlt/BrothBol (x6), simpletype (x2) | Not used by any page, but publicly downloadable from Shopify's CDN. Hosting a commercial desktop font at a public URL without a web licence is the pattern foundries send letters about. **Delete unless the 2024 agency's licence covers web hosting.** |
+| Store Files, legacy | 10 font files from the 2024 site: Trade Gothic LT Std (x2, Linotype/Monotype, commercial), Broth/BrothReg/BrothRegAlt/BrothBol (x6), simpletype (x2) | Deleted from Shopify Files on Nov 24 with Adam's go-ahead. None was used by any page; all were publicly downloadable. No font files remain in Files. |
 
 ## Accessibility (ADA Title III, WCAG 2.2 AA)
 
@@ -31,7 +31,7 @@ Fixed on Nov 24:
   reduced motion.
 - Footer links: 24px touch targets.
 - Accessibility statement at `accessibility.html`, linked from every footer.
-- Store: cart count badge now black on orange (was 3.1:1).
+- Store: cart count badge now black on orange (was 3.1:1). Published Nov 24.
 
 Keep doing: alt text on every new image, check new colours against
 `#F3F8E4` / `#017A5F` / `#D37240` / `#231F20` before shipping, captions on
