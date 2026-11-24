@@ -55,8 +55,9 @@ any video with speech.
   Safety Code 44475 et seq.) requires anyone making a carbon-neutral claim in
   California to publish on their website how the claim is verified and which
   offsets back it (project, registry, standard). Penalties run up to $2,500 a
-  day. The FTC Green Guides also require substantiation. **Either publish the
-  disclosure or remove the claim.**
+  day. The FTC Green Guides also require substantiation. **Adam is sending
+  the offset provider, project and registry (Nov 24); then build the
+  disclosure page and link it wherever the claim appears.**
 - **"Additive-free"**: keep the certification or test result on file (for
   example the verification programme that confirms it).
 - **"Kosher certified"**: keep the certificate on file; consider naming the
