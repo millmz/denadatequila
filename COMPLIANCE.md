@@ -39,9 +39,8 @@ any video with speech.
 
 ## Alcohol advertising (TTB, 27 CFR part 5 subpart H)
 
-- Responsible advertiser: footers now read "De Nada Tequila, a brand of DNA
-  Spirits, LLC, Stony Point, NY". **Counsel:** confirm DNA Spirits, LLC is the
-  right name for advertising (brand owner vs importer of record).
+- Responsible advertiser: footers read "De Nada Tequila, a brand of DNA
+  Spirits, LLC, Stony Point, NY". Adam confirmed DNA Spirits, LLC (Nov 24).
 - Class and alcohol content ("Tequila", 40% ALC/VOL) appear on the shop and
   product pages.
 - Age gate on every page, 21+ on every footer, "Please drink responsibly".
@@ -58,18 +57,16 @@ any video with speech.
   day. The FTC Green Guides also require substantiation. **Adam is sending
   the offset provider, project and registry (Nov 24); then build the
   disclosure page and link it wherever the claim appears.**
-- **"Additive-free"**: keep the certification or test result on file (for
-  example the verification programme that confirms it).
-- **"Kosher certified"**: keep the certificate on file; consider naming the
-  certifier.
+- **"Additive-free"** and **"Kosher certified"**: substantiation on file with
+  Adam (confirmed Nov 24).
 - **"All natural"**: removed from the gifting and recipes pages and the Trio's
   Shopify description; "natural" claims on food and drink are a common
   class-action target.
 - **Trio pricing**: the $184.97 compare-at price is the three bottles' real
   everyday prices added together, which is a fair reference price. The
   Shopify page's "SALE" badge implies a temporary discount; fine while true.
-- Bevstack's Trio copy says "three bottles ship free". Confirm checkout
-  actually charges no shipping on it.
+- Bevstack's Trio copy says "three bottles ship free"; Adam to keep that true
+  at checkout.
 
 ## Privacy
 
@@ -80,9 +77,21 @@ any video with speech.
 - CCPA/CPRA applies above $25M-plus revenue or 100,000 California consumers;
   De Nada is likely under both today, but the policy is already written as if
   it applied, which is the safer posture.
-- **Counsel:** `privacy.html` and `terms.html` still end with "should be
-  reviewed by qualified legal counsel before publication". Have them reviewed,
-  then remove that line; as it stands it tells a reader the terms are a draft.
+- `privacy.html` and `terms.html` rewritten as final documents, effective Nov
+  24, 2026, draft disclaimer removed. Privacy: CCPA notice at collection
+  (categories, sources, purposes, recipients by name), sale/sharing and GPC,
+  Do Not Track statement, rights for every state with a privacy law, 10-day
+  acknowledgment and 45-day response, appeals with the attorney general
+  route, retention periods by category. Terms: Bevstack as seller of record,
+  sign-in-wrap acceptance through the age check, compare-at price
+  definition, social content used only with permission (New York Civil
+  Rights Law 50-51), liability carve-outs, and an arbitration clause with
+  60-day informal resolution, consumer fee coverage, mass-arbitration
+  batching, public-injunction severance, and a 30-day opt-out.
+- "Your Privacy Choices" link in every footer (to `privacy.html#choices`).
+- **What the policy commits us to:** acknowledge privacy requests within 10
+  business days, answer within 45; honour "Do Not Sell or Share" emails;
+  record any "Arbitration Opt-Out" emails.
 - Email (CAN-SPAM): every marketing email needs the postal address and a
   working unsubscribe. Klaviyo's footer handles both; recheck once the
   Klaviyo connector is signed in again.
