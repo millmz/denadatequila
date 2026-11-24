@@ -89,6 +89,11 @@ any video with speech.
   60-day informal resolution, consumer fee coverage, mass-arbitration
   batching, public-injunction severance, and a 30-day opt-out.
 - "Your Privacy Choices" link in every footer (to `privacy.html#choices`).
+- Shopify's own policy pages (linked from the cart and checkout) still carry
+  the old template text, including a "[BRAND URL]" placeholder in the Terms
+  and a refund policy that asks for damaged items back. Replacement texts are
+  in `SHOPIFY-POLICIES.md`; Adam pastes them in Settings, Policies (the
+  Shopify connection lacks the policy permission).
 - **What the policy commits us to:** acknowledge privacy requests within 10
   business days, answer within 45; honour "Do Not Sell or Share" emails;
   record any "Arbitration Opt-Out" emails.
