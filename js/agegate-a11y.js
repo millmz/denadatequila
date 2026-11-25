@@ -2,7 +2,7 @@
    While the gate is open: keyboard focus starts on "Yes, I'm 21+", Tab and
    Shift+Tab stay inside the gate, and the page behind it is inert (not
    focusable, hidden from screen readers). On "Yes" the page comes back and
-   focus returns to the top of it. Loaded right after the gate markup. */
+   focus moves to the start of the page content. Loaded right after the gate markup. */
 (function () {
   var g = document.getElementById("agegate");
   if (!g || g.style.display === "none" || getComputedStyle(g).display === "none") return;
@@ -36,8 +36,9 @@
     if (typeof yes === "function") yes.apply(this, arguments);
     document.removeEventListener("keydown", trap, true);
     others.forEach(function (el) { el.removeAttribute("inert"); el.removeAttribute("aria-hidden"); });
-    var start = document.querySelector(".skip-link") || document.body;
-    if (start === document.body) document.body.setAttribute("tabindex", "-1");
-    start.focus();
+    var start = document.getElementById("content") || document.querySelector("main") || document.body;
+    if (!start.hasAttribute("tabindex")) start.setAttribute("tabindex", "-1");
+    start.style.outline = "none";
+    try { start.focus({ preventScroll: true }); } catch (e) { start.focus(); }
   };
 })();

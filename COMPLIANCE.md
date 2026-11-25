@@ -26,7 +26,7 @@ Fixed on Nov 24:
 - Age gate: focus starts on "Yes, I'm 21+", Tab stays inside, the page behind
   is inert, focus returns to the top of the page afterwards (`js/agegate-a11y.js`).
 - Signup pop-up: Tab stays inside (Escape and focus return already worked).
-- "Skip to content" link and a main landmark on every page.
+- A main landmark on every page (the visible "Skip to content" link was removed Nov 25 at Adam's request; landmarks still let screen-reader users bypass the navigation).
 - Homepage ticker: pause button (WCAG 2.2.2); still stops entirely under
   reduced motion.
 - Footer links: 24px touch targets.
