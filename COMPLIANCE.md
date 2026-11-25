@@ -27,8 +27,11 @@ Fixed on Nov 24:
   is inert, focus returns to the top of the page afterwards (`js/agegate-a11y.js`).
 - Signup pop-up: Tab stays inside (Escape and focus return already worked).
 - A main landmark on every page (the visible "Skip to content" link was removed Nov 25 at Adam's request; landmarks still let screen-reader users bypass the navigation).
-- Homepage ticker: pause button (WCAG 2.2.2); still stops entirely under
-  reduced motion.
+- Homepage ticker: the pause button was removed Nov 25 at Adam's request. It
+  pauses on hover and stops entirely under reduced motion. Strictly, WCAG
+  2.2.2 asks for a pause control on motion that lasts over 5 seconds; the
+  low-risk alternative if this is ever raised is to stop the ticker after
+  one pass.
 - Footer links: 24px touch targets.
 - Accessibility statement at `accessibility.html`, linked from every footer.
 - Store: cart count badge now black on orange (was 3.1:1). Published Nov 24.
